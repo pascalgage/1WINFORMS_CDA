@@ -17,13 +17,14 @@ namespace Saisie_Controle
         public Form1()
         {
             InitializeComponent();
+            
         }
-        
-        
+
+       
 
         private bool ValidationNom()
         {
-            if ((Regex.Match(textBoxName.Text, "^[a-zA-Z]*$").Success) && (textBoxName.Text.Length <= 30) && (textBoxName.Text != ""))
+            if (Validation.IsValidName(textBoxName.Text))
             {
                 
                 errorProviderNom.Clear();
@@ -34,6 +35,7 @@ namespace Saisie_Controle
                 
                 errorProviderNom.SetError(textBoxName, "Erreur: le nom ne doit comporter que des lettres");
                 textBoxName.BackColor = Color.Red;
+                
                 return false;
             }
                 
@@ -45,6 +47,7 @@ namespace Saisie_Controle
             if (ValidationNom())
             {
                 textBoxName.BackColor = Color.White;
+                
                 
             }
             return true;
