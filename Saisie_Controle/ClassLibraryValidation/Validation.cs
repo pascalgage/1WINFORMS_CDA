@@ -22,6 +22,20 @@ namespace ClassLibraryValidation
             }
             
         }
+
+        public static bool IsValidDate(string _textBoxDate)
+        {
+            
+                DateTime resultDate;
+                DateTime.TryParse(_textBoxDate, out resultDate);
+                DateTime dateDuJour = DateTime.Now;
+                return resultDate > dateDuJour;
+            
+        }
+
+
+
+
         public static bool IsValidMontant(string _textBoxMontant)
         {
             if(Regex.Match(_textBoxMontant, "^[0-9]+([.,]{1}[0-9]{2})?$").Success)

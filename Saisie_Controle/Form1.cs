@@ -55,7 +55,7 @@ namespace Saisie_Controle
 
         private bool ValidationDate()
         {
-            if (IsDateValidAfterToday(textBoxDate.Text))
+            if (Validation.IsValidDate(textBoxDate.Text))
             {
                 
                 errorProviderDate.Clear();
@@ -79,16 +79,6 @@ namespace Saisie_Controle
                 textBoxDate.BackColor = Color.White;
             }
             return true;
-        }
-
-        //Vérification de date postérieure à date Actuelle /Utilisateur
-
-        private bool IsDateValidAfterToday(string strDate)
-        {
-            DateTime resultDate;
-            DateTime.TryParse(strDate, out resultDate);
-            DateTime dateDuJour = DateTime.Now;
-            return resultDate > dateDuJour;
         }
 
 
@@ -168,7 +158,8 @@ namespace Saisie_Controle
             return true;
         }
 
-        
+        //Méthode de Validation principale
+
         private void Va()
         {
             bool ok = true;
@@ -280,11 +271,7 @@ namespace Saisie_Controle
                 
                 
             }
-            //if (dr == DialogResult.Yes)
-            //{
-            //    e.Cancel = false;
-            //    EffacementDesChamps();
-            //}
+            
 
         }
     }
