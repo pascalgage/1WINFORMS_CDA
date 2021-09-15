@@ -34,17 +34,20 @@ namespace Saisie_Controle
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.textBoxMontant = new System.Windows.Forms.TextBox();
+            this.textBoxCodePostal = new System.Windows.Forms.TextBox();
+            this.buttonValider = new System.Windows.Forms.Button();
+            this.buttonEffacer = new System.Windows.Forms.Button();
             this.errorProviderNom = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderMontant = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCP = new System.Windows.Forms.ErrorProvider(this.components);
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderMontant)).BeginInit();
@@ -87,54 +90,57 @@ namespace Saisie_Controle
             this.label4.TabIndex = 3;
             this.label4.Text = "CODE POSTAL";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBoxName.Location = new System.Drawing.Point(208, 86);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.TabIndex = 4;
+            this.textBoxName.Leave += new System.EventHandler(this.textBoxName_Leave);
             // 
-            // textBox2
+            // textBoxDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBoxDate.Location = new System.Drawing.Point(208, 132);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDate.TabIndex = 5;
+            this.textBoxDate.Leave += new System.EventHandler(this.textBoxDate_Leave);
             // 
-            // textBox3
+            // textBoxMontant
             // 
-            this.textBox3.Location = new System.Drawing.Point(208, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBoxMontant.Location = new System.Drawing.Point(208, 194);
+            this.textBoxMontant.Name = "textBoxMontant";
+            this.textBoxMontant.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMontant.TabIndex = 6;
+            this.textBoxMontant.Leave += new System.EventHandler(this.textBoxMontant_Leave);
             // 
-            // textBox4
+            // textBoxCodePostal
             // 
-            this.textBox4.Location = new System.Drawing.Point(208, 248);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxCodePostal.Location = new System.Drawing.Point(208, 248);
+            this.textBoxCodePostal.Name = "textBoxCodePostal";
+            this.textBoxCodePostal.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCodePostal.TabIndex = 7;
+            this.textBoxCodePostal.Leave += new System.EventHandler(this.textBoxCodePostal_Leave);
             // 
-            // button1
+            // buttonValider
             // 
-            this.button1.Location = new System.Drawing.Point(476, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Valider";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonValider.Location = new System.Drawing.Point(476, 305);
+            this.buttonValider.Name = "buttonValider";
+            this.buttonValider.Size = new System.Drawing.Size(75, 23);
+            this.buttonValider.TabIndex = 8;
+            this.buttonValider.Text = "Valider";
+            this.buttonValider.UseVisualStyleBackColor = true;
+            this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
-            // button2
+            // buttonEffacer
             // 
-            this.button2.Location = new System.Drawing.Point(476, 349);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Effacer";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonEffacer.Location = new System.Drawing.Point(476, 349);
+            this.buttonEffacer.Name = "buttonEffacer";
+            this.buttonEffacer.Size = new System.Drawing.Size(75, 23);
+            this.buttonEffacer.TabIndex = 9;
+            this.buttonEffacer.Text = "Effacer";
+            this.buttonEffacer.UseVisualStyleBackColor = true;
+            this.buttonEffacer.Click += new System.EventHandler(this.buttonEffacer_Click);
             // 
             // errorProviderNom
             // 
@@ -155,24 +161,54 @@ namespace Saisie_Controle
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(436, 132);
+            this.label5.Location = new System.Drawing.Point(220, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "JJMMAAAA";
+            this.label5.Text = "JJ/MM/AAAA";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(220, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(187, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "nom en lettres seulement sans espace";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(223, 221);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(234, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Entier ou decimal avec deux chiffres après , ou .";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(223, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Code à 5 chiffres maximum";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonEffacer);
+            this.Controls.Add(this.buttonValider);
+            this.Controls.Add(this.textBoxCodePostal);
+            this.Controls.Add(this.textBoxMontant);
+            this.Controls.Add(this.textBoxDate);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -194,17 +230,20 @@ namespace Saisie_Controle
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.TextBox textBoxMontant;
+        private System.Windows.Forms.TextBox textBoxCodePostal;
+        private System.Windows.Forms.Button buttonValider;
+        private System.Windows.Forms.Button buttonEffacer;
         private System.Windows.Forms.ErrorProvider errorProviderNom;
         private System.Windows.Forms.ErrorProvider errorProviderDate;
         private System.Windows.Forms.ErrorProvider errorProviderMontant;
         private System.Windows.Forms.ErrorProvider errorProviderCP;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 

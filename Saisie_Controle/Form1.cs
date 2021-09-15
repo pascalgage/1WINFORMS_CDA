@@ -18,67 +18,136 @@ namespace Saisie_Controle
             InitializeComponent();
         }
 
-        private void Validation()
+
+        private bool ValidationNom()
         {
-            
-            if ((Regex.Match(textBox1.Text, "^[a-zA-Z]*$").Success) && (textBox1.Text.Length <= 30) && (textBox1.Text != ""))
+            if ((Regex.Match(textBoxName.Text, "^[a-zA-Z]*$").Success) && (textBoxName.Text.Length <= 30) && (textBoxName.Text != ""))
             {
-                if ((Regex.Match(textBox2.Text, "^[0-9]*$").Success) && (textBox2.Text.Length == 8))
-                {
-                    if (Regex.Match(textBox3.Text, "^[0-9]*$").Success)
-                    {
-                        if ((textBox4.Text.Length < 6) && (Regex.Match(textBox4.Text, "^[0-9]*$").Success))
-                        {
-                            errorProviderNom.Clear();
-                            errorProviderDate.Clear();
-                            errorProviderMontant.Clear();
-                            errorProviderCP.Clear();
-                            MessageBox.Show("NOM:" + textBox1.Text + "\nDATE:" + textBox2.Text + "\nMONTANT:" + textBox3.Text +
-                                 "\nCODE POSTAL:" + textBox4.Text);
-                        }
-                        else
-                        {
-                            MessageBox.Show("ERROR le code postal = maximun 5 chiffres");
-                            errorProviderCP.SetError(textBox4, "ERROR le code postal = maximun 5 chiffres");
-                        }
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("ERROR le montant doit être numérique");
-                        errorProviderMontant.SetError(textBox3, "ERROR le montant doit être numérique");
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("ERROR la date doit être de forme JJMMAAAA");
-                    errorProviderDate.SetError(textBox2, "ERROR la date doit être de forme JJMMAAAA");
-                }
-
+                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                errorProviderNom.Clear();
+                return true;
             }
             else
             {
                 MessageBox.Show("ERROR le nom ne doit comporter que des lettres");
-                errorProviderNom.SetError(textBox1, "ERROR le nom ne doit comporter que des lettres");
+                errorProviderNom.SetError(textBoxName, "ERROR le nom ne doit comporter que des lettres");
+                return false;
             }
+                
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private bool ValidationDate()
+        {
+            if ((DateTime.TryParse(textBoxDate.Text, out DateTime result)))
+            {
+                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                 "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                errorProviderDate.Clear();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR la date doit être de forme JJMMAAAA");
+                errorProviderDate.SetError(textBoxDate, "ERROR la date doit être de forme JJMMAAAA");
+                return false;
+            }
+
+            
+        }
+
+
+        private bool ValidationMontant()
+        {
+            if (Regex.Match(textBoxMontant.Text, "^[0-9]+([.,]{1}[0-9]{2})?$").Success)
+            {
+                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                errorProviderMontant.Clear();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR le montant doit être numérique");
+                errorProviderMontant.SetError(textBoxMontant, "ERROR le montant doit être numérique");
+                return false;
+            }
+
+        }
+
+       
+
+        private bool ValidationCodePostal()
+        {
+            if ((textBoxCodePostal.Text.Length < 6) && (Regex.Match(textBoxCodePostal.Text, "^[0-9]*$").Success))
+            {
+                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                 "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                errorProviderCP.Clear();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("ERROR le code postal = maximun 5 chiffres");
+                errorProviderCP.SetError(textBoxCodePostal, "ERROR le code postal = maximun 5 chiffres");
+                return false;
+            }
+                
+        }
+
+        private bool EffacementDesChamps()
+        {
+            textBoxName.Text = "";
+            textBoxDate.Text = "";
+            textBoxMontant.Text = "";
+            textBoxCodePostal.Text = "";
+
+            return true;
+        }
+
+
+
+        private void Validation()
+        {
+            bool ok =true;
+            ok= ok &&ValidationNom();
+            ok = ok && ValidationDate();
+            ok = ok && ValidationMontant();
+            ok = ok && ValidationCodePostal();
+
+        }
+
+       //Lancement de la Validation du champ quand on quitte chaque champ
+        
+        private void textBoxName_Leave(object sender, EventArgs e)
+        {
+            ValidationNom();
+        }
+        private void textBoxDate_Leave(object sender, EventArgs e)
+        {
+            ValidationDate();
+        }
+        private void textBoxMontant_Leave(object sender, EventArgs e)
+        {
+            ValidationMontant();
+        }
+        private void textBoxCodePostal_Leave(object sender, EventArgs e)
+        {
+            ValidationCodePostal();
+        }
+
+        //Boutons VALIDER puis EFFACER
+
+        private void buttonValider_Click(object sender, EventArgs e)
         {
             Validation();
 
         }
-        //bool successful = DateTime.TryParseExact
-        //("20201205", "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowLeadingWhite, out dateARecupere);
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void buttonEffacer_Click(object sender, EventArgs e)
         {
-            //Validation();
+            EffacementDesChamps();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Validation();
-        }
+        
     }
 }
