@@ -256,14 +256,14 @@ namespace Saisie_Controle
             Va();
             SqlConnection con = new SqlConnection(ConnectionString);
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into clients values (@client_id,@client_nom,@client_date,@client_montant,@client_codePostal)", con);
-            cmd.Parameters.AddWithValue("@client_id");
+            SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
             cmd.Parameters.AddWithValue("@client_nom",textBoxName.Text);
             cmd.Parameters.AddWithValue("@client_date",textBoxDate.Text);
             cmd.Parameters.AddWithValue("@client_montant",textBoxMontant.Text);
             cmd.Parameters.AddWithValue("@client_codePostal",textBoxCodePostal.Text);
             cmd.ExecuteNonQuery();
             con.Close();
+            MessageBox.Show("INSERTION EN BDD clients réussie!");
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
         {
