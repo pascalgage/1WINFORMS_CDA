@@ -23,15 +23,15 @@ namespace Saisie_Controle
         {
             if ((Regex.Match(textBoxName.Text, "^[a-zA-Z]*$").Success) && (textBoxName.Text.Length <= 30) && (textBoxName.Text != ""))
             {
-                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                
                 errorProviderNom.Clear();
                 return true;
             }
             else
             {
-                MessageBox.Show("ERROR le nom ne doit comporter que des lettres");
-                errorProviderNom.SetError(textBoxName, "ERROR le nom ne doit comporter que des lettres");
+                
+                errorProviderNom.SetError(textBoxName, "Erreur: le nom ne doit comporter que des lettres");
+                textBoxName.BackColor = Color.Red;
                 return false;
             }
                 
@@ -39,21 +39,30 @@ namespace Saisie_Controle
 
         private bool ValidationDate()
         {
-            if ((DateTime.TryParse(textBoxDate.Text, out DateTime result)))
+            if (IsDateValidAfterToday(textBoxDate.Text))
             {
-                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                 "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                
                 errorProviderDate.Clear();
                 return true;
             }
             else
             {
-                MessageBox.Show("ERROR la date doit être de forme JJMMAAAA");
-                errorProviderDate.SetError(textBoxDate, "ERROR la date doit être de forme JJMMAAAA");
+                
+                errorProviderDate.SetError(textBoxDate, "Erreur: la date doit être de forme JJ/MM/AAAA et postérieure à date actuelle !");
                 return false;
             }
 
             
+        }
+
+        //Vérification de date postérieure à date Actuelle /Utilisateur
+
+        private bool IsDateValidAfterToday(string strDate)
+        {
+            DateTime resultDate;
+            DateTime.TryParse(strDate, out resultDate);
+            DateTime dateDuJour = DateTime.Now;
+            return resultDate > dateDuJour;
         }
 
 
@@ -61,15 +70,14 @@ namespace Saisie_Controle
         {
             if (Regex.Match(textBoxMontant.Text, "^[0-9]+([.,]{1}[0-9]{2})?$").Success)
             {
-                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                "\nCODE POSTAL:" + textBoxCodePostal.Text);
+                
                 errorProviderMontant.Clear();
                 return true;
             }
             else
             {
-                MessageBox.Show("ERROR le montant doit être numérique");
-                errorProviderMontant.SetError(textBoxMontant, "ERROR le montant doit être numérique");
+                
+                errorProviderMontant.SetError(textBoxMontant, "Erreur: le montant doit être entier ou decimal à deux chiffres après la virgule");
                 return false;
             }
 
@@ -79,17 +87,16 @@ namespace Saisie_Controle
 
         private bool ValidationCodePostal()
         {
-            if ((textBoxCodePostal.Text.Length < 6) && (Regex.Match(textBoxCodePostal.Text, "^[0-9]*$").Success))
+            if ((textBoxCodePostal.Text.Length < 6) && (textBoxCodePostal.Text !="")&&(Regex.Match(textBoxCodePostal.Text, "^[0-9]*$").Success))
             {
-                MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                 "\nCODE POSTAL:" + textBoxCodePostal.Text);
+               
                 errorProviderCP.Clear();
                 return true;
             }
             else
             {
-                MessageBox.Show("ERROR le code postal = maximun 5 chiffres");
-                errorProviderCP.SetError(textBoxCodePostal, "ERROR le code postal = maximun 5 chiffres");
+                
+                errorProviderCP.SetError(textBoxCodePostal, "Erreur: le code postal = maximun 5 chiffres");
                 return false;
             }
                 
@@ -102,6 +109,12 @@ namespace Saisie_Controle
             textBoxMontant.Text = "";
             textBoxCodePostal.Text = "";
 
+            errorProviderNom.Clear();
+            errorProviderDate.Clear();
+            errorProviderMontant.Clear();
+            errorProviderCP.Clear();
+
+            textBoxName.BackColor = Color.White;
             return true;
         }
 
@@ -115,7 +128,11 @@ namespace Saisie_Controle
             ok = ok && ValidationMontant();
             ok = ok && ValidationCodePostal();
 
+            MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                "\nCODE POSTAL:" + textBoxCodePostal.Text, "VALIDATION EFFECTUEE !",MessageBoxButtons.YesNo);
+
         }
+        
 
        //Lancement de la Validation du champ quand on quitte chaque champ
         
@@ -126,6 +143,7 @@ namespace Saisie_Controle
         private void textBoxDate_Leave(object sender, EventArgs e)
         {
             ValidationDate();
+            
         }
         private void textBoxMontant_Leave(object sender, EventArgs e)
         {
@@ -148,6 +166,26 @@ namespace Saisie_Controle
             EffacementDesChamps();
         }
 
-        
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show
+            ("Fin de l’application ?", "FIN",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+                EffacementDesChamps();
+                
+                
+            }
+            if (dr == DialogResult.Yes)
+            {
+                e.Cancel = false;
+                EffacementDesChamps();
+            }
+
+        }
     }
 }
