@@ -202,13 +202,19 @@ namespace Saisie_Controle
             }
 
             string listerrors = "";
-            foreach (var item in errors)
+
+            foreach (string item in errors)
             {
                 listerrors += item + "\n";
             }
+
             if (!ok)
             {
                 MessageBox.Show(listerrors, "VALIDATION IMPOSSIBLE !");
+            }
+            else
+            {
+                MessageBox.Show("Opération réussie", "INSERTION BDD");
             }
 
 
@@ -263,15 +269,15 @@ namespace Saisie_Controle
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;
-                EffacementDesChamps();
+             
                 
                 
             }
-            if (dr == DialogResult.Yes)
-            {
-                e.Cancel = false;
-                EffacementDesChamps();
-            }
+            //if (dr == DialogResult.Yes)
+            //{
+            //    e.Cancel = false;
+            //    EffacementDesChamps();
+            //}
 
         }
     }

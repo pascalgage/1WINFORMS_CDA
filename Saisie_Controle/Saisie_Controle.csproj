@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClassLibraryValidation\ClassLibraryValidation.csproj">
+      <Project>{8c4aabe0-e4e6-4f1f-8582-2a21c62e2784}</Project>
+      <Name>ClassLibraryValidation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
