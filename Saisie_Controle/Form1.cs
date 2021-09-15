@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ClassLibraryValidation;
+using System.Data.SqlClient;
 
 namespace Saisie_Controle
 {
     public partial class Form1 : Form
     {
+        private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
         public Form1()
         {
             InitializeComponent();
@@ -251,7 +254,16 @@ namespace Saisie_Controle
         private void buttonValider_Click(object sender, EventArgs e)
         {
             Va();
-
+            SqlConnection con = new SqlConnection(ConnectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into clients values (@client_id,@client_nom,@client_date,@client_montant,@client_codePostal)", con);
+            cmd.Parameters.AddWithValue("@client_id");
+            cmd.Parameters.AddWithValue("@client_nom",textBoxName.Text);
+            cmd.Parameters.AddWithValue("@client_date",textBoxDate.Text);
+            cmd.Parameters.AddWithValue("@client_montant",textBoxMontant.Text);
+            cmd.Parameters.AddWithValue("@client_codePostal",textBoxCodePostal.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
         {
