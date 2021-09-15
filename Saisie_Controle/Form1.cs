@@ -125,7 +125,7 @@ namespace Saisie_Controle
             else
             {
                 
-                errorProviderCP.SetError(textBoxCodePostal, "Erreur: le code postal = maximun 5 chiffres");
+                errorProviderCP.SetError(textBoxCodePostal, "Erreur: le code postal = maximum 5 chiffres");
                 textBoxCodePostal.BackColor = Color.Red;
                 return false;
             }
@@ -165,17 +165,54 @@ namespace Saisie_Controle
         private void Validation()
         {
             bool ok = true;
-            ok= ok &&ValidationNom();
-            ok = ok && ValidationDate();
-            ok = ok && ValidationMontant();
-            ok = ok && ValidationCodePostal();
-
+            
             MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
                                 "\nCODE POSTAL:" + textBoxCodePostal.Text, "Voulez-vous effectuer la VALIDATION des données ?",MessageBoxButtons.YesNo);
+
+
+            List<string> errors = new List<string>();
+
+            
+            if (!ValidationNom())
+            {
+                errors.Add("Nom incorrect");
+                ok = false;
+                
+            }
+
+            if (!ValidationDate())
+            {
+                errors.Add("Date incorrecte");
+                ok = false;
+
+            }
+
+            if (!ValidationMontant())
+            {
+                errors.Add("Montant incorrect");
+                ok = false;
+
+            }
+
+            if (!ValidationCodePostal())
+            {
+                errors.Add("Code postal incorrect");
+                ok = false;
+
+            }
+
+            string listerrors = "";
+            foreach (var item in errors)
+            {
+                listerrors += item + "\n";
+            }
             if (!ok)
             {
-                MessageBox.Show("Veuillez remplir tous les champs avec exactitude !", "VALIDATION IMPOSSIBLE !");
+                MessageBox.Show(listerrors, "VALIDATION IMPOSSIBLE !");
             }
+
+
+
         }
         
 
