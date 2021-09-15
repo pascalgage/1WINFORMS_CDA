@@ -22,5 +22,28 @@ namespace ClassLibraryValidation
             }
             
         }
+        public static bool IsValidMontant(string _textBoxMontant)
+        {
+            if(Regex.Match(_textBoxMontant, "^[0-9]+([.,]{1}[0-9]{2})?$").Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool IsValidCodePostal(string _textBoxCP)
+        {
+            if((_textBoxCP.Length < 6) && (_textBoxCP!= "") && (Regex.Match(_textBoxCP, "^[0-9]*$").Success))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -94,7 +94,7 @@ namespace Saisie_Controle
 
         private bool ValidationMontant()
         {
-            if (Regex.Match(textBoxMontant.Text, "^[0-9]+([.,]{1}[0-9]{2})?$").Success)
+            if (Validation.IsValidMontant(textBoxMontant.Text))
             {
                 
                 errorProviderMontant.Clear();
@@ -123,7 +123,7 @@ namespace Saisie_Controle
 
         private bool ValidationCodePostal()
         {
-            if ((textBoxCodePostal.Text.Length < 6) && (textBoxCodePostal.Text !="")&&(Regex.Match(textBoxCodePostal.Text, "^[0-9]*$").Success))
+            if (Validation.IsValidCodePostal(textBoxCodePostal.Text))
             {
                
                 errorProviderCP.Clear();
