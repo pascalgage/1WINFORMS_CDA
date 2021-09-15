@@ -37,6 +37,15 @@ namespace Saisie_Controle
                 
         }
 
+        private bool EffacementColorNom()
+        {
+            if (ValidationNom())
+            {
+                textBoxName.BackColor = Color.White;
+            }
+            return true;
+        }
+
         private bool ValidationDate()
         {
             if (IsDateValidAfterToday(textBoxDate.Text))
@@ -49,10 +58,20 @@ namespace Saisie_Controle
             {
                 
                 errorProviderDate.SetError(textBoxDate, "Erreur: la date doit être de forme JJ/MM/AAAA et postérieure à date actuelle !");
+                textBoxDate.BackColor = Color.Red;
                 return false;
             }
 
             
+        }
+
+        private bool EffacementColorDate()
+        {
+            if (ValidationDate())
+            {
+                textBoxDate.BackColor = Color.White;
+            }
+            return true;
         }
 
         //Vérification de date postérieure à date Actuelle /Utilisateur
@@ -78,12 +97,22 @@ namespace Saisie_Controle
             {
                 
                 errorProviderMontant.SetError(textBoxMontant, "Erreur: le montant doit être entier ou decimal à deux chiffres après la virgule");
+                textBoxMontant.BackColor = Color.Red;
                 return false;
             }
 
         }
 
-       
+        private bool EffacementColorMontant()
+        {
+            if (ValidationMontant())
+            {
+                textBoxMontant.BackColor = Color.White;
+            }
+            return true;
+        }
+
+
 
         private bool ValidationCodePostal()
         {
@@ -97,9 +126,19 @@ namespace Saisie_Controle
             {
                 
                 errorProviderCP.SetError(textBoxCodePostal, "Erreur: le code postal = maximun 5 chiffres");
+                textBoxCodePostal.BackColor = Color.Red;
                 return false;
             }
                 
+        }
+
+        private bool EffacementColorCP()
+        {
+            if (ValidationCodePostal())
+            {
+                textBoxCodePostal.BackColor = Color.White;
+            }
+            return true;
         }
 
         private bool EffacementDesChamps()
@@ -115,22 +154,28 @@ namespace Saisie_Controle
             errorProviderCP.Clear();
 
             textBoxName.BackColor = Color.White;
+            textBoxDate.BackColor = Color.White;
+            textBoxMontant.BackColor = Color.White;
+            textBoxCodePostal.BackColor = Color.White;
+
             return true;
         }
 
-
-
+        
         private void Validation()
         {
-            bool ok =true;
+            bool ok = true;
             ok= ok &&ValidationNom();
             ok = ok && ValidationDate();
             ok = ok && ValidationMontant();
             ok = ok && ValidationCodePostal();
 
             MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                "\nCODE POSTAL:" + textBoxCodePostal.Text, "VALIDATION EFFECTUEE !",MessageBoxButtons.YesNo);
-
+                                "\nCODE POSTAL:" + textBoxCodePostal.Text, "Voulez-vous effectuer la VALIDATION des données ?",MessageBoxButtons.YesNo);
+            if (!ok)
+            {
+                MessageBox.Show("Veuillez remplir tous les champs avec exactitude !", "VALIDATION IMPOSSIBLE !");
+            }
         }
         
 
@@ -139,19 +184,24 @@ namespace Saisie_Controle
         private void textBoxName_Leave(object sender, EventArgs e)
         {
             ValidationNom();
+            EffacementColorNom();
+            
         }
         private void textBoxDate_Leave(object sender, EventArgs e)
         {
             ValidationDate();
+            EffacementColorDate();
             
         }
         private void textBoxMontant_Leave(object sender, EventArgs e)
         {
             ValidationMontant();
+            EffacementColorMontant();
         }
         private void textBoxCodePostal_Leave(object sender, EventArgs e)
         {
             ValidationCodePostal();
+            EffacementColorCP();
         }
 
         //Boutons VALIDER puis EFFACER

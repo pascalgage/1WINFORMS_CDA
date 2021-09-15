@@ -161,7 +161,7 @@ namespace Saisie_Controle
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(220, 155);
+            this.label5.Location = new System.Drawing.Point(209, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 10;
@@ -170,16 +170,16 @@ namespace Saisie_Controle
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(220, 109);
+            this.label6.Location = new System.Drawing.Point(207, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 13);
+            this.label6.Size = new System.Drawing.Size(189, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "nom en lettres seulement sans espace";
+            this.label6.Text = "Nom en lettres seulement sans espace";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(223, 221);
+            this.label7.Location = new System.Drawing.Point(208, 221);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(234, 13);
             this.label7.TabIndex = 12;
@@ -188,7 +188,7 @@ namespace Saisie_Controle
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(223, 275);
+            this.label8.Location = new System.Drawing.Point(208, 275);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(133, 13);
             this.label8.TabIndex = 13;
