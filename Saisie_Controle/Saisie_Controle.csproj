@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ClassLibraryValidation\ClassLibraryValidation.csproj">
-      <Project>{8c4aabe0-e4e6-4f1f-8582-2a21c62e2784}</Project>
+      <Project>{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}</Project>
       <Name>ClassLibraryValidation</Name>
     </ProjectReference>
   </ItemGroup>

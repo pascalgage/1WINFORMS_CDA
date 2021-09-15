@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using ClassLibraryValidation;
 
 namespace Saisie_Controle
 {
@@ -17,7 +18,8 @@ namespace Saisie_Controle
         {
             InitializeComponent();
         }
-
+        
+        
 
         private bool ValidationNom()
         {
@@ -39,9 +41,11 @@ namespace Saisie_Controle
 
         private bool EffacementColorNom()
         {
+            
             if (ValidationNom())
             {
                 textBoxName.BackColor = Color.White;
+                
             }
             return true;
         }
@@ -162,7 +166,7 @@ namespace Saisie_Controle
         }
 
         
-        private void Validation()
+        private void Va()
         {
             bool ok = true;
             
@@ -251,7 +255,7 @@ namespace Saisie_Controle
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            Validation();
+            Va();
 
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
