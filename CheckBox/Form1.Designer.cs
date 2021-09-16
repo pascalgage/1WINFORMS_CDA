@@ -31,26 +31,25 @@ namespace CheckBox
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textchoix = new System.Windows.Forms.TextBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.redcolorfont = new System.Windows.Forms.RadioButton();
+            this.greencolorfont = new System.Windows.Forms.RadioButton();
+            this.bluecolorfont = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxChoix = new System.Windows.Forms.GroupBox();
             this.majmintext = new System.Windows.Forms.CheckBox();
             this.colortext = new System.Windows.Forms.CheckBox();
             this.fontcolor = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.fontchoix = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.labelresult = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBoxChoix.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.fontchoix.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,38 +70,38 @@ namespace CheckBox
             this.textchoix.TabIndex = 1;
             this.textchoix.TextChanged += new System.EventHandler(this.textChoix_TextChanged);
             // 
-            // radioButton4
+            // redcolorfont
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(29, 30);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(57, 17);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Rouge";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.redcolorfont.AutoSize = true;
+            this.redcolorfont.Location = new System.Drawing.Point(29, 30);
+            this.redcolorfont.Name = "redcolorfont";
+            this.redcolorfont.Size = new System.Drawing.Size(57, 17);
+            this.redcolorfont.TabIndex = 5;
+            this.redcolorfont.TabStop = true;
+            this.redcolorfont.Text = "Rouge";
+            this.redcolorfont.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // greencolorfont
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(29, 53);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(44, 17);
-            this.radioButton5.TabIndex = 6;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Vert";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.greencolorfont.AutoSize = true;
+            this.greencolorfont.Location = new System.Drawing.Point(29, 53);
+            this.greencolorfont.Name = "greencolorfont";
+            this.greencolorfont.Size = new System.Drawing.Size(44, 17);
+            this.greencolorfont.TabIndex = 6;
+            this.greencolorfont.TabStop = true;
+            this.greencolorfont.Text = "Vert";
+            this.greencolorfont.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // bluecolorfont
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(29, 76);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(46, 17);
-            this.radioButton6.TabIndex = 7;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Bleu";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.bluecolorfont.AutoSize = true;
+            this.bluecolorfont.Location = new System.Drawing.Point(29, 76);
+            this.bluecolorfont.Name = "bluecolorfont";
+            this.bluecolorfont.Size = new System.Drawing.Size(46, 17);
+            this.bluecolorfont.TabIndex = 7;
+            this.bluecolorfont.TabStop = true;
+            this.bluecolorfont.Text = "Bleu";
+            this.bluecolorfont.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
@@ -159,17 +158,11 @@ namespace CheckBox
             this.radioButton11.Text = "Majuscules";
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(91, 221);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(521, 20);
-            this.maskedTextBox1.TabIndex = 13;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButton10);
             this.groupBox1.Controls.Add(this.radioButton11);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(544, 301);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(94, 112);
@@ -221,23 +214,25 @@ namespace CheckBox
             this.fontcolor.UseVisualStyleBackColor = true;
             this.fontcolor.CheckedChanged += new System.EventHandler(this.fontcolor_CheckedChanged);
             // 
-            // groupBox3
+            // fontchoix
             // 
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton6);
-            this.groupBox3.Location = new System.Drawing.Point(91, 300);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(135, 113);
-            this.groupBox3.TabIndex = 16;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fond";
+            this.fontchoix.Controls.Add(this.redcolorfont);
+            this.fontchoix.Controls.Add(this.greencolorfont);
+            this.fontchoix.Controls.Add(this.bluecolorfont);
+            this.fontchoix.Enabled = false;
+            this.fontchoix.Location = new System.Drawing.Point(91, 300);
+            this.fontchoix.Name = "fontchoix";
+            this.fontchoix.Size = new System.Drawing.Size(135, 113);
+            this.fontchoix.TabIndex = 16;
+            this.fontchoix.TabStop = false;
+            this.fontchoix.Text = "Fond";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.radioButton7);
             this.groupBox4.Controls.Add(this.radioButton8);
             this.groupBox4.Controls.Add(this.radioButton9);
+            this.groupBox4.Enabled = false;
             this.groupBox4.Location = new System.Drawing.Point(299, 301);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 112);
@@ -259,10 +254,9 @@ namespace CheckBox
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelresult);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.fontchoix);
             this.Controls.Add(this.groupBoxChoix);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textchoix);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -271,8 +265,8 @@ namespace CheckBox
             this.groupBox1.PerformLayout();
             this.groupBoxChoix.ResumeLayout(false);
             this.groupBoxChoix.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.fontchoix.ResumeLayout(false);
+            this.fontchoix.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -284,18 +278,17 @@ namespace CheckBox
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textchoix;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton redcolorfont;
+        private System.Windows.Forms.RadioButton greencolorfont;
+        private System.Windows.Forms.RadioButton bluecolorfont;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBoxChoix;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox fontchoix;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label labelresult;
         private System.Windows.Forms.CheckBox majmintext;

@@ -26,7 +26,14 @@ namespace CheckBox
 
         private void fontcolor_CheckedChanged(object sender, EventArgs e)
         {
+            
+            
+                fontchoix.Enabled = true;
+            
+           
+            
 
+            
         }
     }
 }
