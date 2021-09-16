@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saisie_Controle", "Saisie_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryValidation", "ClassLibraryValidation\ClassLibraryValidation.csproj", "{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTransaction", "ClassLibraryTransaction\ClassLibraryTransaction.csproj", "{1B0D4502-18C3-4292-A7BF-B80A15F86DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0D4502-18C3-4292-A7BF-B80A15F86DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0D4502-18C3-4292-A7BF-B80A15F86DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0D4502-18C3-4292-A7BF-B80A15F86DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0D4502-18C3-4292-A7BF-B80A15F86DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

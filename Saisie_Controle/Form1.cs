@@ -10,19 +10,21 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ClassLibraryValidation;
 using System.Data.SqlClient;
+using ClassLibraryTransaction;
 
 namespace Saisie_Controle
 {
     public partial class Form1 : Form
     {
-        private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        //private const string ConnectionString = ("Data Source=(localdb)\\instancePascal;Initial " +
+                                                 //"Catalog=ExerciceUSAbdd;Integrated Security=True");
 
         public Form1()
         {
             InitializeComponent();
             
         }
-
+        
        
 
         private bool ValidationNom()
@@ -161,9 +163,9 @@ namespace Saisie_Controle
             return true;
         }
 
-        //Méthode de Validation principale
+        //Méthode de Validation principale des champs...
 
-        private void Va()
+        /*private void UserFeedBack()
         {
             bool ok = true;
             
@@ -221,7 +223,7 @@ namespace Saisie_Controle
 
 
 
-        }
+        }*/
         
 
        //Lancement de la Validation du champ quand on quitte chaque champ
@@ -253,17 +255,86 @@ namespace Saisie_Controle
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            Va();
-            SqlConnection con = new SqlConnection(ConnectionString);
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
-            cmd.Parameters.AddWithValue("@client_nom",textBoxName.Text);
-            cmd.Parameters.AddWithValue("@client_date",textBoxDate.Text);
-            cmd.Parameters.AddWithValue("@client_montant",textBoxMontant.Text);
-            cmd.Parameters.AddWithValue("@client_codePostal",textBoxCodePostal.Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("INSERTION EN BDD clients réussie!");
+            
+            bool ok = true;
+
+            MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
+                                "\nCODE POSTAL:" + textBoxCodePostal.Text, "Voulez-vous effectuer la VALIDATION des données ?", MessageBoxButtons.YesNo);
+
+            List<string> errors = new List<string>();
+
+
+            if (!ValidationNom())
+            {
+                errors.Add("Nom incorrect");
+                ok = false;
+
+            }
+
+            if (!ValidationDate())
+            {
+                errors.Add("Date incorrecte");
+                ok = false;
+
+            }
+
+            if (!ValidationMontant())
+            {
+                errors.Add("Montant incorrect");
+                ok = false;
+
+            }
+
+            if (!ValidationCodePostal())
+            {
+                errors.Add("Code postal incorrect");
+                ok = false;
+
+            }
+
+            string listerrors = "";
+
+            foreach (string item in errors)
+            {
+                listerrors += item + "\n";
+            }
+
+            if (!ok)
+            {
+                MessageBox.Show(listerrors, "VALIDATION IMPOSSIBLE !");
+            }
+            else
+            { 
+                MessageBox.Show("Opération réussie", "INSERTION BDD");
+
+                //Parsage des entrées textBox....
+
+                string nom = textBoxName.Text;
+                DateTime date;
+                DateTime.TryParse(textBoxDate.Text,out date);
+                Decimal montant = Decimal.Parse(textBoxMontant.Text);
+                int codePostal = int.Parse(textBoxCodePostal.Text);
+                
+                //instanciation de l'objet matransaction....
+                Transaction matransaction = new Transaction(nom,date,montant,codePostal);
+                
+                
+            }
+            
+            
+
+            //Commande SQL pour l'insertion dans InstancePascal...ExerciceUSAbdd...
+
+            //SqlConnection con = new SqlConnection(ConnectionString);
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
+            //cmd.Parameters.AddWithValue("@client_nom",textBoxName.Text);
+            //cmd.Parameters.AddWithValue("@client_date",textBoxDate.Text);
+            //cmd.Parameters.AddWithValue("@client_montant",textBoxMontant.Text);
+            //cmd.Parameters.AddWithValue("@client_codePostal",textBoxCodePostal.Text);
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+            //MessageBox.Show("INSERTION EN BDD clients réussie!");
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
         {

@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ClassLibraryTransaction\ClassLibraryTransaction.csproj">
+      <Project>{1b0d4502-18c3-4292-a7bf-b80a15f86dae}</Project>
+      <Name>ClassLibraryTransaction</Name>
+    </ProjectReference>
     <ProjectReference Include="ClassLibraryValidation\ClassLibraryValidation.csproj">
       <Project>{8C4AABE0-E4E6-4F1F-8582-2A21C62E2784}</Project>
       <Name>ClassLibraryValidation</Name>
