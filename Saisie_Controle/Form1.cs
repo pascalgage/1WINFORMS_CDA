@@ -316,7 +316,11 @@ namespace Saisie_Controle
                 int codePostal = int.Parse(textBoxCodePostal.Text);
                 
                 //instanciation de l'objet matransaction....
-                Transaction matransaction = new Transaction(nom,date,montant,codePostal);
+                Transaction maTransaction = new Transaction(nom,date,montant,codePostal);
+
+
+                TransactionAffForm afficherTransaction = new TransactionAffForm(nom,date,montant,codePostal);
+                afficherTransaction.ShowDialog();
                 
                 
             }
