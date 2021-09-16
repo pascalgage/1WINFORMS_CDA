@@ -16,8 +16,8 @@ namespace Saisie_Controle
 {
     public partial class Form1 : Form
     {
-        //private const string ConnectionString = ("Data Source=(localdb)\\instancePascal;Initial " +
-                                                 //"Catalog=ExerciceUSAbdd;Integrated Security=True");
+        private const string ConnectionString = ("Data Source=(localdb)\\instancePascal;Initial " +
+                                                 "Catalog=ExerciceUSAbdd;Integrated Security=True");
 
         public Form1()
         {
@@ -325,21 +325,21 @@ namespace Saisie_Controle
 
 
             }
-            
-            
+
+
 
             //Commande SQL pour l'insertion dans InstancePascal...ExerciceUSAbdd...
 
-            //SqlConnection con = new SqlConnection(ConnectionString);
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
-            //cmd.Parameters.AddWithValue("@client_nom",textBoxName.Text);
-            //cmd.Parameters.AddWithValue("@client_date",textBoxDate.Text);
-            //cmd.Parameters.AddWithValue("@client_montant",textBoxMontant.Text);
-            //cmd.Parameters.AddWithValue("@client_codePostal",textBoxCodePostal.Text);
-            //cmd.ExecuteNonQuery();
-            //con.Close();
-            //MessageBox.Show("INSERTION EN BDD clients réussie!");
+            SqlConnection con = new SqlConnection(ConnectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
+            cmd.Parameters.AddWithValue("@client_nom", textBoxName.Text);
+            cmd.Parameters.AddWithValue("@client_date", textBoxDate.Text);
+            cmd.Parameters.AddWithValue("@client_montant", textBoxMontant.Text);
+            cmd.Parameters.AddWithValue("@client_codePostal", textBoxCodePostal.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("INSERTION EN BDD clients réussie!");
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
         {
