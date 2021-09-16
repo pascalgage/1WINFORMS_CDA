@@ -319,10 +319,11 @@ namespace Saisie_Controle
                 Transaction maTransaction = new Transaction(nom,date,montant,codePostal);
 
 
-                TransactionAffForm afficherTransaction = new TransactionAffForm(nom,date,montant,codePostal);
+                //TransactionAffForm afficherTransaction = new TransactionAffForm(nom, date, montant, codePostal);
+                TransactionAffForm afficherTransaction = new TransactionAffForm(maTransaction);
                 afficherTransaction.ShowDialog();
-                
-                
+
+
             }
             
             
