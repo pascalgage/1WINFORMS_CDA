@@ -32,6 +32,14 @@ namespace ListBOX
             entreeText.Focus();
         }
 
+        private void inscritList_Click(object sender, EventArgs e)
+        {
+            int topindex = inscritList.SelectedIndex;
+            int item = inscritList.SelectedIndex +1;
 
+            count.Text = item.ToString();
+            index.Text = topindex.ToString();
+            render.Text = inscritList.Text;
+        }
     }
 }
