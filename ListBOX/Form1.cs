@@ -41,5 +41,23 @@ namespace ListBOX
             index.Text = topindex.ToString();
             render.Text = inscritList.Text;
         }
+
+        private void selectList_Click(object sender, EventArgs e)
+        {
+            string text = "";
+            text = inscritList.Text;
+
+            for (int i = 0; i < inscritList.Items.Count; i++)
+            {
+                if (entindx.Text==inscritList.Items[i])
+                {
+                    MessageBox.Show("Correspondance trouvée");
+                }
+                else
+                {
+                    MessageBox.Show("Correspondance non-trouvée");
+                }
+            }
+        }
     }
 }
