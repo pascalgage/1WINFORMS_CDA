@@ -22,13 +22,16 @@ namespace ListBOX
         {
             
             inscritList.Items.Add(entreeText.Text);
-            entreeText.Text=" ";
+            entreeText.Text="";
             entreeText.Focus();
         }
 
         private void emptyList_Click(object sender, EventArgs e)
         {
             inscritList.Items.Clear();
+            entreeText.Focus();
         }
+
+
     }
 }
