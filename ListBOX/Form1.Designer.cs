@@ -37,13 +37,14 @@ namespace ListBOX
             this.emptyList = new System.Windows.Forms.Button();
             this.selectList = new System.Windows.Forms.Button();
             this.entreeText = new System.Windows.Forms.TextBox();
-            this.inscritList = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.count = new System.Windows.Forms.TextBox();
             this.index = new System.Windows.Forms.TextBox();
             this.render = new System.Windows.Forms.TextBox();
+            this.entindx = new System.Windows.Forms.TextBox();
+            this.inscritList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +94,7 @@ namespace ListBOX
             this.addList.TabIndex = 4;
             this.addList.Text = "Ajout Liste";
             this.addList.UseVisualStyleBackColor = true;
+            this.addList.Click += new System.EventHandler(this.addList_Click);
             // 
             // emptyList
             // 
@@ -118,15 +120,6 @@ namespace ListBOX
             this.entreeText.Name = "entreeText";
             this.entreeText.Size = new System.Drawing.Size(157, 20);
             this.entreeText.TabIndex = 7;
-            // 
-            // inscritList
-            // 
-            this.inscritList.Location = new System.Drawing.Point(40, 220);
-            this.inscritList.Multiline = true;
-            this.inscritList.Name = "inscritList";
-            this.inscritList.ReadOnly = true;
-            this.inscritList.Size = new System.Drawing.Size(180, 200);
-            this.inscritList.TabIndex = 8;
             // 
             // label5
             // 
@@ -179,18 +172,34 @@ namespace ListBOX
             this.render.Size = new System.Drawing.Size(184, 20);
             this.render.TabIndex = 14;
             // 
+            // entindx
+            // 
+            this.entindx.Location = new System.Drawing.Point(456, 61);
+            this.entindx.Name = "entindx";
+            this.entindx.Size = new System.Drawing.Size(72, 20);
+            this.entindx.TabIndex = 15;
+            // 
+            // inscritList
+            // 
+            this.inscritList.FormattingEnabled = true;
+            this.inscritList.Location = new System.Drawing.Point(43, 208);
+            this.inscritList.Name = "inscritList";
+            this.inscritList.Size = new System.Drawing.Size(154, 173);
+            this.inscritList.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.inscritList);
+            this.Controls.Add(this.entindx);
             this.Controls.Add(this.render);
             this.Controls.Add(this.index);
             this.Controls.Add(this.count);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.inscritList);
             this.Controls.Add(this.entreeText);
             this.Controls.Add(this.selectList);
             this.Controls.Add(this.emptyList);
@@ -216,13 +225,14 @@ namespace ListBOX
         private System.Windows.Forms.Button emptyList;
         private System.Windows.Forms.Button selectList;
         private System.Windows.Forms.TextBox entreeText;
-        private System.Windows.Forms.TextBox inscritList;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox count;
         private System.Windows.Forms.TextBox index;
         private System.Windows.Forms.TextBox render;
+        private System.Windows.Forms.TextBox entindx;
+        private System.Windows.Forms.ListBox inscritList;
     }
 }
 

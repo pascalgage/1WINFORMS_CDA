@@ -16,5 +16,11 @@ namespace ListBOX
         {
             InitializeComponent();
         }
+
+        private void addList_Click(object sender, EventArgs e)
+        {
+            
+            inscritList.Text=entreeText.Text;
+        }
     }
 }
