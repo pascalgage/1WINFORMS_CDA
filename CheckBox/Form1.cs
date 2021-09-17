@@ -17,6 +17,8 @@ namespace CheckBox
             InitializeComponent();
         }
 
+
+        //DEPART ENTER TEXT
         private void textChoix_TextChanged(object sender, EventArgs e)
         {
             groupBoxChoix.Enabled = true;
@@ -24,36 +26,65 @@ namespace CheckBox
 
         }
 
+        //CHOIX FENETRE d'OPTIONS ACTIVE 
         private void fontcolor_CheckedChanged(object sender, EventArgs e)
         {
-            
-           fontchoix.Enabled = true;
+            if (fontcolor.Checked == false)
+            {
+                fontchoix.Enabled = false;
+                labelresult.BackColor = default;
+            }
+            else
+            {
+                fontchoix.Enabled = true;
+                
+            }
+           
             
         }
-
-        private void fontcolor_Leave(object sender, EventArgs e)
-        {
-            fontchoix.Enabled = false;
-        }
-
         private void colortext_CheckedChanged(object sender, EventArgs e)
         {
-            carachoix.Enabled = true;
-        }
-
-        private void colortext_Leave(object sender, EventArgs e)
-        {
-            carachoix.Enabled = false;
+            if (colortext.Checked == false)
+            {
+                carachoix.Enabled = false;
+            }
+            else
+            {
+                carachoix.Enabled = true;
+            }
         }
 
         private void majmintext_CheckedChanged(object sender, EventArgs e)
         {
-            cassechoix.Enabled = true;
+            if (majmintext.Checked == false)
+            {
+                cassechoix.Enabled = false;
+            }
+            else
+            {
+                cassechoix.Enabled = true;
+            }
         }
+        //FIN CHOIX FENETRE...
 
-        private void majmintext_Leave(object sender, EventArgs e)
+
+
+        //COULEUR DU FONT DE TEXT CHOIX
+        private void redcolorfont_Click(object sender, EventArgs e)
         {
-            cassechoix.Enabled = false;
+            labelresult.BackColor = Color.Red;
         }
+        private void greencolorfont_Click(object sender, EventArgs e)
+        {
+            labelresult.BackColor = Color.Green;
+        }
+        private void bluecolorfont_Click(object sender, EventArgs e)
+        {
+            labelresult.BackColor = Color.Blue;
+        }
+        //FIN CHOIX FONT COULEUR
+
+
+        
     }
 }
