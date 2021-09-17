@@ -17,11 +17,18 @@ namespace ListBOX
             InitializeComponent();
         }
 
+        //BOUTON REMPLIR la List....ajoute et replace le focus dans entreetext
         private void addList_Click(object sender, EventArgs e)
         {
             
             inscritList.Items.Add(entreeText.Text);
             entreeText.Text=" ";
+            entreeText.Focus();
+        }
+
+        private void emptyList_Click(object sender, EventArgs e)
+        {
+            inscritList.Items.Clear();
         }
     }
 }

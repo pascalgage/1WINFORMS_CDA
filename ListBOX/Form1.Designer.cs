@@ -50,9 +50,10 @@ namespace ListBOX
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 22);
+            this.label1.Location = new System.Drawing.Point(117, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 23);
+            this.label1.Size = new System.Drawing.Size(633, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nouvel Elément";
             // 
@@ -60,9 +61,10 @@ namespace ListBOX
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(450, 22);
+            this.label2.Location = new System.Drawing.Point(1425, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(237, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Index Elément";
             // 
@@ -70,9 +72,10 @@ namespace ListBOX
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 169);
+            this.label3.Location = new System.Drawing.Point(127, 481);
+            this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(119, 38);
             this.label3.TabIndex = 2;
             this.label3.Text = "LstList";
             // 
@@ -80,17 +83,19 @@ namespace ListBOX
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(453, 168);
+            this.label4.Location = new System.Drawing.Point(1435, 478);
+            this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(176, 38);
             this.label4.TabIndex = 3;
             this.label4.Text = "Propriétés";
             // 
             // addList
             // 
-            this.addList.Location = new System.Drawing.Point(40, 90);
+            this.addList.Location = new System.Drawing.Point(127, 256);
+            this.addList.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.addList.Name = "addList";
-            this.addList.Size = new System.Drawing.Size(157, 23);
+            this.addList.Size = new System.Drawing.Size(497, 65);
             this.addList.TabIndex = 4;
             this.addList.Text = "Ajout Liste";
             this.addList.UseVisualStyleBackColor = true;
@@ -98,100 +103,113 @@ namespace ListBOX
             // 
             // emptyList
             // 
-            this.emptyList.Location = new System.Drawing.Point(563, 90);
+            this.emptyList.Location = new System.Drawing.Point(1783, 256);
+            this.emptyList.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.emptyList.Name = "emptyList";
-            this.emptyList.Size = new System.Drawing.Size(105, 23);
+            this.emptyList.Size = new System.Drawing.Size(333, 65);
             this.emptyList.TabIndex = 5;
             this.emptyList.Text = "Vider la Liste";
             this.emptyList.UseVisualStyleBackColor = true;
+            this.emptyList.Click += new System.EventHandler(this.emptyList_Click);
             // 
             // selectList
             // 
-            this.selectList.Location = new System.Drawing.Point(563, 61);
+            this.selectList.Location = new System.Drawing.Point(1783, 174);
+            this.selectList.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.selectList.Name = "selectList";
-            this.selectList.Size = new System.Drawing.Size(105, 23);
+            this.selectList.Size = new System.Drawing.Size(333, 65);
             this.selectList.TabIndex = 6;
             this.selectList.Text = "Sélectionner";
             this.selectList.UseVisualStyleBackColor = true;
             // 
             // entreeText
             // 
-            this.entreeText.Location = new System.Drawing.Point(40, 61);
+            this.entreeText.Location = new System.Drawing.Point(127, 174);
+            this.entreeText.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.entreeText.Name = "entreeText";
-            this.entreeText.Size = new System.Drawing.Size(157, 20);
+            this.entreeText.Size = new System.Drawing.Size(489, 44);
             this.entreeText.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(456, 220);
+            this.label5.Location = new System.Drawing.Point(1444, 626);
+            this.label5.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(188, 37);
             this.label5.TabIndex = 9;
             this.label5.Text = "items.Count";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(453, 306);
+            this.label6.Location = new System.Drawing.Point(1435, 871);
+            this.label6.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.Size = new System.Drawing.Size(215, 37);
             this.label6.TabIndex = 10;
             this.label6.Text = "SelectedIndex";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(456, 407);
+            this.label7.Location = new System.Drawing.Point(1444, 1158);
+            this.label7.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.Size = new System.Drawing.Size(78, 37);
             this.label7.TabIndex = 11;
             this.label7.Text = "Text";
             // 
             // count
             // 
-            this.count.Location = new System.Drawing.Point(563, 220);
+            this.count.Location = new System.Drawing.Point(1783, 626);
+            this.count.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.count.Name = "count";
             this.count.ReadOnly = true;
-            this.count.Size = new System.Drawing.Size(100, 20);
+            this.count.Size = new System.Drawing.Size(308, 44);
             this.count.TabIndex = 12;
             // 
             // index
             // 
-            this.index.Location = new System.Drawing.Point(563, 306);
+            this.index.Location = new System.Drawing.Point(1783, 871);
+            this.index.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.index.Name = "index";
             this.index.ReadOnly = true;
-            this.index.Size = new System.Drawing.Size(100, 20);
+            this.index.Size = new System.Drawing.Size(308, 44);
             this.index.TabIndex = 13;
             // 
             // render
             // 
-            this.render.Location = new System.Drawing.Point(563, 399);
+            this.render.Location = new System.Drawing.Point(1783, 1136);
+            this.render.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.render.Name = "render";
             this.render.ReadOnly = true;
-            this.render.Size = new System.Drawing.Size(184, 20);
+            this.render.Size = new System.Drawing.Size(574, 44);
             this.render.TabIndex = 14;
             // 
             // entindx
             // 
-            this.entindx.Location = new System.Drawing.Point(456, 61);
+            this.entindx.Location = new System.Drawing.Point(1444, 174);
+            this.entindx.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.entindx.Name = "entindx";
-            this.entindx.Size = new System.Drawing.Size(72, 20);
+            this.entindx.Size = new System.Drawing.Size(219, 44);
             this.entindx.TabIndex = 15;
             // 
             // inscritList
             // 
             this.inscritList.FormattingEnabled = true;
-            this.inscritList.Location = new System.Drawing.Point(43, 208);
+            this.inscritList.ItemHeight = 37;
+            this.inscritList.Location = new System.Drawing.Point(136, 592);
+            this.inscritList.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.inscritList.Name = "inscritList";
-            this.inscritList.Size = new System.Drawing.Size(154, 173);
+            this.inscritList.Size = new System.Drawing.Size(479, 485);
             this.inscritList.TabIndex = 16;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2533, 1281);
             this.Controls.Add(this.inscritList);
             this.Controls.Add(this.entindx);
             this.Controls.Add(this.render);
@@ -208,6 +226,7 @@ namespace ListBOX
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
