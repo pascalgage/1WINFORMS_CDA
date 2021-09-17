@@ -20,7 +20,8 @@ namespace ListBOX
         private void addList_Click(object sender, EventArgs e)
         {
             
-            inscritList.Text=entreeText.Text;
+            inscritList.Items.Add(entreeText.Text);
+            entreeText.Text=" ";
         }
     }
 }
