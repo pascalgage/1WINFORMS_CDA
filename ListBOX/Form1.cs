@@ -46,10 +46,11 @@ namespace ListBOX
         {
             string text = "";
             text = inscritList.Text;
+            
 
             for (int i = 0; i < inscritList.Items.Count; i++)
             {
-                if (entindx.Text==inscritList.Items[i])
+                if (entindx.Text.ToString()==inscritList.Items[i].ToString())
                 {
                     MessageBox.Show("Correspondance trouvée");
                 }
