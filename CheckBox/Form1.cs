@@ -25,6 +25,8 @@ namespace CheckBox
             labelresult.Text= textchoix.Text;
 
         }
+        //FIN DEPART...
+
 
         //CHOIX FENETRE d'OPTIONS ACTIVE 
         private void fontcolor_CheckedChanged(object sender, EventArgs e)
@@ -84,7 +86,37 @@ namespace CheckBox
         }
         //FIN CHOIX FONT COULEUR
 
+        //COULEUR DES CARACTERES
+        private void carared_Click(object sender, EventArgs e)
+        {
+            labelresult.ForeColor = Color.Red;
+        }
 
-        
+        private void carawhite_Click(object sender, EventArgs e)
+        {
+            labelresult.ForeColor = Color.White;
+        }
+
+        private void carablack_Click(object sender, EventArgs e)
+        {
+            labelresult.ForeColor = Color.Black;
+        }
+
+
+        //FIN COULEUR DES CARACTERES
+
+        //MAJ MIN CHOIX
+        private void cassmin_Click(object sender, EventArgs e)
+        {
+            labelresult.Text= labelresult.Text.ToLower();
+        }
+
+        private void cassmaj_Click(object sender, EventArgs e)
+        {
+            labelresult.Text = labelresult.Text.ToUpper();
+        }
+        //MAJ MIN CHOIX FIN....
+
+
     }
 }

@@ -117,6 +117,7 @@ namespace CheckBox
             this.carared.TabStop = true;
             this.carared.Text = "Rouge";
             this.carared.UseVisualStyleBackColor = true;
+            this.carared.Click += new System.EventHandler(this.carared_Click);
             // 
             // carawhite
             // 
@@ -128,6 +129,7 @@ namespace CheckBox
             this.carawhite.TabStop = true;
             this.carawhite.Text = "Blanc";
             this.carawhite.UseVisualStyleBackColor = true;
+            this.carawhite.Click += new System.EventHandler(this.carawhite_Click);
             // 
             // carablack
             // 
@@ -139,6 +141,7 @@ namespace CheckBox
             this.carablack.TabStop = true;
             this.carablack.Text = "Noir";
             this.carablack.UseVisualStyleBackColor = true;
+            this.carablack.Click += new System.EventHandler(this.carablack_Click);
             // 
             // cassmin
             // 
@@ -150,6 +153,7 @@ namespace CheckBox
             this.cassmin.TabStop = true;
             this.cassmin.Text = "Minuscules";
             this.cassmin.UseVisualStyleBackColor = true;
+            this.cassmin.Click += new System.EventHandler(this.cassmin_Click);
             // 
             // cassmaj
             // 
@@ -161,6 +165,7 @@ namespace CheckBox
             this.cassmaj.TabStop = true;
             this.cassmaj.Text = "Majuscules";
             this.cassmaj.UseVisualStyleBackColor = true;
+            this.cassmaj.Click += new System.EventHandler(this.cassmaj_Click);
             // 
             // cassechoix
             // 
@@ -197,7 +202,6 @@ namespace CheckBox
             this.majmintext.Text = "Casse";
             this.majmintext.UseVisualStyleBackColor = true;
             this.majmintext.CheckedChanged += new System.EventHandler(this.majmintext_CheckedChanged);
-            
             // 
             // colortext
             // 
@@ -209,7 +213,6 @@ namespace CheckBox
             this.colortext.Text = "Couleur des caractères";
             this.colortext.UseVisualStyleBackColor = true;
             this.colortext.CheckedChanged += new System.EventHandler(this.colortext_CheckedChanged);
-            
             // 
             // fontcolor
             // 
@@ -221,7 +224,6 @@ namespace CheckBox
             this.fontcolor.Text = "Couleur du fond";
             this.fontcolor.UseVisualStyleBackColor = true;
             this.fontcolor.CheckedChanged += new System.EventHandler(this.fontcolor_CheckedChanged);
-            
             // 
             // fontchoix
             // 
