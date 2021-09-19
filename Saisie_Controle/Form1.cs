@@ -16,43 +16,45 @@ namespace Saisie_Controle
 {
     public partial class Form1 : Form
     {
-        private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
+        private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated" +
+           " Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" +
+           "MultiSubnetFailover=False");
         public Form1()
         {
             InitializeComponent();
-            
+
         }
-        
-       
+
+
 
         private bool ValidationNom()
         {
             if (Validation.IsValidName(textBoxName.Text))
             {
-                
+
                 errorProviderNom.Clear();
                 return true;
             }
             else
             {
-                
+
                 errorProviderNom.SetError(textBoxName, "Erreur: le nom ne doit comporter que des lettres");
                 textBoxName.BackColor = Color.Red;
-                
+
                 return false;
             }
-                
+
         }
 
         private bool EffacementColorNom()
         {
-            
+
             if (ValidationNom())
             {
                 textBoxName.BackColor = Color.White;
-                
-                
+
+
             }
             return true;
         }
@@ -61,19 +63,19 @@ namespace Saisie_Controle
         {
             if (Validation.IsValidDate(textBoxDate.Text))
             {
-                
+
                 errorProviderDate.Clear();
                 return true;
             }
             else
             {
-                
+
                 errorProviderDate.SetError(textBoxDate, "Erreur: la date doit être de forme JJ/MM/AAAA et postérieure à date actuelle !");
                 textBoxDate.BackColor = Color.Red;
                 return false;
             }
 
-            
+
         }
 
         private bool EffacementColorDate()
@@ -90,13 +92,13 @@ namespace Saisie_Controle
         {
             if (Validation.IsValidMontant(textBoxMontant.Text))
             {
-                
+
                 errorProviderMontant.Clear();
                 return true;
             }
             else
             {
-                
+
                 errorProviderMontant.SetError(textBoxMontant, "Erreur: le montant doit être entier ou decimal à deux chiffres après la virgule");
                 textBoxMontant.BackColor = Color.Red;
                 return false;
@@ -119,18 +121,18 @@ namespace Saisie_Controle
         {
             if (Validation.IsValidCodePostal(textBoxCodePostal.Text))
             {
-               
+
                 errorProviderCP.Clear();
                 return true;
             }
             else
             {
-                
+
                 errorProviderCP.SetError(textBoxCodePostal, "Erreur: le code postal = maximum 5 chiffres");
                 textBoxCodePostal.BackColor = Color.Red;
                 return false;
             }
-                
+
         }
 
         private bool EffacementColorCP()
@@ -162,82 +164,20 @@ namespace Saisie_Controle
             return true;
         }
 
-        //Méthode de Validation principale des champs...
 
-        /*private void UserFeedBack()
-        {
-            bool ok = true;
-            
-            MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
-                                "\nCODE POSTAL:" + textBoxCodePostal.Text, "Voulez-vous effectuer la VALIDATION des données ?",MessageBoxButtons.YesNo);
+        //Lancement de la Validation du champ quand on quitte chaque champ
 
-
-            List<string> errors = new List<string>();
-
-            
-            if (!ValidationNom())
-            {
-                errors.Add("Nom incorrect");
-                ok = false;
-                
-            }
-
-            if (!ValidationDate())
-            {
-                errors.Add("Date incorrecte");
-                ok = false;
-
-            }
-
-            if (!ValidationMontant())
-            {
-                errors.Add("Montant incorrect");
-                ok = false;
-
-            }
-
-            if (!ValidationCodePostal())
-            {
-                errors.Add("Code postal incorrect");
-                ok = false;
-
-            }
-
-            string listerrors = "";
-
-            foreach (string item in errors)
-            {
-                listerrors += item + "\n";
-            }
-
-            if (!ok)
-            {
-                MessageBox.Show(listerrors, "VALIDATION IMPOSSIBLE !");
-            }
-            else
-            {
-                
-                MessageBox.Show("Opération réussie", "INSERTION BDD");
-            }
-
-
-
-        }*/
-        
-
-       //Lancement de la Validation du champ quand on quitte chaque champ
-        
         private void textBoxName_Leave(object sender, EventArgs e)
         {
             ValidationNom();
             EffacementColorNom();
-            
+
         }
         private void textBoxDate_Leave(object sender, EventArgs e)
         {
             ValidationDate();
             EffacementColorDate();
-            
+
         }
         private void textBoxMontant_Leave(object sender, EventArgs e)
         {
@@ -254,7 +194,7 @@ namespace Saisie_Controle
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            
+
             bool ok = true;
 
             MessageBox.Show("NOM:" + textBoxName.Text + "\nDATE:" + textBoxDate.Text + "\nMONTANT:" + textBoxMontant.Text +
@@ -303,19 +243,19 @@ namespace Saisie_Controle
                 MessageBox.Show(listerrors, "VALIDATION IMPOSSIBLE !");
             }
             else
-            { 
+            {
                 MessageBox.Show("Opération réussie", "INSERTION BDD");
 
                 //Parsage des entrées textBox....
 
                 string nom = textBoxName.Text;
                 DateTime date;
-                DateTime.TryParse(textBoxDate.Text,out date);
+                DateTime.TryParse(textBoxDate.Text, out date);
                 Decimal montant = Decimal.Parse(textBoxMontant.Text);
                 int codePostal = int.Parse(textBoxCodePostal.Text);
-                
+
                 //instanciation de l'objet matransaction....
-                Transaction maTransaction = new Transaction(nom,date,montant,codePostal);
+                Transaction maTransaction = new Transaction(nom, date, montant, codePostal);
 
 
                 //TransactionAffForm afficherTransaction = new TransactionAffForm(nom, date, montant, codePostal);
@@ -327,18 +267,18 @@ namespace Saisie_Controle
 
 
 
-            //Commande SQL pour l'insertion dans InstancePascal...ExerciceUSAbdd...
+            //Commande SQL pour l'insertion dans....
 
-            SqlConnection con = new SqlConnection(ConnectionString);
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
-            cmd.Parameters.AddWithValue("@client_nom", textBoxName.Text);
-            cmd.Parameters.AddWithValue("@client_date", textBoxDate.Text);
-            cmd.Parameters.AddWithValue("@client_montant", textBoxMontant.Text);
-            cmd.Parameters.AddWithValue("@client_codePostal", textBoxCodePostal.Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("INSERTION EN BDD clients réussie!");
+            //SqlConnection con = new SqlConnection(ConnectionString);
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
+            //cmd.Parameters.AddWithValue("@client_nom", textBoxName.Text);
+            //cmd.Parameters.AddWithValue("@client_date", textBoxDate.Text);
+            //cmd.Parameters.AddWithValue("@client_montant", textBoxMontant.Text);
+            //cmd.Parameters.AddWithValue("@client_codePostal", textBoxCodePostal.Text);
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+            //MessageBox.Show("INSERTION EN BDD clients réussie!");
         }
         private void buttonEffacer_Click(object sender, EventArgs e)
         {
@@ -355,12 +295,35 @@ namespace Saisie_Controle
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;
-             
-                
-                
-            }
-            
 
+            }
+
+
+        }
+        
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            string nom = textBoxName.Text;
+            DateTime date;
+            DateTime.TryParse(textBoxDate.Text, out date);
+            Decimal montant = Decimal.Parse(textBoxMontant.Text);
+            int codePostal = int.Parse(textBoxCodePostal.Text);
+
+
+
+            SqlConnection con = new SqlConnection(ConnectionString);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into clients values (@client_nom,@client_date,@client_montant,@client_codePostal)", con);
+            cmd.Parameters.AddWithValue("@client_nom", textBoxName.Text);
+            cmd.Parameters.AddWithValue("@client_date", textBoxDate.Text);
+            cmd.Parameters.AddWithValue("@client_montant", textBoxMontant.Text);
+            cmd.Parameters.AddWithValue("@client_codePostal", textBoxCodePostal.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("INSERTION EN BDD clients réussie!");
         }
     }
 }
+
+

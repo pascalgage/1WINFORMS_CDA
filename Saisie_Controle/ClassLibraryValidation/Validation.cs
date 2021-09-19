@@ -38,5 +38,7 @@ namespace ClassLibraryValidation
             return (_textBoxCP.Length < 6) && (_textBoxCP != "") && (Regex.Match(_textBoxCP, "^[0-9]*$").Success);
             
         }
+
+        
     }
 }
