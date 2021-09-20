@@ -46,7 +46,12 @@ namespace ComboBox
         //INSERTALL....
         private void buttonINSERTALL_Click(object sender, EventArgs e)
         {
-            listBoxCIBLE.Items.AddRange(comboBoxSOURCE.);
+            Object[] monTab = new object[comboBoxSOURCE.Items.Count];
+
+            comboBoxSOURCE.Items.CopyTo(monTab, 0);
+
+            listBoxCIBLE.Items.AddRange(monTab);
+            
         }
 
 
