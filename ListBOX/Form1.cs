@@ -20,6 +20,7 @@ namespace ListBOX
         //BOUTON REMPLIR la List....ajoute et replace le focus dans entreetext
         private void addList_Click(object sender, EventArgs e)
         {
+            //METHODE Avec un FOR pour parcourir la liste des inscrits un peu lourde !
             //bool ok=true;
 
             //for (int i = 0; i < inscritList.Items.Count; i++)
