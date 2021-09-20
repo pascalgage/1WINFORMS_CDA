@@ -57,13 +57,16 @@ namespace ComboBox
 
         private void comboBoxSource_DropDown(object sender, EventArgs e)
         {
+            //Si combobBoxSource est vide alors bouton .Enabled=false
             if (comboBoxSOURCE.Items.Count > 0)
             {
                 buttonINSERT.Enabled = true;
+                buttonINSERTALL.Enabled = true;
             }
             else
             {
                 buttonINSERT.Enabled = false;
+                buttonINSERTALL.Enabled = false;
             }
            
         }
