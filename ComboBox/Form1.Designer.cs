@@ -59,8 +59,8 @@ namespace ComboBox
             this.comboBoxSOURCE.Name = "comboBoxSOURCE";
             this.comboBoxSOURCE.Size = new System.Drawing.Size(162, 21);
             this.comboBoxSOURCE.TabIndex = 2;
-            this.comboBoxSOURCE.DropDown += new System.EventHandler(this.comboBoxSOURCE_DropDown);
-            this.comboBoxSOURCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSOURCE_KeyPress);
+            this.comboBoxSOURCE.DropDown += new System.EventHandler(this.comboBoxSource_DropDown);
+            this.comboBoxSOURCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSource_KeyPress);
             // 
             // listBoxCIBLE
             // 
@@ -90,9 +90,9 @@ namespace ComboBox
             this.buttonINSERT.TabIndex = 5;
             this.buttonINSERT.Text = ">";
             this.buttonINSERT.UseVisualStyleBackColor = false;
-            this.buttonINSERT.BackColorChanged += new System.EventHandler(this.buttonINSERT_Click);
-            this.buttonINSERT.ForeColorChanged += new System.EventHandler(this.buttonINSERT_Click);
-            this.buttonINSERT.Click += new System.EventHandler(this.buttonINSERT_Click);
+            this.buttonINSERT.BackColorChanged += new System.EventHandler(this.buttonInsert_Click);
+            this.buttonINSERT.ForeColorChanged += new System.EventHandler(this.buttonInsert_Click);
+            this.buttonINSERT.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonINSERTALL
             // 
@@ -102,7 +102,7 @@ namespace ComboBox
             this.buttonINSERTALL.TabIndex = 6;
             this.buttonINSERTALL.Text = ">>";
             this.buttonINSERTALL.UseVisualStyleBackColor = true;
-            this.buttonINSERTALL.Click += new System.EventHandler(this.buttonINSERTALL_Click);
+            this.buttonINSERTALL.Click += new System.EventHandler(this.buttonInsertAll_Click);
             // 
             // buttonUNINST
             // 

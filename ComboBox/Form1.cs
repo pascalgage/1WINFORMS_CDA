@@ -17,7 +17,7 @@ namespace ComboBox
             InitializeComponent();
         }
 
-        private void comboBoxSOURCE_KeyPress(object sender, KeyPressEventArgs e)
+        private void comboBoxSource_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
@@ -31,7 +31,7 @@ namespace ComboBox
             
         }
         //INSERT....
-        private void buttonINSERT_Click(object sender, EventArgs e)
+        private void buttonInsert_Click(object sender, EventArgs e)
         {
 
 
@@ -49,7 +49,7 @@ namespace ComboBox
 
 
         //INSERTALL....
-        private void buttonINSERTALL_Click(object sender, EventArgs e)
+        private void buttonInsertAll_Click(object sender, EventArgs e)
         {
             Object[] monTab = new object[comboBoxSOURCE.Items.Count];
 
@@ -62,7 +62,7 @@ namespace ComboBox
 
 
 
-        private void comboBoxSOURCE_DropDown(object sender, EventArgs e)
+        private void comboBoxSource_DropDown(object sender, EventArgs e)
         {
             if (comboBoxSOURCE.Items.Count > 0)
             {
