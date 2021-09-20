@@ -20,24 +20,32 @@ namespace ListBOX
         //BOUTON REMPLIR la List....ajoute et replace le focus dans entreetext
         private void addList_Click(object sender, EventArgs e)
         {
-            bool ok=true;
+            //bool ok=true;
 
-            for (int i = 0; i < inscritList.Items.Count; i++)
+            //for (int i = 0; i < inscritList.Items.Count; i++)
+            //{
+            //    if (entreeText.Text == inscritList.Items[i].ToString())
+            //    {
+            //        ok = false;
+            //    }
+
+            //}
+            //if (ok)
+            //{
+
+            //    inscritList.Items.Add(entreeText.Text);
+            //    entreeText.Text = "";
+            //    entreeText.Focus();
+            //}
+
+            //si l'utilisateur entre un prénom déjà présent dans la liste, il n'entre pas dans la liste...
+            if (!inscritList.Items.Contains(entreeText.Text))
             {
-                if (entreeText.Text == inscritList.Items[i].ToString())
-                {
-                    ok = false;
-                }
-                
-            }
-            if (ok)
-            {
-                
                 inscritList.Items.Add(entreeText.Text);
                 entreeText.Text = "";
                 entreeText.Focus();
             }
-            
+
         }
 
         private void emptyList_Click(object sender, EventArgs e)
@@ -48,8 +56,13 @@ namespace ListBOX
 
         private void inscritList_Click(object sender, EventArgs e)
         {
+            AjouterUnItemDansLaListe();
+        }
+
+        private void AjouterUnItemDansLaListe()
+        {
             int topindex = inscritList.SelectedIndex;
-            int item = inscritList.SelectedIndex +1;
+            int item = inscritList.SelectedIndex + 1;
 
             count.Text = inscritList.Items.Count.ToString();
             index.Text = topindex.ToString();
@@ -67,7 +80,7 @@ namespace ListBOX
                 if (ind < inscritList.Items.Count)
                 {
                     this.inscritList.SelectedIndex = ind;
-                    inscritList_Click(sender,e);
+                    AjouterUnItemDansLaListe();
                 }
                 
             }
