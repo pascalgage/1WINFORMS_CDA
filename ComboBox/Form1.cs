@@ -44,10 +44,6 @@ namespace ComboBox
             
         }
         
-        
-
-
-
         //INSERTALL....
         private void buttonInsertAll_Click(object sender, EventArgs e)
         {
@@ -58,9 +54,6 @@ namespace ComboBox
             comboBoxSOURCE.Items.Clear();
 
         }
-
-
-
 
         private void comboBoxSource_DropDown(object sender, EventArgs e)
         {
