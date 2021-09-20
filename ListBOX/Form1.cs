@@ -20,10 +20,24 @@ namespace ListBOX
         //BOUTON REMPLIR la List....ajoute et replace le focus dans entreetext
         private void addList_Click(object sender, EventArgs e)
         {
+            bool ok=true;
+
+            for (int i = 0; i < inscritList.Items.Count; i++)
+            {
+                if (entreeText.Text == inscritList.Items[i].ToString())
+                {
+                    ok = false;
+                }
+                
+            }
+            if (ok)
+            {
+                
+                inscritList.Items.Add(entreeText.Text);
+                entreeText.Text = "";
+                entreeText.Focus();
+            }
             
-            inscritList.Items.Add(entreeText.Text);
-            entreeText.Text="";
-            entreeText.Focus();
         }
 
         private void emptyList_Click(object sender, EventArgs e)
@@ -37,28 +51,27 @@ namespace ListBOX
             int topindex = inscritList.SelectedIndex;
             int item = inscritList.SelectedIndex +1;
 
-            count.Text = item.ToString();
+            count.Text = inscritList.Items.Count.ToString();
             index.Text = topindex.ToString();
             render.Text = inscritList.Text;
         }
 
         private void selectList_Click(object sender, EventArgs e)
         {
-            string text = "";
-            text = inscritList.Text;
-            
+            string indexElement = entindx.Text;
+            int ind;
+            bool ok = int.TryParse(indexElement, out ind );
 
-            for (int i = 0; i < inscritList.Items.Count; i++)
+            if (ok)
             {
-                if (entindx.Text.ToString()==inscritList.Items[i].ToString())
+                if (ind < inscritList.Items.Count)
                 {
-                    MessageBox.Show("Correspondance trouvée");
+                    this.inscritList.SelectedIndex = ind;
+                    inscritList_Click(sender,e);
                 }
-                else
-                {
-                    MessageBox.Show("Correspondance non-trouvée");
-                }
+                
             }
+            
         }
     }
 }
