@@ -43,15 +43,20 @@ namespace ComboBox
             }
             
         }
+        
+        
+
+
+
         //INSERTALL....
         private void buttonINSERTALL_Click(object sender, EventArgs e)
         {
             Object[] monTab = new object[comboBoxSOURCE.Items.Count];
 
             comboBoxSOURCE.Items.CopyTo(monTab, 0);
-
             listBoxCIBLE.Items.AddRange(monTab);
-            
+            comboBoxSOURCE.Items.Clear();
+
         }
 
 
