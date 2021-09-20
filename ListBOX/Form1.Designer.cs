@@ -29,6 +29,7 @@ namespace ListBOX
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@ namespace ListBOX
             this.render = new System.Windows.Forms.TextBox();
             this.entindx = new System.Windows.Forms.TextBox();
             this.inscritList = new System.Windows.Forms.ListBox();
+            this.errorNonumber = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorNonumber)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -190,6 +193,10 @@ namespace ListBOX
             this.inscritList.TabIndex = 16;
             this.inscritList.Click += new System.EventHandler(this.inscritList_Click);
             // 
+            // errorNonumber
+            // 
+            this.errorNonumber.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +220,7 @@ namespace ListBOX
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorNonumber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +244,7 @@ namespace ListBOX
         private System.Windows.Forms.TextBox render;
         private System.Windows.Forms.TextBox entindx;
         private System.Windows.Forms.ListBox inscritList;
+        private System.Windows.Forms.ErrorProvider errorNonumber;
     }
 }
 

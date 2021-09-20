@@ -81,8 +81,14 @@ namespace ListBOX
                 {
                     this.inscritList.SelectedIndex = ind;
                     AjouterUnItemDansLaListe();
+                    errorNonumber.Clear();
                 }
-                
+
+
+            }
+            else
+            {
+                errorNonumber.SetError(entindx, "Veuillez saisir un nombre !");
             }
             
         }
