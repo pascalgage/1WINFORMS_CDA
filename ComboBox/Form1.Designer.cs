@@ -39,6 +39,8 @@ namespace ComboBox
             this.buttonUNINSTALL = new System.Windows.Forms.Button();
             this.buttonUP = new System.Windows.Forms.Button();
             this.buttonDOWN = new System.Windows.Forms.Button();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +59,7 @@ namespace ComboBox
             this.comboBoxSOURCE.Name = "comboBoxSOURCE";
             this.comboBoxSOURCE.Size = new System.Drawing.Size(162, 21);
             this.comboBoxSOURCE.TabIndex = 2;
+            this.comboBoxSOURCE.DropDown += new System.EventHandler(this.comboBoxSOURCE_DropDown);
             this.comboBoxSOURCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxSOURCE_KeyPress);
             // 
             // listBoxCIBLE
@@ -78,12 +81,17 @@ namespace ComboBox
             // 
             // buttonINSERT
             // 
+            this.buttonINSERT.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonINSERT.Enabled = false;
+            this.buttonINSERT.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonINSERT.Location = new System.Drawing.Point(325, 63);
             this.buttonINSERT.Name = "buttonINSERT";
             this.buttonINSERT.Size = new System.Drawing.Size(75, 23);
             this.buttonINSERT.TabIndex = 5;
             this.buttonINSERT.Text = ">";
-            this.buttonINSERT.UseVisualStyleBackColor = true;
+            this.buttonINSERT.UseVisualStyleBackColor = false;
+            this.buttonINSERT.BackColorChanged += new System.EventHandler(this.buttonINSERT_Click);
+            this.buttonINSERT.ForeColorChanged += new System.EventHandler(this.buttonINSERT_Click);
             this.buttonINSERT.Click += new System.EventHandler(this.buttonINSERT_Click);
             // 
             // buttonINSERTALL
@@ -94,15 +102,18 @@ namespace ComboBox
             this.buttonINSERTALL.TabIndex = 6;
             this.buttonINSERTALL.Text = ">>";
             this.buttonINSERTALL.UseVisualStyleBackColor = true;
+            this.buttonINSERTALL.Click += new System.EventHandler(this.buttonINSERTALL_Click);
             // 
             // buttonUNINST
             // 
+            this.buttonUNINST.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonUNINST.Enabled = false;
             this.buttonUNINST.Location = new System.Drawing.Point(325, 241);
             this.buttonUNINST.Name = "buttonUNINST";
             this.buttonUNINST.Size = new System.Drawing.Size(75, 23);
             this.buttonUNINST.TabIndex = 7;
             this.buttonUNINST.Text = "<";
-            this.buttonUNINST.UseVisualStyleBackColor = true;
+            this.buttonUNINST.UseVisualStyleBackColor = false;
             // 
             // buttonUNINSTALL
             // 
@@ -131,6 +142,10 @@ namespace ComboBox
             this.buttonDOWN.Text = "down";
             this.buttonDOWN.UseVisualStyleBackColor = true;
             // 
+            // eventLog1
+            // 
+            this.eventLog1.SynchronizingObject = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +163,7 @@ namespace ComboBox
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +181,7 @@ namespace ComboBox
         private System.Windows.Forms.Button buttonUNINSTALL;
         private System.Windows.Forms.Button buttonUP;
         private System.Windows.Forms.Button buttonDOWN;
+        private System.Diagnostics.EventLog eventLog1;
     }
 }
 

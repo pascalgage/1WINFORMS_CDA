@@ -26,13 +26,45 @@ namespace ComboBox
                 e.Handled = true;
                 //pour vider le champ...
                 comboBoxSOURCE.Text = "";
+                
             }
-            //verifie que la touche tapez est la touche enter
+            
         }
-
+        //INSERT....
         private void buttonINSERT_Click(object sender, EventArgs e)
         {
-            listBoxCIBLE.Items.Add(comboBoxSOURCE.Text);
+
+
+
+            if (!listBoxCIBLE.Items.Contains(comboBoxSOURCE.Text) && comboBoxSOURCE.Text != "")
+            {
+                listBoxCIBLE.Items.Add(comboBoxSOURCE.Text);
+                comboBoxSOURCE.Items.Remove(comboBoxSOURCE.Text);
+            }
+            
         }
+        //INSERTALL....
+        private void buttonINSERTALL_Click(object sender, EventArgs e)
+        {
+            listBoxCIBLE.Items.AddRange(comboBoxSOURCE.);
+        }
+
+
+
+
+        private void comboBoxSOURCE_DropDown(object sender, EventArgs e)
+        {
+            if (comboBoxSOURCE.Items.Count > 0)
+            {
+                buttonINSERT.Enabled = true;
+            }
+            else
+            {
+                buttonINSERT.Enabled = false;
+            }
+           
+        }
+
+        
     }
 }
