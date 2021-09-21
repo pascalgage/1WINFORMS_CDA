@@ -123,6 +123,7 @@ namespace ComboBox
                 listBoxCIBLE.Items.RemoveAt(vIndex);
                 listBoxCIBLE.Items.Insert(vIndex + 1, vTemp);
                 listBoxCIBLE.SelectedIndex = vIndex + 1;
+                
             }
         }
         private void EnableButton()
@@ -130,10 +131,12 @@ namespace ComboBox
             if(listBoxCIBLE.SelectedItem != null)
             {
                 buttonUP.Enabled = true;
+                buttonDOWN.Enabled = true;
             }
             else
             {
                 buttonUP.Enabled = false;
+                buttonDOWN.Enabled = false;
             }
 
             
