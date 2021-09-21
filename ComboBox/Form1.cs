@@ -103,6 +103,7 @@ namespace ComboBox
         {
             if (listBoxCIBLE.SelectedIndex >0)
             {
+
                 int vIndex = listBoxCIBLE.SelectedIndex;
                 object vTemp = listBoxCIBLE.SelectedItem;
                 listBoxCIBLE.Items.RemoveAt(vIndex);
@@ -124,7 +125,28 @@ namespace ComboBox
                 listBoxCIBLE.SelectedIndex = vIndex + 1;
             }
         }
+        private void EnableButton()
+        {
+            if(listBoxCIBLE.SelectedItem != null)
+            {
+                buttonUP.Enabled = true;
+            }
+            else
+            {
+                buttonUP.Enabled = false;
+            }
 
-        
+            
+        }
+
+        private void listBoxCIBLE_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EnableButton();
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            listBoxCIBLE.SelectedItem = null;
+        }
     }
 }

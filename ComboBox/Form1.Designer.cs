@@ -55,6 +55,10 @@ namespace ComboBox
             // comboBoxSOURCE
             // 
             this.comboBoxSOURCE.FormattingEnabled = true;
+            this.comboBoxSOURCE.Items.AddRange(new object[] {
+            "pascal",
+            "jocelyn",
+            "fred"});
             this.comboBoxSOURCE.Location = new System.Drawing.Point(63, 63);
             this.comboBoxSOURCE.Name = "comboBoxSOURCE";
             this.comboBoxSOURCE.Size = new System.Drawing.Size(162, 21);
@@ -65,10 +69,15 @@ namespace ComboBox
             // listBoxCIBLE
             // 
             this.listBoxCIBLE.FormattingEnabled = true;
+            this.listBoxCIBLE.Items.AddRange(new object[] {
+            "Barry",
+            "Tarik",
+            "Bastien"});
             this.listBoxCIBLE.Location = new System.Drawing.Point(480, 63);
             this.listBoxCIBLE.Name = "listBoxCIBLE";
             this.listBoxCIBLE.Size = new System.Drawing.Size(172, 225);
             this.listBoxCIBLE.TabIndex = 3;
+            this.listBoxCIBLE.SelectedIndexChanged += new System.EventHandler(this.listBoxCIBLE_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -128,6 +137,7 @@ namespace ComboBox
             // 
             // buttonUP
             // 
+            this.buttonUP.Enabled = false;
             this.buttonUP.Location = new System.Drawing.Point(514, 316);
             this.buttonUP.Name = "buttonUP";
             this.buttonUP.Size = new System.Drawing.Size(38, 23);
@@ -138,6 +148,7 @@ namespace ComboBox
             // 
             // buttonDOWN
             // 
+            this.buttonDOWN.Enabled = false;
             this.buttonDOWN.Location = new System.Drawing.Point(577, 316);
             this.buttonDOWN.Name = "buttonDOWN";
             this.buttonDOWN.Size = new System.Drawing.Size(45, 23);
@@ -167,6 +178,7 @@ namespace ComboBox
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
