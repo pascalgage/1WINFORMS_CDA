@@ -157,6 +157,7 @@ namespace ComboBox
         private void Form1_Click(object sender, EventArgs e)
         {
             listBoxCible.SelectedItem = null;
+            EnableButtonUninstall();
         }
     }
 }
