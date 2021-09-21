@@ -16,7 +16,7 @@ namespace ComboBox
         {
             InitializeComponent();
         }
-
+        //Inserer des éléments dans le menu deroulant Source....
         private void comboBoxSource_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -43,7 +43,19 @@ namespace ComboBox
             }
             
         }
-        
+        //Uninstall button...retour d'un élément de la CIBLE vers la SOURCE
+        private void buttonUNINST_Click(object sender, EventArgs e)
+        {
+            if (!comboBoxSOURCE.Items.Contains(listBoxCIBLE.SelectedItem))
+            {
+                comboBoxSOURCE.Items.Add(listBoxCIBLE.Text);
+                listBoxCIBLE.Items.Remove(listBoxCIBLE.Text);
+            }
+        }
+
+
+
+
         //INSERTALL....
         private void buttonInsertAll_Click(object sender, EventArgs e)
         {
@@ -69,6 +81,32 @@ namespace ComboBox
                 buttonINSERTALL.Enabled = false;
             }
            
+        }
+
+        private void buttonUP_Click(object sender, EventArgs e)
+        {
+            if (listBoxCIBLE.SelectedIndex >0)
+            {
+                int vIndex = listBoxCIBLE.SelectedIndex;
+                object vTemp = listBoxCIBLE.SelectedItem;
+                listBoxCIBLE.Items.RemoveAt(vIndex);
+                listBoxCIBLE.Items.Insert(vIndex - 1, vTemp);
+                listBoxCIBLE.SelectedIndex = vIndex - 1;
+            }
+
+        }
+        
+
+        private void buttonDown_Click(object sender, EventArgs e)
+        {
+            if (listBoxCIBLE.SelectedIndex < listBoxCIBLE.Items.Count - 1)
+            {
+                int vIndex = listBoxCIBLE.SelectedIndex;
+                object vTemp = listBoxCIBLE.SelectedItem;
+                listBoxCIBLE.Items.RemoveAt(vIndex);
+                listBoxCIBLE.Items.Insert(vIndex + 1, vTemp);
+                listBoxCIBLE.SelectedIndex = vIndex + 1;
+            }
         }
 
         
