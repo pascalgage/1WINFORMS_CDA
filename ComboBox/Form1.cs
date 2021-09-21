@@ -30,7 +30,7 @@ namespace ComboBox
             }
             
         }
-        //INSERT....
+        //INSERT button...aller d'un élement de la SOURCE vers La CIBLE
         private void buttonInsert_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +66,22 @@ namespace ComboBox
             comboBoxSOURCE.Items.Clear();
 
         }
+
+        //UNINSTALL   ALL de la CIBLE VERS LA SOURCE....
+        private void buttonUninstallall_Click(object sender, EventArgs e)
+        {
+            Object[] monTabRetour = new object[listBoxCIBLE.Items.Count];
+
+            listBoxCIBLE.Items.CopyTo(monTabRetour, 0);
+            comboBoxSOURCE.Items.AddRange(monTabRetour);
+            listBoxCIBLE.Items.Clear();
+        }
+
+
+
+
+
+
 
         private void comboBoxSource_DropDown(object sender, EventArgs e)
         {

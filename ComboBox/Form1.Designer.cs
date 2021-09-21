@@ -124,6 +124,7 @@ namespace ComboBox
             this.buttonUNINSTALL.TabIndex = 8;
             this.buttonUNINSTALL.Text = "<<";
             this.buttonUNINSTALL.UseVisualStyleBackColor = true;
+            this.buttonUNINSTALL.Click += new System.EventHandler(this.buttonUninstallall_Click);
             // 
             // buttonUP
             // 
