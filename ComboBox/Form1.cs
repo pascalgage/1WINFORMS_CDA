@@ -36,20 +36,21 @@ namespace ComboBox
 
 
 
-            if (!listBoxCIBLE.Items.Contains(comboBoxSOURCE.Text) && comboBoxSOURCE.Text != "")
+            if (!listBoxCible.Items.Contains(comboBoxSOURCE.Text) && comboBoxSOURCE.Text != "")
             {
-                listBoxCIBLE.Items.Add(comboBoxSOURCE.Text);
+                listBoxCible.Items.Add(comboBoxSOURCE.Text);
                 comboBoxSOURCE.Items.Remove(comboBoxSOURCE.Text);
+                
             }
             
         }
         //Uninstall button...retour d'un élément de la CIBLE vers la SOURCE
         private void buttonUNINST_Click(object sender, EventArgs e)
         {
-            if (!comboBoxSOURCE.Items.Contains(listBoxCIBLE.SelectedItem))
+            if (!comboBoxSOURCE.Items.Contains(listBoxCible.SelectedItem))
             {
-                comboBoxSOURCE.Items.Add(listBoxCIBLE.Text);
-                listBoxCIBLE.Items.Remove(listBoxCIBLE.Text);
+                comboBoxSOURCE.Items.Add(listBoxCible.Text);
+                listBoxCible.Items.Remove(listBoxCible.Text);
             }
         }
 
@@ -59,7 +60,7 @@ namespace ComboBox
             Object[] monTab = new object[comboBoxSOURCE.Items.Count];
 
             comboBoxSOURCE.Items.CopyTo(monTab, 0);
-            listBoxCIBLE.Items.AddRange(monTab);
+            listBoxCible.Items.AddRange(monTab);
             comboBoxSOURCE.Items.Clear();
 
         }
@@ -67,11 +68,11 @@ namespace ComboBox
         //UNINSTALL   ALL de la CIBLE VERS LA SOURCE....
         private void buttonUninstallall_Click(object sender, EventArgs e)
         {
-            Object[] monTabRetour = new object[listBoxCIBLE.Items.Count];
+            Object[] monTabRetour = new object[listBoxCible.Items.Count];
 
-            listBoxCIBLE.Items.CopyTo(monTabRetour, 0);
+            listBoxCible.Items.CopyTo(monTabRetour, 0);
             comboBoxSOURCE.Items.AddRange(monTabRetour);
-            listBoxCIBLE.Items.Clear();
+            listBoxCible.Items.Clear();
         }
 
         private void comboBoxSource_DropDown(object sender, EventArgs e)
@@ -92,14 +93,14 @@ namespace ComboBox
 
         private void buttonUP_Click(object sender, EventArgs e)
         {
-            if (listBoxCIBLE.SelectedIndex >0)
+            if (listBoxCible.SelectedIndex >0)
             {
 
-                int vIndex = listBoxCIBLE.SelectedIndex;
-                object vTemp = listBoxCIBLE.SelectedItem;
-                listBoxCIBLE.Items.RemoveAt(vIndex);
-                listBoxCIBLE.Items.Insert(vIndex - 1, vTemp);
-                listBoxCIBLE.SelectedIndex = vIndex - 1;
+                int vIndex = listBoxCible.SelectedIndex;
+                object vTemp = listBoxCible.SelectedItem;
+                listBoxCible.Items.RemoveAt(vIndex);
+                listBoxCible.Items.Insert(vIndex - 1, vTemp);
+                listBoxCible.SelectedIndex = vIndex - 1;
             }
 
         }
@@ -107,19 +108,19 @@ namespace ComboBox
 
         private void buttonDown_Click(object sender, EventArgs e)
         {
-            if (listBoxCIBLE.SelectedIndex < listBoxCIBLE.Items.Count - 1)
+            if (listBoxCible.SelectedIndex < listBoxCible.Items.Count - 1)
             {
-                int vIndex = listBoxCIBLE.SelectedIndex;
-                object vTemp = listBoxCIBLE.SelectedItem;
-                listBoxCIBLE.Items.RemoveAt(vIndex);
-                listBoxCIBLE.Items.Insert(vIndex + 1, vTemp);
-                listBoxCIBLE.SelectedIndex = vIndex + 1;
+                int vIndex = listBoxCible.SelectedIndex;
+                object vTemp = listBoxCible.SelectedItem;
+                listBoxCible.Items.RemoveAt(vIndex);
+                listBoxCible.Items.Insert(vIndex + 1, vTemp);
+                listBoxCible.SelectedIndex = vIndex + 1;
                 
             }
         }
         private void EnableButton()
         {
-            if (listBoxCIBLE.SelectedItem != null)
+            if (listBoxCible.SelectedItem != null)
             {
                 buttonUP.Enabled = true;
                 buttonDOWN.Enabled = true;
@@ -132,17 +133,30 @@ namespace ComboBox
 
 
         }
-
+        private void EnableButtonUninstall()
+        {
+            if(listBoxCible.SelectedItem != null)
+            {
+                buttonUninst.Enabled = true;
+                buttonUninstall.Enabled = true;
+            }
+            else
+            {
+                buttonUninst.Enabled = false;
+                buttonUninstall.Enabled = false;
+            }
+        }
 
 
         private void listBoxCIBLE_SelectedIndexChanged(object sender, EventArgs e)
         {
             EnableButton();
+            EnableButtonUninstall();
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            listBoxCIBLE.SelectedItem = null;
+            listBoxCible.SelectedItem = null;
         }
     }
 }

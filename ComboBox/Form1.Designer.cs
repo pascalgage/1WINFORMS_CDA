@@ -31,12 +31,12 @@ namespace ComboBox
         {
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSOURCE = new System.Windows.Forms.ComboBox();
-            this.listBoxCIBLE = new System.Windows.Forms.ListBox();
+            this.listBoxCible = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonINSERT = new System.Windows.Forms.Button();
             this.buttonINSERTALL = new System.Windows.Forms.Button();
-            this.buttonUNINST = new System.Windows.Forms.Button();
-            this.buttonUNINSTALL = new System.Windows.Forms.Button();
+            this.buttonUninst = new System.Windows.Forms.Button();
+            this.buttonUninstall = new System.Windows.Forms.Button();
             this.buttonUP = new System.Windows.Forms.Button();
             this.buttonDOWN = new System.Windows.Forms.Button();
             this.eventLog1 = new System.Diagnostics.EventLog();
@@ -68,16 +68,16 @@ namespace ComboBox
             // 
             // listBoxCIBLE
             // 
-            this.listBoxCIBLE.FormattingEnabled = true;
-            this.listBoxCIBLE.Items.AddRange(new object[] {
+            this.listBoxCible.FormattingEnabled = true;
+            this.listBoxCible.Items.AddRange(new object[] {
             "Barry",
             "Tarik",
             "Bastien"});
-            this.listBoxCIBLE.Location = new System.Drawing.Point(480, 63);
-            this.listBoxCIBLE.Name = "listBoxCIBLE";
-            this.listBoxCIBLE.Size = new System.Drawing.Size(172, 225);
-            this.listBoxCIBLE.TabIndex = 3;
-            this.listBoxCIBLE.SelectedIndexChanged += new System.EventHandler(this.listBoxCIBLE_SelectedIndexChanged);
+            this.listBoxCible.Location = new System.Drawing.Point(480, 63);
+            this.listBoxCible.Name = "listBoxCIBLE";
+            this.listBoxCible.Size = new System.Drawing.Size(172, 225);
+            this.listBoxCible.TabIndex = 3;
+            this.listBoxCible.SelectedIndexChanged += new System.EventHandler(this.listBoxCIBLE_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -90,7 +90,7 @@ namespace ComboBox
             // 
             // buttonINSERT
             // 
-            this.buttonINSERT.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonINSERT.BackColor = System.Drawing.SystemColors.Control;
             this.buttonINSERT.Enabled = false;
             this.buttonINSERT.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonINSERT.Location = new System.Drawing.Point(325, 63);
@@ -105,35 +105,39 @@ namespace ComboBox
             // 
             // buttonINSERTALL
             // 
+            this.buttonINSERTALL.BackColor = System.Drawing.SystemColors.Control;
             this.buttonINSERTALL.Enabled = false;
             this.buttonINSERTALL.Location = new System.Drawing.Point(326, 112);
             this.buttonINSERTALL.Name = "buttonINSERTALL";
             this.buttonINSERTALL.Size = new System.Drawing.Size(75, 23);
             this.buttonINSERTALL.TabIndex = 6;
             this.buttonINSERTALL.Text = ">>";
-            this.buttonINSERTALL.UseVisualStyleBackColor = true;
+            this.buttonINSERTALL.UseVisualStyleBackColor = false;
             this.buttonINSERTALL.Click += new System.EventHandler(this.buttonInsertAll_Click);
             // 
             // buttonUNINST
             // 
-            this.buttonUNINST.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonUNINST.Location = new System.Drawing.Point(325, 241);
-            this.buttonUNINST.Name = "buttonUNINST";
-            this.buttonUNINST.Size = new System.Drawing.Size(75, 23);
-            this.buttonUNINST.TabIndex = 7;
-            this.buttonUNINST.Text = "<";
-            this.buttonUNINST.UseVisualStyleBackColor = false;
-            this.buttonUNINST.Click += new System.EventHandler(this.buttonUNINST_Click);
+            this.buttonUninst.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonUninst.Enabled = false;
+            this.buttonUninst.Location = new System.Drawing.Point(325, 241);
+            this.buttonUninst.Name = "buttonUNINST";
+            this.buttonUninst.Size = new System.Drawing.Size(75, 23);
+            this.buttonUninst.TabIndex = 7;
+            this.buttonUninst.Text = "<";
+            this.buttonUninst.UseVisualStyleBackColor = false;
+            this.buttonUninst.Click += new System.EventHandler(this.buttonUNINST_Click);
             // 
             // buttonUNINSTALL
             // 
-            this.buttonUNINSTALL.Location = new System.Drawing.Point(325, 294);
-            this.buttonUNINSTALL.Name = "buttonUNINSTALL";
-            this.buttonUNINSTALL.Size = new System.Drawing.Size(75, 23);
-            this.buttonUNINSTALL.TabIndex = 8;
-            this.buttonUNINSTALL.Text = "<<";
-            this.buttonUNINSTALL.UseVisualStyleBackColor = true;
-            this.buttonUNINSTALL.Click += new System.EventHandler(this.buttonUninstallall_Click);
+            this.buttonUninstall.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonUninstall.Enabled = false;
+            this.buttonUninstall.Location = new System.Drawing.Point(325, 294);
+            this.buttonUninstall.Name = "buttonUNINSTALL";
+            this.buttonUninstall.Size = new System.Drawing.Size(75, 23);
+            this.buttonUninstall.TabIndex = 8;
+            this.buttonUninstall.Text = "<<";
+            this.buttonUninstall.UseVisualStyleBackColor = false;
+            this.buttonUninstall.Click += new System.EventHandler(this.buttonUninstallall_Click);
             // 
             // buttonUP
             // 
@@ -168,12 +172,12 @@ namespace ComboBox
             this.ClientSize = new System.Drawing.Size(800, 373);
             this.Controls.Add(this.buttonDOWN);
             this.Controls.Add(this.buttonUP);
-            this.Controls.Add(this.buttonUNINSTALL);
-            this.Controls.Add(this.buttonUNINST);
+            this.Controls.Add(this.buttonUninstall);
+            this.Controls.Add(this.buttonUninst);
             this.Controls.Add(this.buttonINSERTALL);
             this.Controls.Add(this.buttonINSERT);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBoxCIBLE);
+            this.Controls.Add(this.listBoxCible);
             this.Controls.Add(this.comboBoxSOURCE);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -189,12 +193,12 @@ namespace ComboBox
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxSOURCE;
-        private System.Windows.Forms.ListBox listBoxCIBLE;
+        private System.Windows.Forms.ListBox listBoxCible;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonINSERT;
         private System.Windows.Forms.Button buttonINSERTALL;
-        private System.Windows.Forms.Button buttonUNINST;
-        private System.Windows.Forms.Button buttonUNINSTALL;
+        private System.Windows.Forms.Button buttonUninst;
+        private System.Windows.Forms.Button buttonUninstall;
         private System.Windows.Forms.Button buttonUP;
         private System.Windows.Forms.Button buttonDOWN;
         private System.Diagnostics.EventLog eventLog1;
