@@ -53,9 +53,6 @@ namespace ComboBox
             }
         }
 
-
-
-
         //INSERTALL....
         private void buttonInsertAll_Click(object sender, EventArgs e)
         {
@@ -76,12 +73,6 @@ namespace ComboBox
             comboBoxSOURCE.Items.AddRange(monTabRetour);
             listBoxCIBLE.Items.Clear();
         }
-
-
-
-
-
-
 
         private void comboBoxSource_DropDown(object sender, EventArgs e)
         {
@@ -128,7 +119,7 @@ namespace ComboBox
         }
         private void EnableButton()
         {
-            if(listBoxCIBLE.SelectedItem != null)
+            if (listBoxCIBLE.SelectedItem != null)
             {
                 buttonUP.Enabled = true;
                 buttonDOWN.Enabled = true;
@@ -139,8 +130,10 @@ namespace ComboBox
                 buttonDOWN.Enabled = false;
             }
 
-            
+
         }
+
+
 
         private void listBoxCIBLE_SelectedIndexChanged(object sender, EventArgs e)
         {
