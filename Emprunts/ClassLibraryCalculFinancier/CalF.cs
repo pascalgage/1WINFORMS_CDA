@@ -13,7 +13,7 @@ namespace ClassLibraryCalculFinancier
             double resultat = 0;
 
             double exp=Math.Pow((1+_tx/12),-(_nm));
-            resultat = _k * (_tx/12/(1-(exp)));
+            resultat = _k * ((_tx/12)/(1-(exp)));
 
                 return resultat;
         }
