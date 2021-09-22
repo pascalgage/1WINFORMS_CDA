@@ -45,7 +45,7 @@ namespace Emprunts
             this.radioButt8perc = new System.Windows.Forms.RadioButton();
             this.radioButt9perc = new System.Windows.Forms.RadioButton();
             this.groupBoxTx = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelRembousement = new System.Windows.Forms.Label();
             this.labelDure = new System.Windows.Forms.Label();
             this.groupBoxTx.SuspendLayout();
             this.SuspendLayout();
@@ -205,13 +205,13 @@ namespace Emprunts
             this.groupBoxTx.TabStop = false;
             this.groupBoxTx.Text = "Taux d\'intérêt";
             // 
-            // label2
+            // labelRembousement
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(549, 354);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 34);
-            this.label2.TabIndex = 17;
+            this.labelRembousement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRembousement.Location = new System.Drawing.Point(549, 354);
+            this.labelRembousement.Name = "labelRembousement";
+            this.labelRembousement.Size = new System.Drawing.Size(154, 34);
+            this.labelRembousement.TabIndex = 17;
             // 
             // labelDure
             // 
@@ -231,7 +231,7 @@ namespace Emprunts
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelDure);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelRembousement);
             this.Controls.Add(this.groupBoxTx);
             this.Controls.Add(this.labelRemb);
             this.Controls.Add(this.labelNBrVersement);
@@ -272,7 +272,7 @@ namespace Emprunts
         private System.Windows.Forms.RadioButton radioButt8perc;
         private System.Windows.Forms.RadioButton radioButt9perc;
         private System.Windows.Forms.GroupBox groupBoxTx;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelRembousement;
         private System.Windows.Forms.Label labelDure;
     }
 }
