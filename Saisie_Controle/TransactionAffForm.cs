@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryTransaction;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,7 @@ namespace Saisie_Controle
         }
 
 
-        public TransactionAffForm(ClassLibraryTransaction.Transaction _transaction) : this(_transaction.Nom, _transaction.Date, _transaction.Montant, _transaction.CodePostal)
+        public TransactionAffForm(Transaction _transaction) : this(_transaction.Nom, _transaction.Date, _transaction.Montant, _transaction.CodePostal)
         {
             //this.textBoxCLIENT.Text = _transaction.Nom;
             //this.textBoxDATE.Text = _transaction.Date.ToString();
