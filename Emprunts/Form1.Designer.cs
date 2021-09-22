@@ -39,14 +39,14 @@ namespace Emprunts
             this.labelDuree = new System.Windows.Forms.Label();
             this.listBoxPeriodicite = new System.Windows.Forms.ListBox();
             this.labelPeriodicite = new System.Windows.Forms.Label();
-            this.labelDure = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNBrVersement = new System.Windows.Forms.Label();
             this.labelRemb = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButt7perc = new System.Windows.Forms.RadioButton();
+            this.radioButt8perc = new System.Windows.Forms.RadioButton();
+            this.radioButt9perc = new System.Windows.Forms.RadioButton();
             this.groupBoxTx = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.labelDure = new System.Windows.Forms.Label();
             this.groupBoxTx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,10 +70,13 @@ namespace Emprunts
             // 
             // hScrollBarDuree
             // 
-            this.hScrollBarDuree.Location = new System.Drawing.Point(292, 152);
+            this.hScrollBarDuree.LargeChange = 1;
+            this.hScrollBarDuree.Location = new System.Drawing.Point(291, 162);
+            this.hScrollBarDuree.Maximum = 160;
             this.hScrollBarDuree.Name = "hScrollBarDuree";
             this.hScrollBarDuree.Size = new System.Drawing.Size(154, 23);
             this.hScrollBarDuree.TabIndex = 2;
+            this.hScrollBarDuree.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarDuree_Scroll);
             // 
             // textBoxNom
             // 
@@ -119,6 +122,12 @@ namespace Emprunts
             // listBoxPeriodicite
             // 
             this.listBoxPeriodicite.FormattingEnabled = true;
+            this.listBoxPeriodicite.Items.AddRange(new object[] {
+            "Mensuelle",
+            "Bimestrielle",
+            "Trimestrielle",
+            "Semestrielle",
+            "Annuelle"});
             this.listBoxPeriodicite.Location = new System.Drawing.Point(34, 292);
             this.listBoxPeriodicite.Name = "listBoxPeriodicite";
             this.listBoxPeriodicite.Size = new System.Drawing.Size(168, 134);
@@ -133,23 +142,14 @@ namespace Emprunts
             this.labelPeriodicite.TabIndex = 9;
             this.labelPeriodicite.Text = "Périodicité de remboursement";
             // 
-            // labelDure
+            // labelNBrVersement
             // 
-            this.labelDure.AutoSize = true;
-            this.labelDure.Location = new System.Drawing.Point(231, 162);
-            this.labelDure.Name = "labelDure";
-            this.labelDure.Size = new System.Drawing.Size(35, 13);
-            this.labelDure.TabIndex = 10;
-            this.labelDure.Text = "label1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(472, 292);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "label1";
+            this.labelNBrVersement.AutoSize = true;
+            this.labelNBrVersement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNBrVersement.Location = new System.Drawing.Point(472, 292);
+            this.labelNBrVersement.Name = "labelNBrVersement";
+            this.labelNBrVersement.Size = new System.Drawing.Size(2, 15);
+            this.labelNBrVersement.TabIndex = 11;
             // 
             // labelRemb
             // 
@@ -160,44 +160,44 @@ namespace Emprunts
             this.labelRemb.TabIndex = 12;
             this.labelRemb.Text = "Remboursements";
             // 
-            // radioButton1
+            // radioButt7perc
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(27, 32);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButt7perc.AutoSize = true;
+            this.radioButt7perc.Location = new System.Drawing.Point(27, 32);
+            this.radioButt7perc.Name = "radioButt7perc";
+            this.radioButt7perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt7perc.TabIndex = 13;
+            this.radioButt7perc.TabStop = true;
+            this.radioButt7perc.Text = "7%";
+            this.radioButt7perc.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButt8perc
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(27, 62);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButt8perc.AutoSize = true;
+            this.radioButt8perc.Location = new System.Drawing.Point(27, 62);
+            this.radioButt8perc.Name = "radioButt8perc";
+            this.radioButt8perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt8perc.TabIndex = 14;
+            this.radioButt8perc.TabStop = true;
+            this.radioButt8perc.Text = "8%";
+            this.radioButt8perc.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButt9perc
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(27, 94);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 15;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButt9perc.AutoSize = true;
+            this.radioButt9perc.Location = new System.Drawing.Point(27, 94);
+            this.radioButt9perc.Name = "radioButt9perc";
+            this.radioButt9perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt9perc.TabIndex = 15;
+            this.radioButt9perc.TabStop = true;
+            this.radioButt9perc.Text = "9%";
+            this.radioButt9perc.UseVisualStyleBackColor = true;
             // 
             // groupBoxTx
             // 
-            this.groupBoxTx.Controls.Add(this.radioButton1);
-            this.groupBoxTx.Controls.Add(this.radioButton3);
-            this.groupBoxTx.Controls.Add(this.radioButton2);
+            this.groupBoxTx.Controls.Add(this.radioButt7perc);
+            this.groupBoxTx.Controls.Add(this.radioButt9perc);
+            this.groupBoxTx.Controls.Add(this.radioButt8perc);
             this.groupBoxTx.Location = new System.Drawing.Point(522, 21);
             this.groupBoxTx.Name = "groupBoxTx";
             this.groupBoxTx.Size = new System.Drawing.Size(135, 135);
@@ -207,22 +207,34 @@ namespace Emprunts
             // 
             // label2
             // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Location = new System.Drawing.Point(549, 354);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 34);
             this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
+            // 
+            // labelDure
+            // 
+            this.labelDure.AutoSize = true;
+            this.labelDure.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelDure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDure.Location = new System.Drawing.Point(244, 162);
+            this.labelDure.Name = "labelDure";
+            this.labelDure.Size = new System.Drawing.Size(2, 15);
+            this.labelDure.TabIndex = 18;
+            this.labelDure.Tag = "";
+            this.labelDure.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelDure);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBoxTx);
             this.Controls.Add(this.labelRemb);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelDure);
+            this.Controls.Add(this.labelNBrVersement);
             this.Controls.Add(this.labelPeriodicite);
             this.Controls.Add(this.listBoxPeriodicite);
             this.Controls.Add(this.labelDuree);
@@ -254,14 +266,14 @@ namespace Emprunts
         private System.Windows.Forms.Label labelDuree;
         private System.Windows.Forms.ListBox listBoxPeriodicite;
         private System.Windows.Forms.Label labelPeriodicite;
-        private System.Windows.Forms.Label labelDure;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNBrVersement;
         private System.Windows.Forms.Label labelRemb;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButt7perc;
+        private System.Windows.Forms.RadioButton radioButt8perc;
+        private System.Windows.Forms.RadioButton radioButt9perc;
         private System.Windows.Forms.GroupBox groupBoxTx;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelDure;
     }
 }
 

@@ -16,5 +16,10 @@ namespace Emprunts
         {
             InitializeComponent();
         }
+
+        private void hScrollBarDuree_Scroll(object sender, ScrollEventArgs e)
+        {
+            labelDure.Text = hScrollBarDuree.Value.ToString();
+        }
     }
 }
