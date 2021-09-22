@@ -21,5 +21,28 @@ namespace Emprunts
         {
             labelDure.Text = hScrollBarDuree.Value.ToString();
         }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            if (radioButt8perc.Checked)
+            {
+                double k = double.Parse(textBoxCapitalEmpr.Text);
+                double tx = 8;
+                double m = double.Parse(labelDure.Text);
+                double result = 0;
+
+                result = ((k * tx/100)/m);
+                labelRembousement.Text = result.ToString();
+
+
+            }else if (radioButt7perc.Checked)
+            {
+
+            }else if (radioButt9perc.Checked)
+            {
+
+            }
+            
+        }
     }
 }
