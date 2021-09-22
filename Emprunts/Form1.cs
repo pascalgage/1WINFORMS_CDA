@@ -25,11 +25,26 @@ namespace Emprunts
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            double mensualitesPrevues = double.Parse(labelDure.Text);
+            
 
-            if (listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3])
+            if (listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3]&& radioButt8perc.Checked)
             {
-                double mensualiteNombr = mensualitesPrevues / 4;
+                double mensualitesPrevues = double.Parse(labelDure.Text);
+                labelNBrVersement.Text = (mensualitesPrevues / 2).ToString();
+
+                
+                double k = double.Parse(textBoxCapitalEmpr.Text);// k Capital
+                double tx = 8;// tx TAUX ANNUEL
+
+
+
+
+
+                double m = double.Parse(labelDure.Text);
+                double result = 0;
+
+                result = ((k * tx / 100) * m);
+                labelRembousement.Text = result.ToString();
             }
 
 
@@ -37,18 +52,7 @@ namespace Emprunts
 
             if (radioButt8perc.Checked)
             {
-                double k = double.Parse(textBoxCapitalEmpr.Text);// k Capital
-                double tx = 8;// tx TAUX ANNUEL
-
                 
-
-                
-
-                double m = double.Parse(labelDure.Text);
-                double result = 0;
-
-                result = ((k * tx/100)*m);
-                labelRembousement.Text = result.ToString();
 
 
             }else if (radioButt7perc.Checked)
