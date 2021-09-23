@@ -31,14 +31,14 @@ namespace Emprunts
             {
                 int dure = int.Parse(hScrollBarDuree.Value.ToString());
                 labelDure.Text = hScrollBarDuree.Value.ToString();
-                hScrollBarDuree.SmallChange = 2;
-                hScrollBarDuree.LargeChange = 2;
+                
                 labelNBrVersement.Text = (dure / 2).ToString();
             }
             else if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem)
             {
                 int dure = int.Parse(hScrollBarDuree.Value.ToString());
                 labelDure.Text = hScrollBarDuree.Value.ToString();
+                
                 labelNBrVersement.Text = (dure / 3).ToString();
             }
             else if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem)
