@@ -8,16 +8,25 @@ namespace ClassLibraryCalculFinancier
 {
     public class Calcul
     {
-        public static double CalculdeMensualites(double _k, double _tx, int _nm)
+        public static double CalculdeMensualites(double _k, double _tx, int nbMoisdePeriodicite,int per)
         {
             double resultat = 0;
-
-            double exp=Math.Pow((1+_tx/12),-(_nm));
-            resultat = _k * ((_tx/12)/(1-(exp)));
+            double taux = _tx/(12/per);
+            double exp=Math.Pow((1+taux),-(nbMoisdePeriodicite));
+            resultat = _k * ((taux)/(1-(exp)));
 
                 return resultat;
         }
         
-        
+        public static double CalculMens(double capitalEmprunte,double taux,int CalculNbRem)
+        {
+            double montantRemboursement = Math.Round(capitalEmprunte * (taux / (1 - Math.Pow(1 + taux, -CalculNbRem))), 2);
+            return montantRemboursement;
+        }
+
+
+
+
+
     }
 }

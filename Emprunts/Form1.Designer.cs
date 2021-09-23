@@ -74,7 +74,6 @@ namespace Emprunts
             this.hScrollBarDuree.LargeChange = 1;
             this.hScrollBarDuree.Location = new System.Drawing.Point(291, 162);
             this.hScrollBarDuree.Maximum = 240;
-            this.hScrollBarDuree.Minimum = 1;
             this.hScrollBarDuree.Name = "hScrollBarDuree";
             this.hScrollBarDuree.Size = new System.Drawing.Size(154, 23);
             this.hScrollBarDuree.TabIndex = 2;
@@ -135,6 +134,7 @@ namespace Emprunts
             this.listBoxPeriodicite.Name = "listBoxPeriodicite";
             this.listBoxPeriodicite.Size = new System.Drawing.Size(168, 134);
             this.listBoxPeriodicite.TabIndex = 8;
+            this.listBoxPeriodicite.SelectedIndexChanged += new System.EventHandler(this.listBoxPeriodicite_SelectedIndexChanged);
             // 
             // labelPeriodicite
             // 
