@@ -17,5 +17,7 @@ namespace ClassLibraryCalculFinancier
 
                 return resultat;
         }
+        
+        
     }
 }

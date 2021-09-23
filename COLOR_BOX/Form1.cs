@@ -20,7 +20,7 @@ namespace COLOR_BOX
         {
             InitializeComponent();
 
-            maCouleur = Color.FromArgb(255, 255, 255);
+            maCouleur = Color.FromArgb(55, 25, 75);
             MettreAJourLIHM();
         }
 
@@ -39,6 +39,8 @@ namespace COLOR_BOX
             numericUpDownGreen.Value = maCouleur.G;
             numericUpDownBlue.Value = maCouleur.B;
 
+            labelRGBsample.BackColor = maCouleur;
+
         }
 
         //SCROLL DANS LES BARRE DE MESURE de DROITE à GAUCHE
@@ -51,6 +53,8 @@ namespace COLOR_BOX
             labelRedSample.BackColor = Color.FromArgb(hScrollBarRed.Value, 0, 0);
             //le rgbsample rendu doit être modifié...
             labelRGBsample.BackColor = Color.FromArgb(hScrollBarRed.Value, 0, 0);
+
+   
 
         }
 
@@ -73,24 +77,20 @@ namespace COLOR_BOX
 
         private void numericUpDownRed_ValueChanged(object sender, EventArgs e)
         {
-            hScrollBarRed.Value = (int)numericUpDownRed.Value;
-            labelRedSample.BackColor = Color.FromArgb(hScrollBarRed.Value, 0, 0);
-            labelRGBsample.BackColor = Color.FromArgb(hScrollBarRed.Value, hScrollBarGreen.Value, hScrollBarBlue.Value);
+            maCouleur = Color.FromArgb((int)numericUpDownRed.Value, maCouleur.G, maCouleur.B);
+            this.MettreAJourLIHM();
         }
 
         private void numericUpDownGreen_ValueChanged(object sender, EventArgs e)
         {
-            hScrollBarGreen.Value = (int)numericUpDownGreen.Value;
-            labelGreenSample.BackColor = Color.FromArgb(0, hScrollBarGreen.Value, 0);
-            labelRGBsample.BackColor = Color.FromArgb(hScrollBarRed.Value, hScrollBarGreen.Value, hScrollBarBlue.Value);
+            maCouleur = Color.FromArgb(maCouleur.R, (int)numericUpDownGreen.Value, maCouleur.B);
+            this.MettreAJourLIHM();
         }
 
         private void numericUpDownBlue_ValueChanged(object sender, EventArgs e)
         {
-
-            hScrollBarBlue.Value = (int)numericUpDownBlue.Value;
-            labelBlueSample.BackColor = Color.FromArgb(0, 0, hScrollBarBlue.Value);
-            labelRGBsample.BackColor = Color.FromArgb(hScrollBarRed.Value, hScrollBarGreen.Value, hScrollBarBlue.Value);
+            maCouleur = Color.FromArgb(maCouleur.R, maCouleur.G, (int)numericUpDownBlue.Value);
+            this.MettreAJourLIHM();
         }
 
         private void button1_Click(object sender, EventArgs e)

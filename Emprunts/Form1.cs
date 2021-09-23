@@ -16,59 +16,44 @@ namespace Emprunts
         {
             InitializeComponent();
         }
-
+        
         private void hScrollBarDuree_Scroll(object sender, ScrollEventArgs e)
         {
-            labelDure.Text = hScrollBarDuree.Value.ToString();
+            if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem)
+            {
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
+                labelDure.Text = hScrollBarDuree.Value.ToString();
+                labelNBrVersement.Text = (dure * 1).ToString();
+            }else if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem)
+            {
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
+                labelDure.Text = hScrollBarDuree.Value.ToString();
+                labelNBrVersement.Text = (dure / 2).ToString();
+            }else if(listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem)
+            {
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
+                labelDure.Text = hScrollBarDuree.Value.ToString();
+                labelNBrVersement.Text = (dure / 4).ToString();
+            }else if(listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem)
+            {
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
+                labelDure.Text = hScrollBarDuree.Value.ToString();
+                labelNBrVersement.Text = (dure / 6).ToString();
+            }else if(listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem)
+            {
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
+                labelDure.Text = hScrollBarDuree.Value.ToString();
+                labelNBrVersement.Text = (dure / 12).ToString();
+            }
             
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            double k = double.Parse(textBoxCapitalEmpr.Text);
-            double tx = 0.08;
-            int nm = 12;
-
-            double res=Calcul.CalculdeMensualites(k, tx, nm);
-            labelRembousement.Text = res.ToString();
-            //if (listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3]&& radioButt8perc.Checked)
-            //{
-            //    double mensualitesPrevues = double.Parse(labelDure.Text);
-            //    labelNBrVersement.Text = (mensualitesPrevues / 2).ToString();
-
-
-            //    double k = double.Parse(textBoxCapitalEmpr.Text);// k Capital
-            //    double tx = 8;// tx TAUX ANNUEL
-
-
-
-
-
-            //    double m = double.Parse(labelDure.Text);
-            //    double result = 0;
-
-            //    result = ((k * tx / 100) * m);
-            //    labelRembousement.Text = result.ToString();
-            //}
-
-
-
-
-            if (radioButt8perc.Checked)
-            {
-                
-
-
-            }else if (radioButt7perc.Checked)
-            {
-
-            }else if (radioButt9perc.Checked)
-            {
-
-            }
-
             
             
         }
+
+        
     }
 }
