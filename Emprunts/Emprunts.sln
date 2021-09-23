@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprunts", "Emprunts.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCalculFinancier", "ClassLibraryCalculFinancier\ClassLibraryCalculFinancier.csproj", "{9E86D422-6B6A-454B-AE4E-66F8781AAD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{BBA03909-52B9-4B32-AE4A-DBD164F54CE5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{9E86D422-6B6A-454B-AE4E-66F8781AAD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E86D422-6B6A-454B-AE4E-66F8781AAD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E86D422-6B6A-454B-AE4E-66F8781AAD30}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BBA03909-52B9-4B32-AE4A-DBD164F54CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBA03909-52B9-4B32-AE4A-DBD164F54CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBA03909-52B9-4B32-AE4A-DBD164F54CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBA03909-52B9-4B32-AE4A-DBD164F54CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
