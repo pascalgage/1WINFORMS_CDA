@@ -68,7 +68,7 @@ namespace Emprunts
                 if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
                 int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Emprunt.(k, tx, nmp,per);
+                double resultat = Calcul.CalculdeMensualites(k,tx,nmp,per);
                 labelRembousement.Text = resultat.ToString();
             }
             else if (radioButt7perc.Checked)
@@ -153,7 +153,7 @@ namespace Emprunts
                 hScrollBarDuree.Value = 12;
             }
 
-            //labelDure.Text = hScrollBarDuree.Value.ToString();
+            labelDure.Text = hScrollBarDuree.Value.ToString();
         }
     }
 }
