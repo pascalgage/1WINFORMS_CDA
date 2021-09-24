@@ -117,9 +117,9 @@ namespace Emprunts
             this.labelDuree.AutoSize = true;
             this.labelDuree.Location = new System.Drawing.Point(31, 162);
             this.labelDuree.Name = "labelDuree";
-            this.labelDuree.Size = new System.Drawing.Size(171, 13);
+            this.labelDuree.Size = new System.Drawing.Size(165, 13);
             this.labelDuree.TabIndex = 7;
-            this.labelDuree.Text = "Durée en mois du rempboursement";
+            this.labelDuree.Text = "Durée en mois du remboursement";
             // 
             // listBoxPeriodicite
             // 
@@ -211,10 +211,12 @@ namespace Emprunts
             // labelRembousement
             // 
             this.labelRembousement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRembousement.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRembousement.Location = new System.Drawing.Point(549, 354);
             this.labelRembousement.Name = "labelRembousement";
             this.labelRembousement.Size = new System.Drawing.Size(154, 34);
             this.labelRembousement.TabIndex = 17;
+            this.labelRembousement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDure
             // 

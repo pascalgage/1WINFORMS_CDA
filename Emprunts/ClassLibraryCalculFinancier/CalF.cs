@@ -13,7 +13,7 @@ namespace ClassLibraryCalculFinancier
             double resultat = 0;
             double taux = _tx/(12/per);
             double exp=Math.Pow((1+taux),-(nbMoisdePeriodicite));
-            resultat = _k * ((taux)/(1-(exp)));
+            resultat = Math.Round(_k * ((taux)/(1-(exp))),2);
 
                 return resultat;
         }
