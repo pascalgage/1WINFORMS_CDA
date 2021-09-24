@@ -17,7 +17,7 @@ namespace Emprunts
         public Form1()
         {
             InitializeComponent();
-            monEmprunt = new Emprunt("GAGIEWSKY",150000,120,Emprunt.Frequence.Trimestrielle,0.08);
+            monEmprunt = new Emprunt();
             UpdateEmprunt();
         }
         private void UpdateEmprunt()
@@ -90,7 +90,7 @@ namespace Emprunts
                 if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
                 int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k,tx,nmp,per);
+                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
             }
             else if (radioButt7perc.Checked)
@@ -105,7 +105,7 @@ namespace Emprunts
                 if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
                 int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k, tx,nmp,per);
+                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
 
             }
@@ -121,7 +121,7 @@ namespace Emprunts
                 if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
                 int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k, tx,nmp,per);
+                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
             }
         }
@@ -135,7 +135,7 @@ namespace Emprunts
             }
             else if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem)
             {
-                int dure = int.Parse(hScrollBarDuree.Value.ToString());  
+                int dure = int.Parse(hScrollBarDuree.Value.ToString());
                 labelNBrVersement.Text = (dure / 2).ToString();
 
                 hScrollBarDuree.SmallChange = 2;
