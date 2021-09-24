@@ -97,6 +97,7 @@ namespace Emprunts
             this.textBoxCapitalEmpr.Name = "textBoxCapitalEmpr";
             this.textBoxCapitalEmpr.Size = new System.Drawing.Size(549, 44);
             this.textBoxCapitalEmpr.TabIndex = 4;
+            this.textBoxCapitalEmpr.TextChanged += new System.EventHandler(this.textBoxCapitalEmpr_TextChanged);
             // 
             // labelNom
             // 

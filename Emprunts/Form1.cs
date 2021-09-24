@@ -91,48 +91,55 @@ namespace Emprunts
         {
             if (radioButt8perc.Checked)
             {
-                double k = double.Parse(textBoxCapitalEmpr.Text);
-                double tx = 0.08;
-                int per = 0;
-                if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
-                if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
-                if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
-                if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
-                if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
+                double resultat=monEmprunt.CalculDesMensualites();
+                UpdateEmprunt();
+                //double k = double.Parse(textBoxCapitalEmpr.Text);
+                //double tx = 0.08;
+                //int per = 0;
+                //if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
+                //if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
+                //if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
+                //if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
+                //if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
-                int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
+                //int nmp = int.Parse(labelNBrVersement.Text);
+                //double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
             }
             else if (radioButt7perc.Checked)
             {
-                double k = double.Parse(textBoxCapitalEmpr.Text);
-                double tx = 0.07;
-                int per = 0;
-                if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
-                if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
-                if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
-                if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
-                if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
+                double resultat = monEmprunt.CalculDesMensualites();
+                UpdateEmprunt();
+                //double k = double.Parse(textBoxCapitalEmpr.Text);
+                //double tx = 0.07;
+                //int per = 0;
+                //if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
+                //if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
+                //if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
+                //if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
+                //if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
-                int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
+                //int nmp = int.Parse(labelNBrVersement.Text);
+                //double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
 
             }
             else if (radioButt9perc.Checked)
             {
-                double k = double.Parse(textBoxCapitalEmpr.Text);
-                double tx = 0.09;
-                int per = 0;
-                if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
-                if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
-                if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
-                if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
-                if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
 
-                int nmp = int.Parse(labelNBrVersement.Text);
-                double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
+                double resultat = monEmprunt.CalculDesMensualites();
+                UpdateEmprunt();
+                //double k = double.Parse(textBoxCapitalEmpr.Text);
+                //double tx = 0.09;
+                //int per = 0;
+                //if (listBoxPeriodicite.Items[0] == listBoxPeriodicite.SelectedItem) { per = 1; }
+                //if (listBoxPeriodicite.Items[1] == listBoxPeriodicite.SelectedItem) { per = 2; }
+                //if (listBoxPeriodicite.Items[2] == listBoxPeriodicite.SelectedItem) { per = 3; }
+                //if (listBoxPeriodicite.Items[3] == listBoxPeriodicite.SelectedItem) { per = 6; }
+                //if (listBoxPeriodicite.Items[4] == listBoxPeriodicite.SelectedItem) { per = 12; }
+
+                //int nmp = int.Parse(labelNBrVersement.Text);
+                //double resultat = Calcul.CalculdeMensualites(k, tx, nmp, per);
                 labelRembousement.Text = resultat.ToString();
             }
         }
@@ -189,6 +196,12 @@ namespace Emprunts
             //}
 
             //labelDure.Text = hScrollBarDuree.Value.ToString();
+        }
+
+        private void textBoxCapitalEmpr_TextChanged(object sender, EventArgs e)
+        {
+            monEmprunt.Capital = int.Parse(textBoxCapitalEmpr.Text);
+            UpdateEmprunt();
         }
     }
 }
