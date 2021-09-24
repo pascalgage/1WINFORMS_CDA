@@ -18,15 +18,5 @@ namespace ClassLibraryCalculFinancier
                 return resultat;
         }
         
-        public static double CalculMens(double capitalEmprunte,double taux,int CalculNbRem)
-        {
-            double montantRemboursement = Math.Round(capitalEmprunte * (taux / (1 - Math.Pow(1 + taux, -CalculNbRem))), 2);
-            return montantRemboursement;
-        }
-
-
-
-
-
     }
 }
