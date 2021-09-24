@@ -12,11 +12,33 @@ namespace Emprunts
 {
     public partial class Form1 : Form
     {
+        private Emprunt monEmprunt;
+
         public Form1()
         {
             InitializeComponent();
+            monEmprunt = new Emprunt("GAGIEWSKY",150000,120,Emprunt.Frequence.Trimestrielle,0.08);
+            UpdateEmprunt();
         }
-        
+        private void UpdateEmprunt()
+        {
+            textBoxNom.Text = monEmprunt.Nom;
+            textBoxCapitalEmpr.Text = monEmprunt.Capital.ToString();
+            labelDure.Text = monEmprunt.RemboursementDureeTotale.ToString();
+            listBoxPeriodicite.SelectedItem = monEmprunt.RemboursementFrequence;
+            labelNBrVersement.Text = monEmprunt.CalculNombreRemboursement().ToString();
+            labelRembousement.Text = monEmprunt.CalculDesMensualites().ToString();
+            if (radioButt7perc.Checked)
+            {
+                monEmprunt.Taux = 0.07;
+            }else if (radioButt8perc.Checked)
+            {
+                monEmprunt.Taux = 0.08;
+            }else if (radioButt9perc.Checked)
+            {
+                monEmprunt.Taux = 0.09;
+            }
+        }
         private void hScrollBarDuree_Scroll(object sender, ScrollEventArgs e)
         {
             labelDure.Text = hScrollBarDuree.Value.ToString();
