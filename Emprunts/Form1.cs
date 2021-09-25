@@ -40,10 +40,12 @@ namespace Emprunts
             if (radioButt7perc.Checked)
             {
                 monEmprunt.Taux = 0.07;
-            }else if (radioButt8perc.Checked)
+            }
+            else if (radioButt8perc.Checked)
             {
                 monEmprunt.Taux = 0.08;
-            }else if (radioButt9perc.Checked)
+            }
+            else if (radioButt9perc.Checked)
             {
                 monEmprunt.Taux = 0.09;
             }
