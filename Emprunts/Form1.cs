@@ -71,22 +71,25 @@ namespace Emprunts
             if (radioButt8perc.Checked)
             {
                 double resultat=monEmprunt.CalculDesMensualites();
-                UpdateEmprunt();
+                
                 labelRemboursement.Text = resultat.ToString();
+                UpdateEmprunt();
             }
             else if (radioButt7perc.Checked)
             {
                 double resultat = monEmprunt.CalculDesMensualites();
-                UpdateEmprunt();
+                
                 labelRemboursement.Text = resultat.ToString();
+                UpdateEmprunt();
 
             }
             else if (radioButt9perc.Checked)
             {
 
                 double resultat = monEmprunt.CalculDesMensualites();
-                UpdateEmprunt();
+                
                 labelRemboursement.Text = resultat.ToString();
+                UpdateEmprunt();
             }
         }
 
