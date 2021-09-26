@@ -53,9 +53,18 @@ namespace Emprunts
 
         private void textBoxCapitalEmpr_Leave(object sender, EventArgs e)
         {
-
-            monEmprunt.Capital = int.Parse(textBoxCapitalEmpr.Text);
-            UpdateEmprunt();
+            if (int.TryParse(textBoxCapitalEmpr.Text, out int k))
+            {
+                monEmprunt.Capital = k;
+                UpdateEmprunt();
+            }
+            else
+            {
+                MessageBox.Show("Le capital saisi doit être un entier positif !");
+            }
+               
+            
+            
 
         }
 
