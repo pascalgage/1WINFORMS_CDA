@@ -58,6 +58,7 @@ namespace Emprunts
             {
                 monEmprunt.Taux = Taux9;
             }
+
             if (monEmprunt.Taux == Taux7)
             {
                 radioButt7perc.Checked = true;
