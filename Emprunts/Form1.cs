@@ -95,7 +95,7 @@ namespace Emprunts
         {
             monEmprunt.RemboursementDureeTotale = hScrollBarDuree.Value;
             UpdateEmprunt();
-           
+
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -129,7 +129,24 @@ namespace Emprunts
         {
             monEmprunt.RemboursementFrequence = (Emprunt.Frequence)listBoxPeriodicite.SelectedItem;
             UpdateEmprunt();
-            
+            if (listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[0])
+            {
+                hScrollBarDuree.Height = 23;
+
+            }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[1])
+            {
+                hScrollBarDuree.Height = 30;
+            }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[2])
+            {
+                hScrollBarDuree.Height = 37;
+            }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3])
+            {
+                hScrollBarDuree.Height = 44;
+            }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[4])
+            {
+                hScrollBarDuree.Height = 53;
+            }
+
         }
 
         private void textBoxCapitalEmpr_TextChanged(object sender, EventArgs e)
