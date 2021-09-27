@@ -17,9 +17,15 @@ namespace Run_menu
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenue");
+            toolStripConnexion.Enabled = true;
+            toolStripPhase1.Enabled = true;
+            toolStripPhase2.Enabled = true;
+            toolStripPhase3.Enabled = true;
+            toolStripFenetres.Enabled = true;
         }
     }
 }
