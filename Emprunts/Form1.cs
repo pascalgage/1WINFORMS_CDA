@@ -45,7 +45,6 @@ namespace Emprunts
             labelDure.Text = monEmprunt.RemboursementDureeTotale.ToString();
             listBoxPeriodicite.SelectedItem = monEmprunt.RemboursementFrequence;
             labelNBrVersement.Text = monEmprunt.CalculNombreRemboursement().ToString();
-            labelRemboursement.Text = monEmprunt.CalculDesMensualites().ToString();
             if (radioButt7perc.Checked)
             {
                 monEmprunt.Taux = Taux7;
@@ -69,7 +68,8 @@ namespace Emprunts
             {
                 radioButt9perc.Checked = true;
             }
-            
+            labelRemboursement.Text = monEmprunt.CalculDesMensualites().ToString();
+
         }
 
         private void textBoxCapitalEmpr_Leave(object sender, EventArgs e)
@@ -97,39 +97,20 @@ namespace Emprunts
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            if (radioButt8perc.Checked)
-            {
-                double resultat=monEmprunt.CalculDesMensualites();
-                
-                labelRemboursement.Text = resultat.ToString();
+            
                 UpdateEmprunt();
-            }
-            else if (radioButt7perc.Checked)
-            {
-                double resultat = monEmprunt.CalculDesMensualites();
-                
-                labelRemboursement.Text = resultat.ToString();
-                UpdateEmprunt();
-
-            }
-            else if (radioButt9perc.Checked)
-            {
-
-                double resultat = monEmprunt.CalculDesMensualites();
-                
-                labelRemboursement.Text = resultat.ToString();
-                UpdateEmprunt();
-            }
+            
         }
 
         private void listBoxPeriodicite_SelectedIndexChanged(object sender, EventArgs e)
         {
             monEmprunt.RemboursementFrequence = (Emprunt.Frequence)listBoxPeriodicite.SelectedItem;
             UpdateEmprunt();
+
             if (listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[0])
             {
                 hScrollBarDuree.Height = 23;
-                UpdateEmprunt();
+               
 
             }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[1])
             {
@@ -138,7 +119,7 @@ namespace Emprunts
                 hScrollBarDuree.Minimum = 2;
                 hScrollBarDuree.Value = 2;
                 hScrollBarDuree.Height = 30;
-                UpdateEmprunt();
+               
             }
             else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[2])
             {
@@ -147,7 +128,7 @@ namespace Emprunts
                 hScrollBarDuree.Minimum = 3;
                 hScrollBarDuree.Value = 3;
                 hScrollBarDuree.Height = 37;
-                UpdateEmprunt();
+                
             }
             else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3])
             {
@@ -156,7 +137,7 @@ namespace Emprunts
                 hScrollBarDuree.Minimum = 6;
                 hScrollBarDuree.Value = 6;
                 hScrollBarDuree.Height = 44;
-                UpdateEmprunt();
+                
             }
             else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[4])
             {
@@ -165,7 +146,7 @@ namespace Emprunts
                 hScrollBarDuree.Minimum = 12;
                 hScrollBarDuree.Value = 12;
                 hScrollBarDuree.Height = 53;
-                UpdateEmprunt();
+                
             }
 
         }
@@ -176,6 +157,7 @@ namespace Emprunts
             {
                 monEmprunt.Capital = kemprunte;
                 UpdateEmprunt();
+                
             }
 
             
@@ -186,5 +168,19 @@ namespace Emprunts
             monEmprunt.Nom = textBoxNom.Text;
             UpdateEmprunt();
         }
+
+        private void Reinitialise()
+        {
+            monEmprunt = new Emprunt();
+            UpdateEmprunt();
+            
+
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            Reinitialise();
+        }
+
     }
 }

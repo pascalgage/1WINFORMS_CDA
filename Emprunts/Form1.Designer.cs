@@ -68,16 +68,17 @@ namespace Emprunts
             this.buttonAnnuler.TabIndex = 4;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // hScrollBarDuree
             // 
+            this.hScrollBarDuree.Cursor = System.Windows.Forms.Cursors.Default;
             this.hScrollBarDuree.LargeChange = 1;
             this.hScrollBarDuree.Location = new System.Drawing.Point(291, 162);
             this.hScrollBarDuree.Maximum = 240;
             this.hScrollBarDuree.Name = "hScrollBarDuree";
             this.hScrollBarDuree.Size = new System.Drawing.Size(154, 23);
             this.hScrollBarDuree.TabIndex = 2;
-            this.hScrollBarDuree.UseWaitCursor = true;
             this.hScrollBarDuree.Value = 1;
             this.hScrollBarDuree.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarDuree_Scroll);
             // 
