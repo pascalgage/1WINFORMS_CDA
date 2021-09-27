@@ -34,11 +34,8 @@ namespace Run_menu
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripConnexion = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripPhase1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripPhase2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripPhase3 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripFenetres = new System.Windows.Forms.ToolStripTextBox();
+            this.menuTutuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sousMenuTutuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +46,7 @@ namespace Run_menu
             this.toolStripButton1,
             this.toolStripSeparator1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 27);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1321, 25);
             this.toolStrip1.TabIndex = 0;
@@ -79,57 +76,27 @@ namespace Run_menu
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripConnexion,
-            this.toolStripPhase1,
-            this.toolStripPhase2,
-            this.toolStripPhase3,
-            this.toolStripFenetres});
+            this.menuTutuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1321, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1321, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripConnexion
+            // menuTutuToolStripMenuItem
             // 
-            this.toolStripConnexion.Enabled = false;
-            this.toolStripConnexion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripConnexion.Name = "toolStripConnexion";
-            this.toolStripConnexion.Size = new System.Drawing.Size(100, 23);
-            this.toolStripConnexion.Text = "Connection";
+            this.menuTutuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sousMenuTutuToolStripMenuItem});
+            this.menuTutuToolStripMenuItem.Name = "menuTutuToolStripMenuItem";
+            this.menuTutuToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.menuTutuToolStripMenuItem.Text = "Connexion";
             // 
-            // toolStripPhase1
+            // sousMenuTutuToolStripMenuItem
             // 
-            this.toolStripPhase1.Enabled = false;
-            this.toolStripPhase1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripPhase1.Name = "toolStripPhase1";
-            this.toolStripPhase1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripPhase1.Text = "Phase 1";
-            // 
-            // toolStripPhase2
-            // 
-            this.toolStripPhase2.Enabled = false;
-            this.toolStripPhase2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripPhase2.Name = "toolStripPhase2";
-            this.toolStripPhase2.Size = new System.Drawing.Size(100, 23);
-            this.toolStripPhase2.Text = "Phase 2";
-            
-            // 
-            // toolStripPhase3
-            // 
-            this.toolStripPhase3.Enabled = false;
-            this.toolStripPhase3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripPhase3.Name = "toolStripPhase3";
-            this.toolStripPhase3.Size = new System.Drawing.Size(100, 23);
-            this.toolStripPhase3.Text = "Phase 3";
-            // 
-            // toolStripFenetres
-            // 
-            this.toolStripFenetres.Enabled = false;
-            this.toolStripFenetres.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripFenetres.Name = "toolStripFenetres";
-            this.toolStripFenetres.Size = new System.Drawing.Size(100, 23);
-            this.toolStripFenetres.Text = "Fenêtres";
+            this.sousMenuTutuToolStripMenuItem.Name = "sousMenuTutuToolStripMenuItem";
+            this.sousMenuTutuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sousMenuTutuToolStripMenuItem.Text = "SousMenuTutu";
+            this.sousMenuTutuToolStripMenuItem.Click += new System.EventHandler(this.sousMenuTutuToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -138,10 +105,10 @@ namespace Run_menu
             this.ClientSize = new System.Drawing.Size(1321, 652);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Créer des Formulaires";
-            
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -158,11 +125,8 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripComboBox toolStripButton2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripTextBox toolStripConnexion;
-        private System.Windows.Forms.ToolStripTextBox toolStripPhase1;
-        private System.Windows.Forms.ToolStripTextBox toolStripPhase2;
-        private System.Windows.Forms.ToolStripTextBox toolStripPhase3;
-        private System.Windows.Forms.ToolStripTextBox toolStripFenetres;
+        private System.Windows.Forms.ToolStripMenuItem menuTutuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sousMenuTutuToolStripMenuItem;
     }
 }
 
