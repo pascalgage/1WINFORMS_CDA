@@ -135,15 +135,31 @@ namespace Emprunts
 
             }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[1])
             {
+                hScrollBarDuree.SmallChange = 2;
+                hScrollBarDuree.LargeChange = 2;
+                hScrollBarDuree.Minimum = 2;
+                hScrollBarDuree.Value = 2;
                 hScrollBarDuree.Height = 30;
             }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[2])
             {
+                hScrollBarDuree.SmallChange = 3;
+                hScrollBarDuree.LargeChange = 3;
+                hScrollBarDuree.Minimum = 3;
+                hScrollBarDuree.Value = 3;
                 hScrollBarDuree.Height = 37;
             }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[3])
             {
+                hScrollBarDuree.SmallChange = 6;
+                hScrollBarDuree.LargeChange = 6;
+                hScrollBarDuree.Minimum = 6;
+                hScrollBarDuree.Value = 6;
                 hScrollBarDuree.Height = 44;
             }else if(listBoxPeriodicite.SelectedItem == listBoxPeriodicite.Items[4])
             {
+                hScrollBarDuree.SmallChange = 12;
+                hScrollBarDuree.LargeChange = 12;
+                hScrollBarDuree.Minimum = 12;
+                hScrollBarDuree.Value = 12;
                 hScrollBarDuree.Height = 53;
             }
 
