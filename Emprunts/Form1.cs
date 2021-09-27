@@ -83,10 +83,7 @@ namespace Emprunts
             {
                 MessageBox.Show("Le capital saisi doit être un entier positif !");
             }
-               
             
-            
-
         }
 
 
