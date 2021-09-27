@@ -12,11 +12,18 @@ namespace Emprunts
 {
     public partial class Form1 : Form
     {
+        
+        private const double Taux7 = 0.07;
+        private const double Taux8 = 0.08;
+        private const double Taux9 = 0.09;
+
         private Emprunt monEmprunt;
 
         public Form1()
         {
+            
             InitializeComponent();
+            
             listBoxPeriodicite.Items.AddRange(new object[]
             {
                 Emprunt.Frequence.Mensuelle,
@@ -25,12 +32,14 @@ namespace Emprunts
                 Emprunt.Frequence.Semestrielle,
                 Emprunt.Frequence.Annuelle
             });
-
+            
             monEmprunt = new Emprunt();
             UpdateEmprunt();
+            
         }
         private void UpdateEmprunt()
         {
+            
             textBoxNom.Text = monEmprunt.Nom;
             textBoxCapitalEmpr.Text = monEmprunt.Capital.ToString();
             labelDure.Text = monEmprunt.RemboursementDureeTotale.ToString();
@@ -39,16 +48,27 @@ namespace Emprunts
             labelRemboursement.Text = monEmprunt.CalculDesMensualites().ToString();
             if (radioButt7perc.Checked)
             {
-                monEmprunt.Taux = 0.07;
+                monEmprunt.Taux = Taux7;
             }
             else if (radioButt8perc.Checked)
             {
-                monEmprunt.Taux = 0.08;
+                monEmprunt.Taux = Taux8;
             }
             else if (radioButt9perc.Checked)
             {
-                monEmprunt.Taux = 0.09;
+                monEmprunt.Taux = Taux9;
             }
+            if (monEmprunt.Taux == Taux7)
+            {
+                radioButt7perc.Checked = true;
+            }else if(monEmprunt.Taux == Taux8)
+            {
+                radioButt8perc.Checked = true;
+            }else if(monEmprunt.Taux == Taux9)
+            {
+                radioButt9perc.Checked = true;
+            }
+            
         }
 
         private void textBoxCapitalEmpr_Leave(object sender, EventArgs e)
@@ -111,8 +131,21 @@ namespace Emprunts
             
         }
 
-        
+        private void textBoxCapitalEmpr_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBoxCapitalEmpr.Text,out int kemprunte))
+            {
+                monEmprunt.Capital = kemprunte;
+                UpdateEmprunt();
+            }
 
-        
+            
+        }
+
+        private void textBoxNom_TextChanged(object sender, EventArgs e)
+        {
+            monEmprunt.Nom = textBoxNom.Text;
+            UpdateEmprunt();
+        }
     }
 }

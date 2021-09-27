@@ -41,7 +41,7 @@ namespace ClassLibraryCalculFinancier
         }
         //Constructeur par défaut par interdépendance...
         public Emprunt()
-            : this("", 1000, 12, Frequence.Trimestrielle, 0.07)
+            : this("", 0, 1, Frequence.Mensuelle, 0.07)
         {
 
         }

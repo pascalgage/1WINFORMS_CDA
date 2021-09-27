@@ -52,21 +52,19 @@ namespace Emprunts
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(929, 41);
-            this.buttonOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOk.Location = new System.Drawing.Point(697, 33);
             this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(100, 28);
-            this.buttonOk.TabIndex = 0;
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.TabIndex = 3;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonAnnuler
             // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(929, 77);
-            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAnnuler.Location = new System.Drawing.Point(697, 63);
             this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(100, 28);
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
             this.buttonAnnuler.TabIndex = 1;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
@@ -74,79 +72,73 @@ namespace Emprunts
             // hScrollBarDuree
             // 
             this.hScrollBarDuree.LargeChange = 1;
-            this.hScrollBarDuree.Location = new System.Drawing.Point(388, 199);
+            this.hScrollBarDuree.Location = new System.Drawing.Point(291, 162);
             this.hScrollBarDuree.Maximum = 240;
             this.hScrollBarDuree.Name = "hScrollBarDuree";
-            this.hScrollBarDuree.Size = new System.Drawing.Size(205, 23);
+            this.hScrollBarDuree.Size = new System.Drawing.Size(154, 23);
             this.hScrollBarDuree.TabIndex = 2;
             this.hScrollBarDuree.Value = 1;
             this.hScrollBarDuree.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarDuree_Scroll);
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(165, 43);
-            this.textBoxNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNom.Location = new System.Drawing.Point(124, 35);
             this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(233, 22);
-            this.textBoxNom.TabIndex = 3;
+            this.textBoxNom.Size = new System.Drawing.Size(176, 20);
+            this.textBoxNom.TabIndex = 0;
+            this.textBoxNom.TextChanged += new System.EventHandler(this.textBoxNom_TextChanged);
             // 
             // textBoxCapitalEmpr
             // 
-            this.textBoxCapitalEmpr.Location = new System.Drawing.Point(165, 99);
-            this.textBoxCapitalEmpr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCapitalEmpr.Location = new System.Drawing.Point(124, 80);
             this.textBoxCapitalEmpr.Name = "textBoxCapitalEmpr";
-            this.textBoxCapitalEmpr.Size = new System.Drawing.Size(233, 22);
-            this.textBoxCapitalEmpr.TabIndex = 4;
+            this.textBoxCapitalEmpr.Size = new System.Drawing.Size(176, 20);
+            this.textBoxCapitalEmpr.TabIndex = 1;
+            this.textBoxCapitalEmpr.TextChanged += new System.EventHandler(this.textBoxCapitalEmpr_TextChanged);
             this.textBoxCapitalEmpr.Leave += new System.EventHandler(this.textBoxCapitalEmpr_Leave);
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(37, 47);
-            this.labelNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNom.Location = new System.Drawing.Point(28, 38);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(37, 17);
+            this.labelNom.Size = new System.Drawing.Size(29, 13);
             this.labelNom.TabIndex = 5;
             this.labelNom.Text = "Nom";
             // 
             // labelCapEmpr
             // 
             this.labelCapEmpr.AutoSize = true;
-            this.labelCapEmpr.Location = new System.Drawing.Point(41, 102);
-            this.labelCapEmpr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCapEmpr.Location = new System.Drawing.Point(31, 83);
             this.labelCapEmpr.Name = "labelCapEmpr";
-            this.labelCapEmpr.Size = new System.Drawing.Size(116, 17);
+            this.labelCapEmpr.Size = new System.Drawing.Size(87, 13);
             this.labelCapEmpr.TabIndex = 6;
             this.labelCapEmpr.Text = "Capital Emprunté";
             // 
             // labelDuree
             // 
             this.labelDuree.AutoSize = true;
-            this.labelDuree.Location = new System.Drawing.Point(41, 199);
-            this.labelDuree.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDuree.Location = new System.Drawing.Point(31, 162);
             this.labelDuree.Name = "labelDuree";
-            this.labelDuree.Size = new System.Drawing.Size(223, 17);
+            this.labelDuree.Size = new System.Drawing.Size(165, 13);
             this.labelDuree.TabIndex = 7;
             this.labelDuree.Text = "Durée en mois du remboursement";
             // 
             // listBoxPeriodicite
             // 
             this.listBoxPeriodicite.FormattingEnabled = true;
-            this.listBoxPeriodicite.ItemHeight = 16;
-            this.listBoxPeriodicite.Location = new System.Drawing.Point(45, 359);
-            this.listBoxPeriodicite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxPeriodicite.Location = new System.Drawing.Point(34, 292);
             this.listBoxPeriodicite.Name = "listBoxPeriodicite";
-            this.listBoxPeriodicite.Size = new System.Drawing.Size(223, 164);
+            this.listBoxPeriodicite.Size = new System.Drawing.Size(168, 134);
             this.listBoxPeriodicite.TabIndex = 8;
             this.listBoxPeriodicite.SelectedIndexChanged += new System.EventHandler(this.listBoxPeriodicite_SelectedIndexChanged);
             // 
             // labelPeriodicite
             // 
             this.labelPeriodicite.AutoSize = true;
-            this.labelPeriodicite.Location = new System.Drawing.Point(45, 336);
-            this.labelPeriodicite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPeriodicite.Location = new System.Drawing.Point(34, 273);
             this.labelPeriodicite.Name = "labelPeriodicite";
-            this.labelPeriodicite.Size = new System.Drawing.Size(197, 17);
+            this.labelPeriodicite.Size = new System.Drawing.Size(146, 13);
             this.labelPeriodicite.TabIndex = 9;
             this.labelPeriodicite.Text = "Périodicité de remboursement";
             // 
@@ -154,30 +146,27 @@ namespace Emprunts
             // 
             this.labelNBrVersement.AutoSize = true;
             this.labelNBrVersement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelNBrVersement.Location = new System.Drawing.Point(629, 359);
-            this.labelNBrVersement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNBrVersement.Location = new System.Drawing.Point(472, 292);
             this.labelNBrVersement.Name = "labelNBrVersement";
-            this.labelNBrVersement.Size = new System.Drawing.Size(2, 19);
+            this.labelNBrVersement.Size = new System.Drawing.Size(2, 15);
             this.labelNBrVersement.TabIndex = 11;
             // 
             // labelRemb
             // 
             this.labelRemb.AutoSize = true;
-            this.labelRemb.Location = new System.Drawing.Point(727, 358);
-            this.labelRemb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRemb.Location = new System.Drawing.Point(545, 291);
             this.labelRemb.Name = "labelRemb";
-            this.labelRemb.Size = new System.Drawing.Size(119, 17);
+            this.labelRemb.Size = new System.Drawing.Size(89, 13);
             this.labelRemb.TabIndex = 12;
             this.labelRemb.Text = "Remboursements";
             // 
             // radioButt7perc
             // 
             this.radioButt7perc.AutoSize = true;
-            this.radioButt7perc.Location = new System.Drawing.Point(36, 39);
-            this.radioButt7perc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButt7perc.Location = new System.Drawing.Point(27, 32);
             this.radioButt7perc.Name = "radioButt7perc";
-            this.radioButt7perc.Size = new System.Drawing.Size(49, 21);
-            this.radioButt7perc.TabIndex = 13;
+            this.radioButt7perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt7perc.TabIndex = 2;
             this.radioButt7perc.TabStop = true;
             this.radioButt7perc.Text = "7%";
             this.radioButt7perc.UseVisualStyleBackColor = true;
@@ -185,11 +174,10 @@ namespace Emprunts
             // radioButt8perc
             // 
             this.radioButt8perc.AutoSize = true;
-            this.radioButt8perc.Location = new System.Drawing.Point(36, 76);
-            this.radioButt8perc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButt8perc.Location = new System.Drawing.Point(27, 62);
             this.radioButt8perc.Name = "radioButt8perc";
-            this.radioButt8perc.Size = new System.Drawing.Size(49, 21);
-            this.radioButt8perc.TabIndex = 14;
+            this.radioButt8perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt8perc.TabIndex = 3;
             this.radioButt8perc.TabStop = true;
             this.radioButt8perc.Text = "8%";
             this.radioButt8perc.UseVisualStyleBackColor = true;
@@ -197,11 +185,10 @@ namespace Emprunts
             // radioButt9perc
             // 
             this.radioButt9perc.AutoSize = true;
-            this.radioButt9perc.Location = new System.Drawing.Point(36, 116);
-            this.radioButt9perc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButt9perc.Location = new System.Drawing.Point(27, 94);
             this.radioButt9perc.Name = "radioButt9perc";
-            this.radioButt9perc.Size = new System.Drawing.Size(49, 21);
-            this.radioButt9perc.TabIndex = 15;
+            this.radioButt9perc.Size = new System.Drawing.Size(39, 17);
+            this.radioButt9perc.TabIndex = 4;
             this.radioButt9perc.TabStop = true;
             this.radioButt9perc.Text = "9%";
             this.radioButt9perc.UseVisualStyleBackColor = true;
@@ -211,23 +198,20 @@ namespace Emprunts
             this.groupBoxTx.Controls.Add(this.radioButt7perc);
             this.groupBoxTx.Controls.Add(this.radioButt9perc);
             this.groupBoxTx.Controls.Add(this.radioButt8perc);
-            this.groupBoxTx.Location = new System.Drawing.Point(696, 26);
-            this.groupBoxTx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxTx.Location = new System.Drawing.Point(522, 21);
             this.groupBoxTx.Name = "groupBoxTx";
-            this.groupBoxTx.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxTx.Size = new System.Drawing.Size(180, 166);
+            this.groupBoxTx.Size = new System.Drawing.Size(135, 135);
             this.groupBoxTx.TabIndex = 16;
             this.groupBoxTx.TabStop = false;
             this.groupBoxTx.Text = "Taux d\'intérêt";
             // 
-            // labelRembousement
+            // labelRemboursement
             // 
             this.labelRemboursement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRemboursement.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRemboursement.Location = new System.Drawing.Point(732, 436);
-            this.labelRemboursement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRemboursement.Name = "labelRembousement";
-            this.labelRemboursement.Size = new System.Drawing.Size(205, 42);
+            this.labelRemboursement.Location = new System.Drawing.Point(549, 354);
+            this.labelRemboursement.Name = "labelRemboursement";
+            this.labelRemboursement.Size = new System.Drawing.Size(154, 34);
             this.labelRemboursement.TabIndex = 17;
             this.labelRemboursement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -236,19 +220,18 @@ namespace Emprunts
             this.labelDure.AutoSize = true;
             this.labelDure.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelDure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelDure.Location = new System.Drawing.Point(325, 199);
-            this.labelDure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDure.Location = new System.Drawing.Point(244, 162);
             this.labelDure.Name = "labelDure";
-            this.labelDure.Size = new System.Drawing.Size(2, 19);
+            this.labelDure.Size = new System.Drawing.Size(2, 15);
             this.labelDure.TabIndex = 18;
             this.labelDure.Tag = "";
             this.labelDure.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 456);
+            this.ClientSize = new System.Drawing.Size(854, 450);
             this.Controls.Add(this.labelDure);
             this.Controls.Add(this.labelRemboursement);
             this.Controls.Add(this.groupBoxTx);
@@ -264,7 +247,6 @@ namespace Emprunts
             this.Controls.Add(this.hScrollBarDuree);
             this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.buttonOk);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Emprunts";
             this.groupBoxTx.ResumeLayout(false);
