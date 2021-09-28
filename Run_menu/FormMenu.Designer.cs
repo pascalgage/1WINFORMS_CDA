@@ -36,6 +36,8 @@ namespace Run_menu
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.phase1ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.additionneurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,27 +79,45 @@ namespace Run_menu
             // sousMenuIdentify
             // 
             this.sousMenuIdentify.Name = "sousMenuIdentify";
-            this.sousMenuIdentify.Size = new System.Drawing.Size(180, 22);
+            this.sousMenuIdentify.Size = new System.Drawing.Size(130, 22);
             this.sousMenuIdentify.Text = "S\'identifier";
             this.sousMenuIdentify.Click += new System.EventHandler(this.sousMenuIdentify_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
             // 
             // toolStripQuit
             // 
             this.toolStripQuit.Name = "toolStripQuit";
-            this.toolStripQuit.Size = new System.Drawing.Size(180, 22);
+            this.toolStripQuit.Size = new System.Drawing.Size(130, 22);
             this.toolStripQuit.Text = "Quitter";
+            this.toolStripQuit.Click += new System.EventHandler(this.toolStripQuit_Click);
             // 
             // phase1ToolStrip
             // 
+            this.phase1ToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.additionneurToolStripMenuItem,
+            this.checBoxToolStripMenuItem});
             this.phase1ToolStrip.Enabled = false;
             this.phase1ToolStrip.Name = "phase1ToolStrip";
             this.phase1ToolStrip.Size = new System.Drawing.Size(59, 20);
             this.phase1ToolStrip.Text = "Phase 1";
+            // 
+            // additionneurToolStripMenuItem
+            // 
+            this.additionneurToolStripMenuItem.Name = "additionneurToolStripMenuItem";
+            this.additionneurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.additionneurToolStripMenuItem.Text = "Additionneur";
+            this.additionneurToolStripMenuItem.Click += new System.EventHandler(this.additionneurToolStripMenuItem_Click);
+            // 
+            // checBoxToolStripMenuItem
+            // 
+            this.checBoxToolStripMenuItem.Name = "checBoxToolStripMenuItem";
+            this.checBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checBoxToolStripMenuItem.Text = "CheckBox";
+            this.checBoxToolStripMenuItem.Click += new System.EventHandler(this.checBoxToolStripMenuItem_Click);
             // 
             // phase2ToolStrip
             // 
@@ -150,6 +170,8 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripMenuItem phase2ToolStrip;
         private System.Windows.Forms.ToolStripMenuItem phase3ToolStrip;
         private System.Windows.Forms.ToolStripMenuItem fenetresToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem additionneurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checBoxToolStripMenuItem;
     }
 }
 

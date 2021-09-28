@@ -1,7 +1,7 @@
 ﻿
 namespace Additionneur
 {
-    partial class Form1
+    partial class FormAdd
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

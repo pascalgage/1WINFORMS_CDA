@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Additionneur
 {
-    public partial class Form1 : Form
+    public partial class FormAdd : Form
     {
         int somme;
-        public Form1()
+        public FormAdd()
         {
             InitializeComponent();
             somme = 0;

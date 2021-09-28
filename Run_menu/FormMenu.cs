@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Additionneur;
+using CheckBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +37,19 @@ namespace Run_menu
         private void toolStripQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void additionneurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdd essai = new FormAdd();
+            essai.ShowDialog();
+
+        }
+
+        private void checBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCheck appli2 = new FormCheck();
+            appli2.ShowDialog();
         }
     }
 }

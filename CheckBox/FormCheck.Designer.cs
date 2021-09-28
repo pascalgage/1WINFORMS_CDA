@@ -1,7 +1,7 @@
 ﻿
 namespace CheckBox
 {
-    partial class Form1
+    partial class FormCheck
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
