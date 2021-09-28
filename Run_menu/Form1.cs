@@ -17,18 +17,13 @@ namespace Run_menu
             InitializeComponent();
         }
 
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void sousMenuIdentify_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenue");
-            toolStripConnexion.Enabled = true;
-            toolStripPhase1.Enabled = true;
-            toolStripPhase2.Enabled = true;
-            toolStripPhase3.Enabled = true;
-            toolStripFenetres.Enabled = true;
+            Identity identify = new Identity();
+            identify.ShowDialog();
         }
 
-        private void sousMenuTutuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripQuit_Click(object sender, EventArgs e)
         {
 
         }
