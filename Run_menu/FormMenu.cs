@@ -1,5 +1,6 @@
 ﻿using Additionneur;
 using CheckBox;
+using Saisie_Controle;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,12 @@ namespace Run_menu
         {
             FormCheck appli2 = new FormCheck();
             appli2.ShowDialog();
+        }
+
+        private void saisieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSais appli3 = new FormSais();
+            appli3.ShowDialog();
         }
     }
 }

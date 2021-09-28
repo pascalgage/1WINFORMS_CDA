@@ -14,13 +14,13 @@ using ClassLibraryTransaction;
 
 namespace Saisie_Controle
 {
-    public partial class Form1 : Form
+    public partial class FormSais : Form
     {
 
         private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated" +
            " Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" +
            "MultiSubnetFailover=False");
-        public Form1()
+        public FormSais()
         {
             InitializeComponent();
 

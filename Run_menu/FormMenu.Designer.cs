@@ -41,6 +41,7 @@ namespace Run_menu
             this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +100,8 @@ namespace Run_menu
             // 
             this.phase1ToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.additionneurToolStripMenuItem,
-            this.checBoxToolStripMenuItem});
+            this.checBoxToolStripMenuItem,
+            this.saisieToolStripMenuItem});
             this.phase1ToolStrip.Enabled = false;
             this.phase1ToolStrip.Name = "phase1ToolStrip";
             this.phase1ToolStrip.Size = new System.Drawing.Size(59, 20);
@@ -140,6 +142,13 @@ namespace Run_menu
             this.fenetresToolStrip.Size = new System.Drawing.Size(63, 20);
             this.fenetresToolStrip.Text = "Fenêtres";
             // 
+            // saisieToolStripMenuItem
+            // 
+            this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
+            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saisieToolStripMenuItem.Text = "Saisie";
+            this.saisieToolStripMenuItem.Click += new System.EventHandler(this.saisieToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +181,7 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripMenuItem fenetresToolStrip;
         private System.Windows.Forms.ToolStripMenuItem additionneurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
     }
 }
 

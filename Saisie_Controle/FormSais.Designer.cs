@@ -1,7 +1,7 @@
 ﻿
 namespace Saisie_Controle
 {
-    partial class Form1
+    partial class FormSais
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

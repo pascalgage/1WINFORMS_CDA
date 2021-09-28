@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ComboBox
 {
-    public partial class Form1 : Form
+    public partial class FormComb : Form
     {
-        public Form1()
+        public FormComb()
         {
             InitializeComponent();
         }

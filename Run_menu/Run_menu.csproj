@@ -97,6 +97,10 @@
       <Project>{447DD380-5758-48F5-A986-706132D89CA2}</Project>
       <Name>CheckBox</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Saisie_Controle\Saisie_Controle.csproj">
+      <Project>{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}</Project>
+      <Name>Saisie_Controle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
