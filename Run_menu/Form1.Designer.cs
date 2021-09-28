@@ -89,8 +89,9 @@ namespace Run_menu
             // toolStripQuit
             // 
             this.toolStripQuit.Name = "toolStripQuit";
-            this.toolStripQuit.Size = new System.Drawing.Size(130, 22);
+            this.toolStripQuit.Size = new System.Drawing.Size(180, 22);
             this.toolStripQuit.Text = "Quitter";
+            
             // 
             // phase1ToolStrip
             // 

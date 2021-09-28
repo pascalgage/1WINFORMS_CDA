@@ -19,9 +19,11 @@ namespace Run_menu
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
-            if (textBoxNom.Text == textBoxMdp.Text)
+            if (textBoxNom.Text==textBoxMdp.Text)
+
             {
                 MessageBox.Show("Authentification réussie !");
+                this.Close();
                 
             }
         }

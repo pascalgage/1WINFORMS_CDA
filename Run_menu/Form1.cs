@@ -20,11 +20,30 @@ namespace Run_menu
         private void sousMenuIdentify_Click(object sender, EventArgs e)
         {
             Identity identify = new Identity();
-            identify.ShowDialog();
+            DialogResult reponse= identify.ShowDialog();
+            if (reponse == DialogResult.OK)
+            {
+                // activer mes menus
+                this.phase1ToolStrip.Enabled = true;
+                this.phase2ToolStrip.Enabled = true;
+                this.phase3ToolStrip.Enabled = true;
+                this.fenêtresToolStrip.Enabled = true;
+            }
+
         }
 
-        
+        private void toolStripQuit_Click(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show
+            ("Fin de l’application ?", "FIN",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
 
-        
+            }
+        }
     }
 }

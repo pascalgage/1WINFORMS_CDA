@@ -38,6 +38,7 @@ namespace Run_menu
             // 
             // buttonConnect
             // 
+            this.buttonConnect.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonConnect.Location = new System.Drawing.Point(335, 301);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(108, 23);
