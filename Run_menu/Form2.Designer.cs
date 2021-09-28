@@ -29,35 +29,36 @@ namespace Run_menu
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.textBoxMdp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonConnect
             // 
-            this.button1.Location = new System.Drawing.Point(335, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Se connecter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonConnect.Location = new System.Drawing.Point(335, 301);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(108, 23);
+            this.buttonConnect.TabIndex = 0;
+            this.buttonConnect.Text = "Se connecter";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
-            // textBox1
+            // textBoxNom
             // 
-            this.textBox1.Location = new System.Drawing.Point(245, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxNom.Location = new System.Drawing.Point(245, 102);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(198, 20);
+            this.textBoxNom.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxMdp
             // 
-            this.textBox2.Location = new System.Drawing.Point(245, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBoxMdp.Location = new System.Drawing.Point(245, 169);
+            this.textBoxMdp.Name = "textBoxMdp";
+            this.textBoxMdp.Size = new System.Drawing.Size(198, 20);
+            this.textBoxMdp.TabIndex = 2;
             // 
             // label1
             // 
@@ -84,9 +85,9 @@ namespace Run_menu
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxMdp);
+            this.Controls.Add(this.textBoxNom);
+            this.Controls.Add(this.buttonConnect);
             this.Name = "Identity";
             this.Text = "S\'identifier";
             this.ResumeLayout(false);
@@ -96,9 +97,9 @@ namespace Run_menu
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.TextBox textBoxNom;
+        private System.Windows.Forms.TextBox textBoxMdp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

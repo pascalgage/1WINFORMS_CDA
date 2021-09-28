@@ -35,10 +35,10 @@ namespace Run_menu
             this.sousMenuIdentify = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripQuit = new System.Windows.Forms.ToolStripMenuItem();
-            this.phase1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phase2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phase3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fenêtresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phase1ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.fenêtresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,10 +54,10 @@ namespace Run_menu
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuTutuToolStripMenuItem,
-            this.phase1ToolStripMenuItem,
-            this.phase2ToolStripMenuItem,
-            this.phase3ToolStripMenuItem,
-            this.fenêtresToolStripMenuItem});
+            this.phase1ToolStrip,
+            this.phase2ToolStrip,
+            this.phase3ToolStrip,
+            this.fenêtresToolStrip});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1321, 24);
@@ -77,49 +77,48 @@ namespace Run_menu
             // sousMenuIdentify
             // 
             this.sousMenuIdentify.Name = "sousMenuIdentify";
-            this.sousMenuIdentify.Size = new System.Drawing.Size(180, 22);
+            this.sousMenuIdentify.Size = new System.Drawing.Size(130, 22);
             this.sousMenuIdentify.Text = "S\'identifier";
             this.sousMenuIdentify.Click += new System.EventHandler(this.sousMenuIdentify_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
             // 
             // toolStripQuit
             // 
             this.toolStripQuit.Name = "toolStripQuit";
-            this.toolStripQuit.Size = new System.Drawing.Size(180, 22);
+            this.toolStripQuit.Size = new System.Drawing.Size(130, 22);
             this.toolStripQuit.Text = "Quitter";
-            this.toolStripQuit.Click += new System.EventHandler(this.toolStripQuit_Click);
             // 
-            // phase1ToolStripMenuItem
+            // phase1ToolStrip
             // 
-            this.phase1ToolStripMenuItem.Enabled = false;
-            this.phase1ToolStripMenuItem.Name = "phase1ToolStripMenuItem";
-            this.phase1ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.phase1ToolStripMenuItem.Text = "Phase 1";
+            this.phase1ToolStrip.Enabled = false;
+            this.phase1ToolStrip.Name = "phase1ToolStrip";
+            this.phase1ToolStrip.Size = new System.Drawing.Size(59, 20);
+            this.phase1ToolStrip.Text = "Phase 1";
             // 
-            // phase2ToolStripMenuItem
+            // phase2ToolStrip
             // 
-            this.phase2ToolStripMenuItem.Enabled = false;
-            this.phase2ToolStripMenuItem.Name = "phase2ToolStripMenuItem";
-            this.phase2ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.phase2ToolStripMenuItem.Text = "Phase 2";
+            this.phase2ToolStrip.Enabled = false;
+            this.phase2ToolStrip.Name = "phase2ToolStrip";
+            this.phase2ToolStrip.Size = new System.Drawing.Size(59, 20);
+            this.phase2ToolStrip.Text = "Phase 2";
             // 
-            // phase3ToolStripMenuItem
+            // phase3ToolStrip
             // 
-            this.phase3ToolStripMenuItem.Enabled = false;
-            this.phase3ToolStripMenuItem.Name = "phase3ToolStripMenuItem";
-            this.phase3ToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.phase3ToolStripMenuItem.Text = "Phase 3";
+            this.phase3ToolStrip.Enabled = false;
+            this.phase3ToolStrip.Name = "phase3ToolStrip";
+            this.phase3ToolStrip.Size = new System.Drawing.Size(59, 20);
+            this.phase3ToolStrip.Text = "Phase 3";
             // 
-            // fenêtresToolStripMenuItem
+            // fenêtresToolStrip
             // 
-            this.fenêtresToolStripMenuItem.Enabled = false;
-            this.fenêtresToolStripMenuItem.Name = "fenêtresToolStripMenuItem";
-            this.fenêtresToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.fenêtresToolStripMenuItem.Text = "Fenêtres";
+            this.fenêtresToolStrip.Enabled = false;
+            this.fenêtresToolStrip.Name = "fenêtresToolStrip";
+            this.fenêtresToolStrip.Size = new System.Drawing.Size(63, 20);
+            this.fenêtresToolStrip.Text = "Fenêtres";
             // 
             // Form1
             // 
@@ -147,10 +146,10 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripMenuItem sousMenuIdentify;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripQuit;
-        private System.Windows.Forms.ToolStripMenuItem phase1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phase2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phase3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fenêtresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phase1ToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem phase2ToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem phase3ToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem fenêtresToolStrip;
     }
 }
 

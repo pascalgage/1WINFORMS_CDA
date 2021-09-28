@@ -23,9 +23,8 @@ namespace Run_menu
             identify.ShowDialog();
         }
 
-        private void toolStripQuit_Click(object sender, EventArgs e)
-        {
+        
 
-        }
+        
     }
 }
