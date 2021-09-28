@@ -38,7 +38,7 @@ namespace Run_menu
             this.phase1ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.fenêtresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@ namespace Run_menu
             this.phase1ToolStrip,
             this.phase2ToolStrip,
             this.phase3ToolStrip,
-            this.fenêtresToolStrip});
+            this.fenetresToolStrip});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1321, 24);
@@ -77,21 +77,20 @@ namespace Run_menu
             // sousMenuIdentify
             // 
             this.sousMenuIdentify.Name = "sousMenuIdentify";
-            this.sousMenuIdentify.Size = new System.Drawing.Size(130, 22);
+            this.sousMenuIdentify.Size = new System.Drawing.Size(180, 22);
             this.sousMenuIdentify.Text = "S\'identifier";
             this.sousMenuIdentify.Click += new System.EventHandler(this.sousMenuIdentify_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripQuit
             // 
             this.toolStripQuit.Name = "toolStripQuit";
             this.toolStripQuit.Size = new System.Drawing.Size(180, 22);
             this.toolStripQuit.Text = "Quitter";
-            
             // 
             // phase1ToolStrip
             // 
@@ -114,12 +113,12 @@ namespace Run_menu
             this.phase3ToolStrip.Size = new System.Drawing.Size(59, 20);
             this.phase3ToolStrip.Text = "Phase 3";
             // 
-            // fenêtresToolStrip
+            // fenetresToolStrip
             // 
-            this.fenêtresToolStrip.Enabled = false;
-            this.fenêtresToolStrip.Name = "fenêtresToolStrip";
-            this.fenêtresToolStrip.Size = new System.Drawing.Size(63, 20);
-            this.fenêtresToolStrip.Text = "Fenêtres";
+            this.fenetresToolStrip.Enabled = false;
+            this.fenetresToolStrip.Name = "fenetresToolStrip";
+            this.fenetresToolStrip.Size = new System.Drawing.Size(63, 20);
+            this.fenetresToolStrip.Text = "Fenêtres";
             // 
             // Form1
             // 
@@ -150,7 +149,7 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripMenuItem phase1ToolStrip;
         private System.Windows.Forms.ToolStripMenuItem phase2ToolStrip;
         private System.Windows.Forms.ToolStripMenuItem phase3ToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem fenêtresToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem fenetresToolStrip;
     }
 }
 

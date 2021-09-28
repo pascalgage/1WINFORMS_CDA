@@ -27,23 +27,14 @@ namespace Run_menu
                 this.phase1ToolStrip.Enabled = true;
                 this.phase2ToolStrip.Enabled = true;
                 this.phase3ToolStrip.Enabled = true;
-                this.fenêtresToolStrip.Enabled = true;
+                this.fenetresToolStrip.Enabled = true;
             }
 
         }
 
-        private void toolStripQuit_Click(object sender, FormClosingEventArgs e)
+        private void toolStripQuit_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show
-            ("Fin de l’application ?", "FIN",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question,
-            MessageBoxDefaultButton.Button1);
-            if (dr == DialogResult.No)
-            {
-                e.Cancel = true;
-
-            }
+            this.Close();
         }
     }
 }
