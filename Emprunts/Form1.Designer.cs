@@ -29,6 +29,7 @@ namespace Emprunts
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.hScrollBarDuree = new System.Windows.Forms.HScrollBar();
@@ -47,7 +48,11 @@ namespace Emprunts
             this.groupBoxTx = new System.Windows.Forms.GroupBox();
             this.labelRemboursement = new System.Windows.Forms.Label();
             this.labelDure = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProK = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBoxTx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProK)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOk
@@ -229,7 +234,15 @@ namespace Emprunts
             this.labelDure.Tag = "";
             this.labelDure.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Form1
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProK
+            // 
+            this.errorProK.ContainerControl = this;
+            // 
+            // FormEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,10 +262,12 @@ namespace Emprunts
             this.Controls.Add(this.hScrollBarDuree);
             this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.buttonOk);
-            this.Name = "Form1";
+            this.Name = "FormEmp";
             this.Text = "Emprunts";
             this.groupBoxTx.ResumeLayout(false);
             this.groupBoxTx.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +293,8 @@ namespace Emprunts
         private System.Windows.Forms.GroupBox groupBoxTx;
         private System.Windows.Forms.Label labelRemboursement;
         private System.Windows.Forms.Label labelDure;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProK;
     }
 }
 

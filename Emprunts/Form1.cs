@@ -74,13 +74,14 @@ namespace Emprunts
 
         private void textBoxCapitalEmpr_Leave(object sender, EventArgs e)
         {
-            if (int.TryParse(textBoxCapitalEmpr.Text, out int k))
+            if (double.TryParse(textBoxCapitalEmpr.Text, out double k) && Emprunt.IsvalidK(textBoxCapitalEmpr.Text))
             {
                 monEmprunt.Capital = k;
                 UpdateEmprunt();
             }
             else
             {
+                errorProK.SetError(textBoxCapitalEmpr,"ERREUR!!!");
                 MessageBox.Show("Le capital saisi doit être un entier positif !");
             }
             
@@ -182,5 +183,6 @@ namespace Emprunts
             Reinitialise();
         }
 
+        
     }
 }

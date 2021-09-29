@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 namespace ClassLibraryCalculFinancier
 {
     public class Emprunt
@@ -58,7 +58,10 @@ namespace ClassLibraryCalculFinancier
             return Math.Round(resultat,2);
         }
 
-
+        public static bool IsvalidK(string _monTextbox)
+        {
+            return (Regex.Match(_monTextbox, "^[0-9]+([.,]{1}[0-9]{2})?$").Success);
+        }
 
 
 
