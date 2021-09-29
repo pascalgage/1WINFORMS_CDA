@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBox", "..\CheckBox\Che
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saisie_Controle", "..\Saisie_Controle\Saisie_Controle.csproj", "{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COLOR_BOX", "..\COLOR_BOX\COLOR_BOX.csproj", "{AF0A131D-4052-4009-90AE-12CA24DB5D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emprunts", "..\Emprunts\Emprunts.csproj", "{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0A131D-4052-4009-90AE-12CA24DB5D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0A131D-4052-4009-90AE-12CA24DB5D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0A131D-4052-4009-90AE-12CA24DB5D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0A131D-4052-4009-90AE-12CA24DB5D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -38,10 +38,12 @@ namespace Run_menu
             this.phase1ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.additionneurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empruntsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,8 +123,18 @@ namespace Run_menu
             this.checBoxToolStripMenuItem.Text = "CheckBox";
             this.checBoxToolStripMenuItem.Click += new System.EventHandler(this.checBoxToolStripMenuItem_Click);
             // 
+            // saisieToolStripMenuItem
+            // 
+            this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
+            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saisieToolStripMenuItem.Text = "Saisie";
+            this.saisieToolStripMenuItem.Click += new System.EventHandler(this.saisieToolStripMenuItem_Click);
+            // 
             // phase2ToolStrip
             // 
+            this.phase2ToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colorBoxToolStripMenuItem,
+            this.empruntsToolStripMenuItem});
             this.phase2ToolStrip.Enabled = false;
             this.phase2ToolStrip.Name = "phase2ToolStrip";
             this.phase2ToolStrip.Size = new System.Drawing.Size(59, 20);
@@ -142,12 +154,19 @@ namespace Run_menu
             this.fenetresToolStrip.Size = new System.Drawing.Size(63, 20);
             this.fenetresToolStrip.Text = "Fenêtres";
             // 
-            // saisieToolStripMenuItem
+            // colorBoxToolStripMenuItem
             // 
-            this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
-            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saisieToolStripMenuItem.Text = "Saisie";
-            this.saisieToolStripMenuItem.Click += new System.EventHandler(this.saisieToolStripMenuItem_Click);
+            this.colorBoxToolStripMenuItem.Name = "colorBoxToolStripMenuItem";
+            this.colorBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colorBoxToolStripMenuItem.Text = "ColorBox";
+            this.colorBoxToolStripMenuItem.Click += new System.EventHandler(this.colorBoxToolStripMenuItem_Click);
+            // 
+            // empruntsToolStripMenuItem
+            // 
+            this.empruntsToolStripMenuItem.Name = "empruntsToolStripMenuItem";
+            this.empruntsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empruntsToolStripMenuItem.Text = "Emprunts";
+            this.empruntsToolStripMenuItem.Click += new System.EventHandler(this.empruntsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -182,6 +201,8 @@ namespace Run_menu
         private System.Windows.Forms.ToolStripMenuItem additionneurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saisieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorBoxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empruntsToolStripMenuItem;
     }
 }
 

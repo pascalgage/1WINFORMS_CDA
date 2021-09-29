@@ -1,7 +1,7 @@
 ﻿
 namespace Emprunts
 {
-    partial class Form1
+    partial class FormEmp
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

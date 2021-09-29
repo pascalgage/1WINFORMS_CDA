@@ -1,5 +1,7 @@
 ﻿using Additionneur;
 using CheckBox;
+using COLOR_BOX;
+using Emprunts;
 using Saisie_Controle;
 using System;
 using System.Collections.Generic;
@@ -19,6 +21,11 @@ namespace Run_menu
         {
             InitializeComponent();
         }
+
+        //Compteur pour ouverture de fenêtres...N°1,2 etc...
+        int compteur = 1;
+        public int Compteur { get => compteur; set => compteur = value; }
+        //Fin compteur
 
         private void sousMenuIdentify_Click(object sender, EventArgs e)
         {
@@ -42,21 +49,43 @@ namespace Run_menu
 
         private void additionneurToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAdd essai = new FormAdd();
-            essai.ShowDialog();
+            FormAdd appli1 = new FormAdd();
+            appli1.Text += " N°" + Compteur++;
+            appli1.MdiParent = this;
+            appli1.Show();
 
         }
 
         private void checBoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCheck appli2 = new FormCheck();
-            appli2.ShowDialog();
+            appli2.Text += " N°" + Compteur++;
+            appli2.MdiParent = this;
+            appli2.Show();
         }
 
         private void saisieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSais appli3 = new FormSais();
-            appli3.ShowDialog();
+            appli3.Text += " N°" + Compteur++;
+            appli3.MdiParent = this;
+            appli3.Show();
+        }
+
+        private void colorBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCol appli4 = new FormCol();
+            appli4.Text += " N°" + Compteur++;
+            appli4.MdiParent = this;
+            appli4.Show();
+        }
+
+        private void empruntsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEmp appli5 = new FormEmp();
+            appli5.Text += " N°" + Compteur++;
+            appli5.MdiParent = this;
+            appli5.Show();
         }
     }
 }

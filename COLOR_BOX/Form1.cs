@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace COLOR_BOX
 {
-    public partial class Form1 : Form
+    public partial class FormCol : Form
     {
 
         private System.Drawing.Color maCouleur;
 
 
-        public Form1()
+        public FormCol()
         {
             InitializeComponent();
 

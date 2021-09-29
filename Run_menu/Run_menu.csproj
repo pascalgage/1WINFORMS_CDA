@@ -97,6 +97,14 @@
       <Project>{447DD380-5758-48F5-A986-706132D89CA2}</Project>
       <Name>CheckBox</Name>
     </ProjectReference>
+    <ProjectReference Include="..\COLOR_BOX\COLOR_BOX.csproj">
+      <Project>{AF0A131D-4052-4009-90AE-12CA24DB5D58}</Project>
+      <Name>COLOR_BOX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Emprunts\Emprunts.csproj">
+      <Project>{1F43242C-A023-4E09-80B6-B6E5DFF4AD1D}</Project>
+      <Name>Emprunts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Saisie_Controle\Saisie_Controle.csproj">
       <Project>{8F2A1E77-400F-4D29-ACDD-409C72A9B9DB}</Project>
       <Name>Saisie_Controle</Name>

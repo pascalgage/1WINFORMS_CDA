@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ClassLibraryCalculFinancier;
 namespace Emprunts
 {
-    public partial class Form1 : Form
+    public partial class FormEmp : Form
     {
         
         private const double Taux7 = 0.07;
@@ -19,7 +19,7 @@ namespace Emprunts
 
         private Emprunt monEmprunt;
 
-        public Form1()
+        public FormEmp()
         {
             
             InitializeComponent();

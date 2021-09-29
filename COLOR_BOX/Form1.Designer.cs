@@ -1,7 +1,7 @@
 ﻿
 namespace COLOR_BOX
 {
-    partial class Form1
+    partial class FormCol
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
