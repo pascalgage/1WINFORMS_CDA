@@ -13,10 +13,6 @@ namespace Emprunts
     public partial class FormEmp : Form
     {
 
-        //Declaration de l'évènement...
-        public delegate void DelegateMensualiteOver(double _mensOver);
-        public event DelegateMensualiteOver mensualiteOver;
-
 
         private const double Taux7 = 0.07;
         private const double Taux8 = 0.08;
@@ -40,13 +36,20 @@ namespace Emprunts
             
             monEmprunt = new Emprunt();
             monEmprunt.lamensualiteestOver += MonEmprunt_lamensualiteestOver;
+            monEmprunt.lamensualiteOK += MonEmprunt_lamensualiteOK;
             UpdateEmprunt();
             
+        }
+
+        private void MonEmprunt_lamensualiteOK(Emprunt sender)
+        {
+            labelRemboursement.BackColor = Color.Green;
         }
 
         private void MonEmprunt_lamensualiteestOver(Emprunt sender)
         {
             labelRemboursement.BackColor = Color.Red;
+
         }
 
         private void UpdateEmprunt()

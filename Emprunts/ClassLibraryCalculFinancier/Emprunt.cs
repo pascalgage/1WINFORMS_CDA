@@ -12,6 +12,9 @@ namespace ClassLibraryCalculFinancier
         public delegate void DelegateMensualiteOver(Emprunt sender);
         public event DelegateMensualiteOver lamensualiteestOver;
 
+        public delegate void DelegateMensOK(Emprunt sender);
+        public event DelegateMensOK lamensualiteOK;
+
         //Attributs...
         private string nom;
         private double capital;
@@ -65,6 +68,13 @@ namespace ClassLibraryCalculFinancier
                 if (lamensualiteestOver != null)
                 {
                     lamensualiteestOver(this);
+                }
+            }
+            else
+            {
+                if (lamensualiteOK != null)
+                {
+                    lamensualiteOK(this);
                 }
             }
             
