@@ -12,11 +12,25 @@ namespace CheckBox
 {
     public partial class FormCheck : Form
     {
+        private string texte ="";
+
+        public string Texte { get => texte;  }
+
         public FormCheck()
         {
             InitializeComponent();
         }
 
+        
+
+        public FormCheck(string _texte)
+        {
+            InitializeComponent();
+            this.texte = _texte;
+            this.textchoix.Text=_texte;
+        }
+
+        
 
         //DEPART ENTER TEXT
         private void textChoix_TextChanged(object sender, EventArgs e)

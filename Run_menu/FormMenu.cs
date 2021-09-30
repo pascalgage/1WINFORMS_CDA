@@ -22,6 +22,7 @@ namespace Run_menu
             InitializeComponent();
         }
 
+        
         //Compteur pour ouverture de fenêtres...N°1,2 etc...
         int compteur = 1;
         public int Compteur { get => compteur; set => compteur = value; }
@@ -58,10 +59,32 @@ namespace Run_menu
 
         private void checBoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCheck appli2 = new FormCheck();
+            //FormCheck appli2 = new FormCheck();
+            //appli2.Text += " N°" + Compteur++;
+            //appli2.MdiParent = this;
+            //appli2.Show();
+
+            boxSaisie appliIntermediaire = new boxSaisie();
+            appliIntermediaire.TextSaisietValide += AppliIntermediaire_TextSaisietValide;
+            appliIntermediaire.MdiParent = this;
+            appliIntermediaire.Show();
+
+        }
+
+        
+
+        private void AppliIntermediaire_TextSaisietValide(string montexte)
+        {
+            
+
+            FormCheck appli2 = new FormCheck(montexte);
+
             appli2.Text += " N°" + Compteur++;
+
             appli2.MdiParent = this;
+
             appli2.Show();
+            
         }
 
         private void saisieToolStripMenuItem_Click(object sender, EventArgs e)

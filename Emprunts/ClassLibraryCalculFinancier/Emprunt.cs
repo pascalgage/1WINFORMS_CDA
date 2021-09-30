@@ -8,6 +8,10 @@ namespace ClassLibraryCalculFinancier
 {
     public class Emprunt
     {
+        //Declaration de l'évènement...
+        public delegate void DelegateMensualiteOver(double _mensOver);
+        public event DelegateMensualiteOver mensualiteOver;
+
         //Attributs...
         private string nom;
         private double capital;
