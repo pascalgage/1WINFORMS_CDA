@@ -115,7 +115,7 @@ namespace Run_menu
 
         private void fenetresToolStrip_Click(object sender, EventArgs e)
         {
-            
+           
             //this.menuStripConnection.MdiWindowListItem = this.fenetresToolStripMenuItem;
             
         }
