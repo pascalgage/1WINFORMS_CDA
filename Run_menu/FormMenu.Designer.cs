@@ -40,10 +40,10 @@ namespace Run_menu
             this.checBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phase2ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.colorBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empruntsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phase3ToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.fenetresToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,7 @@ namespace Run_menu
             this.menuStrip1.Size = new System.Drawing.Size(1321, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.MdiWindowListItem = this.fenetresToolStrip;
             // 
             // menuTutuToolStripMenuItem
             // 
@@ -112,21 +113,21 @@ namespace Run_menu
             // additionneurToolStripMenuItem
             // 
             this.additionneurToolStripMenuItem.Name = "additionneurToolStripMenuItem";
-            this.additionneurToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.additionneurToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.additionneurToolStripMenuItem.Text = "Additionneur";
             this.additionneurToolStripMenuItem.Click += new System.EventHandler(this.additionneurToolStripMenuItem_Click);
             // 
             // checBoxToolStripMenuItem
             // 
             this.checBoxToolStripMenuItem.Name = "checBoxToolStripMenuItem";
-            this.checBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.checBoxToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.checBoxToolStripMenuItem.Text = "CheckBox";
             this.checBoxToolStripMenuItem.Click += new System.EventHandler(this.checBoxToolStripMenuItem_Click);
             // 
             // saisieToolStripMenuItem
             // 
             this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
-            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.saisieToolStripMenuItem.Text = "Saisie";
             this.saisieToolStripMenuItem.Click += new System.EventHandler(this.saisieToolStripMenuItem_Click);
             // 
@@ -139,6 +140,20 @@ namespace Run_menu
             this.phase2ToolStrip.Name = "phase2ToolStrip";
             this.phase2ToolStrip.Size = new System.Drawing.Size(59, 20);
             this.phase2ToolStrip.Text = "Phase 2";
+            // 
+            // colorBoxToolStripMenuItem
+            // 
+            this.colorBoxToolStripMenuItem.Name = "colorBoxToolStripMenuItem";
+            this.colorBoxToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.colorBoxToolStripMenuItem.Text = "ColorBox";
+            this.colorBoxToolStripMenuItem.Click += new System.EventHandler(this.colorBoxToolStripMenuItem_Click);
+            // 
+            // empruntsToolStripMenuItem
+            // 
+            this.empruntsToolStripMenuItem.Name = "empruntsToolStripMenuItem";
+            this.empruntsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.empruntsToolStripMenuItem.Text = "Emprunts";
+            this.empruntsToolStripMenuItem.Click += new System.EventHandler(this.empruntsToolStripMenuItem_Click);
             // 
             // phase3ToolStrip
             // 
@@ -153,20 +168,7 @@ namespace Run_menu
             this.fenetresToolStrip.Name = "fenetresToolStrip";
             this.fenetresToolStrip.Size = new System.Drawing.Size(63, 20);
             this.fenetresToolStrip.Text = "Fenêtres";
-            // 
-            // colorBoxToolStripMenuItem
-            // 
-            this.colorBoxToolStripMenuItem.Name = "colorBoxToolStripMenuItem";
-            this.colorBoxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.colorBoxToolStripMenuItem.Text = "ColorBox";
-            this.colorBoxToolStripMenuItem.Click += new System.EventHandler(this.colorBoxToolStripMenuItem_Click);
-            // 
-            // empruntsToolStripMenuItem
-            // 
-            this.empruntsToolStripMenuItem.Name = "empruntsToolStripMenuItem";
-            this.empruntsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.empruntsToolStripMenuItem.Text = "Emprunts";
-            this.empruntsToolStripMenuItem.Click += new System.EventHandler(this.empruntsToolStripMenuItem_Click);
+            
             // 
             // Form1
             // 
