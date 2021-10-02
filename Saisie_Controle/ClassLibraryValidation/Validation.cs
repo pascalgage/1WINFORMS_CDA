@@ -9,9 +9,10 @@ namespace ClassLibraryValidation
 {
     public class Validation
     {
-        
 
-        
+        public delegate void DelegateNomValide(Validation sender);
+        public event DelegateNomValide LenomEstOk;
+
 
         public static bool IsValidName(string _textBoxName)
         {
@@ -42,11 +43,22 @@ namespace ClassLibraryValidation
             return (_textBoxCP.Length < 6) && (_textBoxCP != "") && (Regex.Match(_textBoxCP, "^[0-9]*$").Success);
             
         }
-        
-        public void AllisOK()
+
+        public bool AllisOK(string _textBoxName, string _textBoxMontant, string _textBoxDate, string _textBoxCP)
         {
-            
+
+
+
+            bool isOk = false;
+
+            if (IsValidName(_textBoxName) && IsValidMontant(_textBoxMontant) && IsValidDate(_textBoxDate) && IsValidCodePostal(_textBoxCP))
+            {
+                isOk = true;
+                LenomEstOk(this);
+
+            }
+            return isOk;
         }
-        
+
     }
 }
