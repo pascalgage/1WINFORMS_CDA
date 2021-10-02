@@ -25,7 +25,7 @@ namespace Run_menu
         
         //Compteur pour ouverture de fenêtres...N°1,2 etc...
         int compteur = 1;
-        private object menuStripConnection;
+       
 
         public int Compteur { get => compteur; set => compteur = value; }
         //Fin compteur
@@ -113,11 +113,6 @@ namespace Run_menu
             appli5.Show();
         }
 
-        private void fenetresToolStrip_Click(object sender, EventArgs e)
-        {
-           
-            //this.menuStripConnection.MdiWindowListItem = this.fenetresToolStripMenuItem;
-            
-        }
+        
     }
 }

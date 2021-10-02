@@ -168,7 +168,7 @@ namespace Run_menu
             this.fenetresToolStrip.Name = "fenetresToolStrip";
             this.fenetresToolStrip.Size = new System.Drawing.Size(63, 20);
             this.fenetresToolStrip.Text = "Fenêtres";
-            this.fenetresToolStrip.Click += new System.EventHandler(this.fenetresToolStrip_Click);
+            
             // 
             // Form1
             // 
