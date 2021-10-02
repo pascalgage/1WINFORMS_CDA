@@ -8,8 +8,10 @@ namespace ClassLibraryTransaction
 {
     public class Transaction
     {
-        //déclaration des attributs...
         
+
+        //déclaration des attributs...
+
         private string nom;
         private DateTime date;
         private Decimal montant;
@@ -31,6 +33,6 @@ namespace ClassLibraryTransaction
             this.montant = _montant;
             this.codePostal = _codePostal;
         }
-
+       
     }
 }

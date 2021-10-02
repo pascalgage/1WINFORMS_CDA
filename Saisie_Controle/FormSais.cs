@@ -20,20 +20,24 @@ namespace Saisie_Controle
         private const string ConnectionString = ("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAISIE_FORM;Integrated" +
            " Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" +
            "MultiSubnetFailover=False");
+
+
         public FormSais()
         {
             InitializeComponent();
-
+            
+            
+            
         }
-
 
 
         private bool ValidationNom()
         {
             if (Validation.IsValidName(textBoxName.Text))
             {
-
+                
                 errorProviderNom.Clear();
+                
                 return true;
             }
             else

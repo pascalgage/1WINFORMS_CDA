@@ -9,11 +9,15 @@ namespace ClassLibraryValidation
 {
     public class Validation
     {
+        
+
+        
+
         public static bool IsValidName(string _textBoxName)
         {
 
+
             return (Regex.Match(_textBoxName, "^[a-zA-Z]*$").Success) && (_textBoxName.Length <= 30) && (_textBoxName != "");
-            
             
         }
 
@@ -38,7 +42,11 @@ namespace ClassLibraryValidation
             return (_textBoxCP.Length < 6) && (_textBoxCP != "") && (Regex.Match(_textBoxCP, "^[0-9]*$").Success);
             
         }
-
+        
+        public void AllisOK()
+        {
+            
+        }
         
     }
 }
