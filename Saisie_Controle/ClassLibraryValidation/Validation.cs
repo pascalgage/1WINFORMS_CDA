@@ -44,21 +44,7 @@ namespace ClassLibraryValidation
             
         }
 
-        public bool AllisOK(string _textBoxName, string _textBoxMontant, string _textBoxDate, string _textBoxCP)
-        {
-
-
-
-            bool isOk = false;
-
-            if (IsValidName(_textBoxName) && IsValidMontant(_textBoxMontant) && IsValidDate(_textBoxDate) && IsValidCodePostal(_textBoxCP))
-            {
-                isOk = true;
-                LenomEstOk(this);
-
-            }
-            return isOk;
-        }
+        
 
     }
 }

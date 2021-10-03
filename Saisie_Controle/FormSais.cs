@@ -35,8 +35,9 @@ namespace Saisie_Controle
             
         }
 
-        private void MaValidOK_LenomEstOk(Validation sender)
+        public void MaValidOK_LenomEstOk(Validation sender)
         {
+            
             textBoxName.BackColor = Color.Green;
         }
         
@@ -48,7 +49,7 @@ namespace Saisie_Controle
             {
                 
                 errorProviderNom.Clear();
-                textBoxName.BackColor = Color.Green;
+               
                 return true;
             }
             else
