@@ -21,25 +21,15 @@ namespace Saisie_Controle
            " Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;" +
            "MultiSubnetFailover=False");
 
-        public delegate void DelegateNomValide(Validation sender);
-        public event DelegateNomValide LenomEstOk;
-
-        private Validation maValidOK;
+        
 
         public FormSais()
         {
             InitializeComponent();
-            maValidOK = new Validation();
-           
-            
             
         }
 
-        public void MaValidOK_LenomEstOk(Validation sender)
-        {
-            
-            textBoxName.BackColor = Color.Green;
-        }
+        
         
         
 
@@ -98,7 +88,7 @@ namespace Saisie_Controle
         {
             if (ValidationDate())
             {
-                textBoxDate.BackColor = Color.White;
+                textBoxDate.BackColor = Color.Green;
             }
             return true;
         }
@@ -126,7 +116,7 @@ namespace Saisie_Controle
         {
             if (ValidationMontant())
             {
-                textBoxMontant.BackColor = Color.White;
+                textBoxMontant.BackColor = Color.Green;
             }
             return true;
         }
@@ -155,7 +145,7 @@ namespace Saisie_Controle
         {
             if (ValidationCodePostal())
             {
-                textBoxCodePostal.BackColor = Color.White;
+                textBoxCodePostal.BackColor = Color.Green;
             }
             return true;
         }
