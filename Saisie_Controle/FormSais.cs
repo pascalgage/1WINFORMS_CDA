@@ -30,7 +30,7 @@ namespace Saisie_Controle
         {
             InitializeComponent();
             maValidOK = new Validation();
-            maValidOK.LenomEstOk += MaValidOK_LenomEstOk;
+           
             
             
         }
