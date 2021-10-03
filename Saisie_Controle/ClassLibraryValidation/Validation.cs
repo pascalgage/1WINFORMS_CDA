@@ -10,9 +10,6 @@ namespace ClassLibraryValidation
     public class Validation
     {
 
-        public delegate void DelegateNomValide(Validation sender);
-        public event DelegateNomValide LenomEstOk;
-
 
         public static bool IsValidName(string _textBoxName)
         {
