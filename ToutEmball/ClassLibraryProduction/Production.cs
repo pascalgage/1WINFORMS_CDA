@@ -10,31 +10,32 @@ namespace ClassLibraryProduction
     {
         //Attributs....
         private string produit;
-        private int quantiteDeCaisseDepuisdemarrage;
+        private int quantiteDeCaisseDepuisDemarrage;
         private int quantiteAProduire;
-        private int tempsEnMinute;
+        private int productionParHeure;
         
         //Propriétés...
         
-        public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaisseDepuisdemarrage; }
+        public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaisseDepuisDemarrage; }
         
         
        
 
-        //Constructeur par défaut...
-        public Production()
-            :this("A", 20,10000, 120)
+        //Constructeur classique...
+        public Production(string _produit, int _quantiteAProduire, int _productionParHeure)
         {
+            produit = _produit;
+            quantiteAProduire= _quantiteAProduire;
+            quantiteDeCaisseDepuisDemarrage = 0;
+            productionParHeure = _productionParHeure;
 
         }
-        //Constructeur classique...
-        public Production(string _produit, int _quantiteDeCaisseDepuisdemarrage, int _quantiteAProduire, int _tempsEnMinute)
+
+
+        public void ProduireUneCaisse()
         {
-            this.produit = _produit;
-            this.quantiteDeCaisseDepuisdemarrage = _quantiteDeCaisseDepuisdemarrage;
-            this.quantiteAProduire= _quantiteAProduire;
-            this.tempsEnMinute = _tempsEnMinute;
-            
+            //Sert à produire une caisse...
+            quantiteDeCaisseDepuisDemarrage++;
         }
     }
 }
