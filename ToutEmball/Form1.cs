@@ -18,7 +18,7 @@ namespace ToutEmball
         public FormPROD()
         {
             InitializeComponent();
-            maProd = new Production("A",1000);
+            maProd = new Production("A",10000,1000);
         }
 
         private void timerProdA_Tick(object sender, EventArgs e)
@@ -26,6 +26,7 @@ namespace ToutEmball
             maProd.ProduireUneCaisse();
             //je veux afficher dans la case de nbre de caisses depuis demarrage le nombre de caisse depart
             textCaissDepDemA.Text = maProd.QuantiteDeCaisseDepuisdemarrage.ToString();
+            progressBarA.Value = maProd.QuantiteDeCaisseDepuisdemarrage;
         }
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)

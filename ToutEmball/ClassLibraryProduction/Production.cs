@@ -35,7 +35,7 @@ namespace ClassLibraryProduction
         public void ProduireUneCaisse()
         {
             //Sert à produire une caisse...
-            quantiteDeCaisseDepuisDemarrage++;
+            quantiteDeCaisseDepuisDemarrage+=16;
         }
     }
 }

@@ -288,6 +288,7 @@ namespace ToutEmball
             // progressBarA
             // 
             this.progressBarA.Location = new System.Drawing.Point(396, 316);
+            this.progressBarA.Maximum = 10000;
             this.progressBarA.Name = "progressBarA";
             this.progressBarA.Size = new System.Drawing.Size(341, 23);
             this.progressBarA.TabIndex = 1;
@@ -375,26 +376,26 @@ namespace ToutEmball
             this.bToolStripMenuIDem,
             this.cToolStripMenuIDem});
             this.demarrerToolStripMenuItem.Name = "demarrerToolStripMenuItem";
-            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.demarrerToolStripMenuItem.Text = "Démarrer";
             // 
             // aToolStripMenuIDem
             // 
             this.aToolStripMenuIDem.Name = "aToolStripMenuIDem";
-            this.aToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
+            this.aToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
             this.aToolStripMenuIDem.Text = "A";
             this.aToolStripMenuIDem.Click += new System.EventHandler(this.aToolStripMenuIDem_Click);
             // 
             // bToolStripMenuIDem
             // 
             this.bToolStripMenuIDem.Name = "bToolStripMenuIDem";
-            this.bToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
+            this.bToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
             this.bToolStripMenuIDem.Text = "B";
             // 
             // cToolStripMenuIDem
             // 
             this.cToolStripMenuIDem.Name = "cToolStripMenuIDem";
-            this.cToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
+            this.cToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
             this.cToolStripMenuIDem.Text = "C";
             // 
             // arreterToolStripMenuItem
@@ -404,7 +405,7 @@ namespace ToutEmball
             this.bToolStripMenuIArr,
             this.cToolStripMenuIArr});
             this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
-            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.arreterToolStripMenuItem.Text = "Arrêter";
             // 
             // aToolStripMenuIArr
@@ -432,7 +433,7 @@ namespace ToutEmball
             this.bToolStripMenuICont,
             this.cToolStripMenuICont});
             this.continuerToolStripMenuItem.Name = "continuerToolStripMenuItem";
-            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
             // aToolStripMenuICont
