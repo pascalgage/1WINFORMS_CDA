@@ -67,6 +67,7 @@ namespace ToutEmball
             timerProdC.Start();
         }
 
+        //Arrêter Production...
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             timerProdA.Stop();

@@ -290,6 +290,7 @@ namespace ToutEmball
             // progressBarA
             // 
             this.progressBarA.Location = new System.Drawing.Point(396, 316);
+            this.progressBarA.Maximum = 1000;
             this.progressBarA.Name = "progressBarA";
             this.progressBarA.Size = new System.Drawing.Size(341, 23);
             this.progressBarA.TabIndex = 1;
@@ -297,6 +298,7 @@ namespace ToutEmball
             // progressBarB
             // 
             this.progressBarB.Location = new System.Drawing.Point(396, 359);
+            this.progressBarB.Maximum = 5000;
             this.progressBarB.Name = "progressBarB";
             this.progressBarB.Size = new System.Drawing.Size(341, 23);
             this.progressBarB.TabIndex = 2;
@@ -304,6 +306,7 @@ namespace ToutEmball
             // progressBarC
             // 
             this.progressBarC.Location = new System.Drawing.Point(396, 400);
+            this.progressBarC.Maximum = 10000;
             this.progressBarC.Name = "progressBarC";
             this.progressBarC.Size = new System.Drawing.Size(341, 23);
             this.progressBarC.TabIndex = 3;
