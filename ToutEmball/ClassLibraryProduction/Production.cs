@@ -10,44 +10,36 @@ namespace ClassLibraryProduction
     {
         //Attributs....
         private string produit;
-        private double quantiteDeCaisseDepuisDemarrage;
+        private double quantiteDeCaissedepuisDemarrage;
         private int quantiteAProduire;
         private int productionParHeure;
         
         //Propriétés...
         
-        public double QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaisseDepuisDemarrage; }
+        public double QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaissedepuisDemarrage; }
         
-        
-       
+
+
+
 
         //Constructeur classique...
         public Production(string _produit, int _quantiteAProduire, int _productionParHeure)
         {
             produit = _produit;
             quantiteAProduire= _quantiteAProduire;
-            quantiteDeCaisseDepuisDemarrage = 0;
+            quantiteDeCaissedepuisDemarrage = 0;
             productionParHeure = _productionParHeure;
 
         }
 
 
-        public void ProduireUneCaisseA()
+        public void ProduireUneCaisse()
         {
             //Sert à produire une caisse...
-            double i = 1;
-            quantiteDeCaisseDepuisDemarrage += i;
+            
+            quantiteDeCaissedepuisDemarrage ++;
         }
 
-        public void ProduireUneCaisseB()
-        {
-            double i = 1;
-            quantiteDeCaisseDepuisDemarrage += i;
-        }
-        public void ProduireUneCaisseC()
-        {
-            double i = 2.77;
-            quantiteDeCaisseDepuisDemarrage += i;
-        }
+        
     }
 }

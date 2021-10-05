@@ -13,20 +13,25 @@ namespace ToutEmball
 {
     public partial class FormPROD : Form
     {
-        private Production maProd;
+        private Production maProdA;
+        private Production maProdB;
+        private Production maProdC;
 
         public FormPROD()
         {
             InitializeComponent();
-            maProd = new Production("A",10000,1000);
+            maProdA = new Production("A",10000,1000);
+            maProdB = new Production("B", 25000, 5000);
+            maProdC = new Production("C", 120000, 10000);
+
         }
 
         private void timerProdA_Tick(object sender, EventArgs e)
         {
-            maProd.ProduireUneCaisseA();
+            maProdA.ProduireUneCaisse();
             //afficher dans la case de nbre de caisses depuis demarrage le nombre de caisse depart
-            textCaissDepDemA.Text = maProd.QuantiteDeCaisseDepuisdemarrage.ToString();
-            progressBarA.Value = (int)maProd.QuantiteDeCaisseDepuisdemarrage;
+            textCaissDepDemA.Text = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
+            progressBarA.Value = (int)maProdA.QuantiteDeCaisseDepuisdemarrage;
         }
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
@@ -38,9 +43,9 @@ namespace ToutEmball
 
         private void timerProdB_Tick(object sender, EventArgs e)
         {
-            maProd.ProduireUneCaisseB();
-            textCaissDepDemB.Text = maProd.QuantiteDeCaisseDepuisdemarrage.ToString();
-            progressBarB.Value = (int)maProd.QuantiteDeCaisseDepuisdemarrage;
+            maProdB.ProduireUneCaisse();
+            textCaissDepDemB.Text = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
+            progressBarB.Value = (int)maProdB.QuantiteDeCaisseDepuisdemarrage;
         }
 
 
