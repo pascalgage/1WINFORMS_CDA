@@ -8,5 +8,12 @@ namespace ClassLibraryProduction
 {
     class AleadeProduction:Random
     {
+        private static AleadeProduction alea = null;
+
+        private AleadeProduction()
+        {
+        }
+
+
     }
 }

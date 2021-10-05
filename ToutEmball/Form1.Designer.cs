@@ -75,6 +75,8 @@ namespace ToutEmball
             this.bToolStripMenuICont = new System.Windows.Forms.ToolStripMenuItem();
             this.cToolStripMenuICont = new System.Windows.Forms.ToolStripMenuItem();
             this.timerProdA = new System.Windows.Forms.Timer(this.components);
+            this.timerProdB = new System.Windows.Forms.Timer(this.components);
+            this.timerProdC = new System.Windows.Forms.Timer(this.components);
             this.typeA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -288,7 +290,6 @@ namespace ToutEmball
             // progressBarA
             // 
             this.progressBarA.Location = new System.Drawing.Point(396, 316);
-            this.progressBarA.Maximum = 10000;
             this.progressBarA.Name = "progressBarA";
             this.progressBarA.Size = new System.Drawing.Size(341, 23);
             this.progressBarA.TabIndex = 1;
@@ -376,26 +377,27 @@ namespace ToutEmball
             this.bToolStripMenuIDem,
             this.cToolStripMenuIDem});
             this.demarrerToolStripMenuItem.Name = "demarrerToolStripMenuItem";
-            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.demarrerToolStripMenuItem.Text = "Démarrer";
             // 
             // aToolStripMenuIDem
             // 
             this.aToolStripMenuIDem.Name = "aToolStripMenuIDem";
-            this.aToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
+            this.aToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
             this.aToolStripMenuIDem.Text = "A";
             this.aToolStripMenuIDem.Click += new System.EventHandler(this.aToolStripMenuIDem_Click);
             // 
             // bToolStripMenuIDem
             // 
             this.bToolStripMenuIDem.Name = "bToolStripMenuIDem";
-            this.bToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
+            this.bToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
             this.bToolStripMenuIDem.Text = "B";
+            this.bToolStripMenuIDem.Click += new System.EventHandler(this.bToolStripMenuIDem_Click);
             // 
             // cToolStripMenuIDem
             // 
             this.cToolStripMenuIDem.Name = "cToolStripMenuIDem";
-            this.cToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
+            this.cToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
             this.cToolStripMenuIDem.Text = "C";
             // 
             // arreterToolStripMenuItem
@@ -405,7 +407,7 @@ namespace ToutEmball
             this.bToolStripMenuIArr,
             this.cToolStripMenuIArr});
             this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
-            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arreterToolStripMenuItem.Text = "Arrêter";
             // 
             // aToolStripMenuIArr
@@ -433,7 +435,7 @@ namespace ToutEmball
             this.bToolStripMenuICont,
             this.cToolStripMenuICont});
             this.continuerToolStripMenuItem.Name = "continuerToolStripMenuItem";
-            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
             // aToolStripMenuICont
@@ -456,8 +458,17 @@ namespace ToutEmball
             // 
             // timerProdA
             // 
-            this.timerProdA.Interval = 1000;
+            this.timerProdA.Interval = 3750;
             this.timerProdA.Tick += new System.EventHandler(this.timerProdA_Tick);
+            // 
+            // timerProdB
+            // 
+            this.timerProdB.Interval = 720;
+            this.timerProdB.Tick += new System.EventHandler(this.timerProdB_Tick);
+            // 
+            // timerProdC
+            // 
+            this.timerProdC.Interval = 360;
             // 
             // FormPROD
             // 
@@ -535,6 +546,8 @@ namespace ToutEmball
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuICont;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuICont;
         private System.Windows.Forms.Timer timerProdA;
+        private System.Windows.Forms.Timer timerProdB;
+        private System.Windows.Forms.Timer timerProdC;
     }
 }
 

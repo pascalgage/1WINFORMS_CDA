@@ -10,13 +10,13 @@ namespace ClassLibraryProduction
     {
         //Attributs....
         private string produit;
-        private int quantiteDeCaisseDepuisDemarrage;
+        private double quantiteDeCaisseDepuisDemarrage;
         private int quantiteAProduire;
         private int productionParHeure;
         
         //Propriétés...
         
-        public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaisseDepuisDemarrage; }
+        public double QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaisseDepuisDemarrage; }
         
         
        
@@ -32,10 +32,22 @@ namespace ClassLibraryProduction
         }
 
 
-        public void ProduireUneCaisse()
+        public void ProduireUneCaisseA()
         {
             //Sert à produire une caisse...
-            quantiteDeCaisseDepuisDemarrage+=16;
+            double i = 1;
+            quantiteDeCaisseDepuisDemarrage += i;
+        }
+
+        public void ProduireUneCaisseB()
+        {
+            double i = 1;
+            quantiteDeCaisseDepuisDemarrage += i;
+        }
+        public void ProduireUneCaisseC()
+        {
+            double i = 2.77;
+            quantiteDeCaisseDepuisDemarrage += i;
         }
     }
 }
