@@ -29,9 +29,10 @@ namespace ToutEmball
         private void timerProdA_Tick(object sender, EventArgs e)
         {
             maProdA.ProduireUneCaisse();
+            
             //afficher dans la case de nbre de caisses depuis demarrage le nombre de caisse depart
             textCaissDepDemA.Text = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
-            progressBarA.Value = (int)maProdA.QuantiteDeCaisseDepuisdemarrage;
+            progressBarA.Value = maProdA.QuantiteDeCaisseDepuisdemarrage;
         }
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace ToutEmball
         {
             maProdB.ProduireUneCaisse();
             textCaissDepDemB.Text = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
-            progressBarB.Value = (int)maProdB.QuantiteDeCaisseDepuisdemarrage;
+            progressBarB.Value = maProdB.QuantiteDeCaisseDepuisdemarrage;
         }
 
 

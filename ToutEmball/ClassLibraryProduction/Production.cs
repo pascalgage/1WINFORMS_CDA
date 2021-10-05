@@ -10,14 +10,17 @@ namespace ClassLibraryProduction
     {
         //Attributs....
         private string produit;
-        private double quantiteDeCaissedepuisDemarrage;
+        private int quantiteDeCaissedepuisDemarrage;
         private int quantiteAProduire;
         private int productionParHeure;
-        
+
         //Propriétés...
+        public string Produit { get => produit; set => produit = value; }
+        public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaissedepuisDemarrage; }
         
-        public double QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaissedepuisDemarrage; }
-        
+        public int QuantiteAProduire { get => quantiteAProduire; set => quantiteAProduire = value; }
+        public int ProductionParHeure { get => productionParHeure; set => productionParHeure = value; }
+
 
 
 
@@ -39,7 +42,11 @@ namespace ClassLibraryProduction
             
             quantiteDeCaissedepuisDemarrage ++;
         }
-
+        public double NbreDeCaisseProduiteAlaSec()
+        {
+            double resultat=( (double)productionParHeure) / 3600;
+            return resultat;
+        }
         
     }
 }
