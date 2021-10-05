@@ -383,14 +383,14 @@ namespace ToutEmball
             // aToolStripMenuIDem
             // 
             this.aToolStripMenuIDem.Name = "aToolStripMenuIDem";
-            this.aToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
+            this.aToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
             this.aToolStripMenuIDem.Text = "A";
             this.aToolStripMenuIDem.Click += new System.EventHandler(this.aToolStripMenuIDem_Click);
             // 
             // bToolStripMenuIDem
             // 
             this.bToolStripMenuIDem.Name = "bToolStripMenuIDem";
-            this.bToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
+            this.bToolStripMenuIDem.Size = new System.Drawing.Size(82, 22);
             this.bToolStripMenuIDem.Text = "B";
             this.bToolStripMenuIDem.Click += new System.EventHandler(this.bToolStripMenuIDem_Click);
             // 
@@ -399,6 +399,7 @@ namespace ToutEmball
             this.cToolStripMenuIDem.Name = "cToolStripMenuIDem";
             this.cToolStripMenuIDem.Size = new System.Drawing.Size(180, 22);
             this.cToolStripMenuIDem.Text = "C";
+            this.cToolStripMenuIDem.Click += new System.EventHandler(this.cToolStripMenuIDem_Click);
             // 
             // arreterToolStripMenuItem
             // 
@@ -413,20 +414,23 @@ namespace ToutEmball
             // aToolStripMenuIArr
             // 
             this.aToolStripMenuIArr.Name = "aToolStripMenuIArr";
-            this.aToolStripMenuIArr.Size = new System.Drawing.Size(82, 22);
+            this.aToolStripMenuIArr.Size = new System.Drawing.Size(180, 22);
             this.aToolStripMenuIArr.Text = "A";
+            this.aToolStripMenuIArr.Click += new System.EventHandler(this.aToolStripMenuIArr_Click);
             // 
             // bToolStripMenuIArr
             // 
             this.bToolStripMenuIArr.Name = "bToolStripMenuIArr";
-            this.bToolStripMenuIArr.Size = new System.Drawing.Size(82, 22);
+            this.bToolStripMenuIArr.Size = new System.Drawing.Size(180, 22);
             this.bToolStripMenuIArr.Text = "B";
+            this.bToolStripMenuIArr.Click += new System.EventHandler(this.bToolStripMenuIArr_Click);
             // 
             // cToolStripMenuIArr
             // 
             this.cToolStripMenuIArr.Name = "cToolStripMenuIArr";
-            this.cToolStripMenuIArr.Size = new System.Drawing.Size(82, 22);
+            this.cToolStripMenuIArr.Size = new System.Drawing.Size(180, 22);
             this.cToolStripMenuIArr.Text = "C";
+            this.cToolStripMenuIArr.Click += new System.EventHandler(this.cToolStripMenuIArr_Click);
             // 
             // continuerToolStripMenuItem
             // 
@@ -435,7 +439,7 @@ namespace ToutEmball
             this.bToolStripMenuICont,
             this.cToolStripMenuICont});
             this.continuerToolStripMenuItem.Name = "continuerToolStripMenuItem";
-            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
             // aToolStripMenuICont
@@ -469,6 +473,7 @@ namespace ToutEmball
             // timerProdC
             // 
             this.timerProdC.Interval = 360;
+            this.timerProdC.Tick += new System.EventHandler(this.timerProdC_Tick);
             // 
             // FormPROD
             // 

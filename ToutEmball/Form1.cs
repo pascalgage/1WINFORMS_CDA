@@ -55,6 +55,31 @@ namespace ToutEmball
             timerProdB.Start();
         }
 
-        
+        private void timerProdC_Tick(object sender, EventArgs e)
+        {
+            maProdC.ProduireUneCaisse();
+            textCaissDepDemC.Text = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
+            progressBarC.Value = maProdC.QuantiteDeCaisseDepuisdemarrage;
+        }
+
+        private void cToolStripMenuIDem_Click(object sender, EventArgs e)
+        {
+            timerProdC.Start();
+        }
+
+        private void aToolStripMenuIArr_Click(object sender, EventArgs e)
+        {
+            timerProdA.Stop();
+        }
+
+        private void bToolStripMenuIArr_Click(object sender, EventArgs e)
+        {
+            timerProdB.Stop();
+        }
+
+        private void cToolStripMenuIArr_Click(object sender, EventArgs e)
+        {
+            timerProdC.Stop();
+        }
     }
 }
