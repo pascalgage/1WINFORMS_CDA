@@ -14,6 +14,7 @@ namespace ClassLibraryProduction
         private int quantiteAProduire;
         private int productionParHeure;
         private StatutProd etatCourant;
+        private int caisseAvecDefaut;
 
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
@@ -21,6 +22,7 @@ namespace ClassLibraryProduction
         public int QuantiteAProduire { get => quantiteAProduire; set => quantiteAProduire = value; }
         public int ProductionParHeure { get => productionParHeure; set => productionParHeure = value; }
         public StatutProd EtatCourant { get => etatCourant; set => etatCourant = value; }
+        public int CaisseAvecDefaut { get => caisseAvecDefaut; set => caisseAvecDefaut = value; }
 
         //Constructeur classique...
         public Production(string _produit, int _quantiteAProduire, int _productionParHeure)
@@ -30,6 +32,7 @@ namespace ClassLibraryProduction
             quantiteDeCaissedepuisDemarrage = 0;
             productionParHeure = _productionParHeure;
             etatCourant = StatutProd.NonDemarree;
+            caisseAvecDefaut = 3;
 
         }
 
@@ -85,12 +88,12 @@ namespace ClassLibraryProduction
             }
         }
 
-        public double TauxErreur()
+        public double TauxErreur(int _caisseDefaut)
         {
-            
+            double result;
             int nombreAleatoire = AleadeProduction.Instance().NewAlea(0, 101);
-
-            return nombreAleatoire;
+            result = _caisseDefaut * nombreAleatoire / 100;
+            return result;
             
         }
         
