@@ -38,7 +38,11 @@ namespace ToutEmball
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
         {
             //Demarrer le timerProdA....
-            timerProdA.Start();
+            maProdA.Demarrer();
+            if (maProdA.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdA.Start();
+            }
             
         }
 
@@ -52,7 +56,12 @@ namespace ToutEmball
 
         private void bToolStripMenuIDem_Click(object sender, EventArgs e)
         {
-            timerProdB.Start();
+            maProdB.Demarrer();
+            if(maProdB.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdB.Start();
+            }
+            
         }
 
         private void timerProdC_Tick(object sender, EventArgs e)
@@ -64,23 +73,69 @@ namespace ToutEmball
 
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)
         {
-            timerProdC.Start();
+            maProdC.Demarrer();
+            if(maProdC.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdC.Start();
+            }
         }
 
         //Arrêter Production...
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            timerProdA.Stop();
+            maProdA.Arreter();
+            if (maProdA.EtatCourant == Production.Statut.Terminee)
+            {
+                timerProdA.Stop();
+                
+            }
         }
 
         private void bToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            timerProdB.Stop();
+            maProdB.Arreter();
+            if (maProdB.EtatCourant == Production.Statut.Terminee)
+            {
+                timerProdB.Stop();
+            }
+            
         }
 
         private void cToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            timerProdC.Stop();
+            maProdC.Arreter();
+            if (maProdC.EtatCourant == Production.Statut.Terminee)
+            {
+                timerProdC.Stop();
+            }
+            
+        }
+        //Reprendre la production....
+        private void aToolStripMenuICont_Click(object sender, EventArgs e)
+        {
+            maProdA.ReprendreLaProduction();
+            if (maProdA.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdA.Start();
+            }
+        }
+
+        private void bToolStripMenuICont_Click(object sender, EventArgs e)
+        {
+            maProdB.ReprendreLaProduction();
+            if (maProdB.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdB.Start();
+            }
+        }
+
+        private void cToolStripMenuICont_Click(object sender, EventArgs e)
+        {
+            maProdC.ReprendreLaProduction();
+            if (maProdC.EtatCourant == Production.Statut.Demarree)
+            {
+                timerProdC.Start();
+            }
         }
     }
 }
