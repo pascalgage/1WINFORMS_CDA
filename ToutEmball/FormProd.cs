@@ -48,7 +48,7 @@ namespace ToutEmball
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdA.Start();
-                textTauxDefHeureA.Text = maProdA.TauxErreur().ToString();
+                textTauxDefHeureA.Text = maProdA.TauxErreur();
             }
             
         }
