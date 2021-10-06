@@ -24,7 +24,12 @@ namespace ToutEmball
             maProdB = new Production("B", 25000, 5000);
             maProdC = new Production("C", 120000, 10000);
 
+            progressBarA.Maximum = maProdA.QuantiteAProduire;
+            progressBarB.Maximum = maProdB.QuantiteAProduire;
+            progressBarC.Maximum = maProdC.QuantiteAProduire;
+
         }
+
         //Commencer la production....
 
         private void timerProdA_Tick(object sender, EventArgs e)
@@ -40,7 +45,7 @@ namespace ToutEmball
         {
             //Demarrer le timerProdA....
             maProdA.Demarrer();
-            if (maProdA.EtatCourant == Production.Statut.Demarree)
+            if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdA.Start();
             }
@@ -58,7 +63,7 @@ namespace ToutEmball
         private void bToolStripMenuIDem_Click(object sender, EventArgs e)
         {
             maProdB.Demarrer();
-            if(maProdB.EtatCourant == Production.Statut.Demarree)
+            if(maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdB.Start();
             }
@@ -75,17 +80,17 @@ namespace ToutEmball
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)
         {
             maProdC.Demarrer();
-            if(maProdC.EtatCourant == Production.Statut.Demarree)
+            if(maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdC.Start();
             }
         }
 
-        //Arrêter Production...
+        //Suspendre Production...
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            maProdA.Arreter();
-            if (maProdA.EtatCourant == Production.Statut.Terminee)
+            maProdA.MettreEnPause();
+            if (maProdA.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdA.Stop();
                 
@@ -94,8 +99,8 @@ namespace ToutEmball
 
         private void bToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            maProdB.Arreter();
-            if (maProdB.EtatCourant == Production.Statut.Terminee)
+            maProdB.MettreEnPause();
+            if (maProdB.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdB.Stop();
             }
@@ -104,8 +109,8 @@ namespace ToutEmball
 
         private void cToolStripMenuIArr_Click(object sender, EventArgs e)
         {
-            maProdC.Arreter();
-            if (maProdC.EtatCourant == Production.Statut.Terminee)
+            maProdC.MettreEnPause();
+            if (maProdC.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdC.Stop();
             }
@@ -115,7 +120,7 @@ namespace ToutEmball
         private void aToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdA.ReprendreLaProduction();
-            if (maProdA.EtatCourant == Production.Statut.Demarree)
+            if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdA.Start();
             }
@@ -124,7 +129,7 @@ namespace ToutEmball
         private void bToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdB.ReprendreLaProduction();
-            if (maProdB.EtatCourant == Production.Statut.Demarree)
+            if (maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdB.Start();
             }
@@ -133,7 +138,7 @@ namespace ToutEmball
         private void cToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdC.ReprendreLaProduction();
-            if (maProdC.EtatCourant == Production.Statut.Demarree)
+            if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdC.Start();
             }
