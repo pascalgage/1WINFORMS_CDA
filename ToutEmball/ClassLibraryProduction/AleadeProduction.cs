@@ -14,6 +14,19 @@ namespace ClassLibraryProduction
         {
         }
 
+        public static AleadeProduction Instance()
+        {
+            if (alea == null)
+            {
+                alea = new AleadeProduction();
+            }
+            return alea;
+        }
+
+        public int NewAlea(int minValeur, int maxValeur)
+        {
+            return base.Next(minValeur, maxValeur + 1);
+        }
 
     }
 }

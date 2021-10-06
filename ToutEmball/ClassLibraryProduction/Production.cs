@@ -84,6 +84,15 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Demarree;
             }
         }
+
+        public double TauxErreur()
+        {
+            
+            int nombreAleatoire = AleadeProduction.Instance().NewAlea(0, 101);
+
+            return nombreAleatoire;
+            
+        }
         
     }
 }
