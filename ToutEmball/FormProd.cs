@@ -25,6 +25,7 @@ namespace ToutEmball
             maProdC = new Production("C", 120000, 10000);
 
         }
+        //Commencer la production....
 
         private void timerProdA_Tick(object sender, EventArgs e)
         {
