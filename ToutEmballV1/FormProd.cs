@@ -167,7 +167,8 @@ namespace ToutEmballV1
             {
                 aToolStripMenuIDem.Enabled = false;
                 cToolStripMenuIDem.Enabled = false;
-            }else if (maProdC.EtatCourant == Production.StatutProd.Demarree)
+            }
+            else if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 aToolStripMenuIDem.Enabled = false;
                 bToolStripMenuIDem.Enabled = false;
