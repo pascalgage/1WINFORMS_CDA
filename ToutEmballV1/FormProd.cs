@@ -26,6 +26,7 @@ namespace ToutEmballV1
             uCprogressBarProduction1.LabelProductionAText = "Production A";
             uCprogressBarProduction2.LabelProductionAText = "Production B";
             uCprogressBarProduction3.LabelProductionAText = "Production C";
+            MettreAJourIHM();
         }
 
         //Commencer la production....
@@ -47,6 +48,7 @@ namespace ToutEmballV1
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdA.Start();
+                MettreAJourIHM();
                 
             }
             
@@ -60,6 +62,7 @@ namespace ToutEmballV1
             uCprogressBarProduction2.ProgressBarProdMaximum = 100;
             uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
+            
         }
 
 
@@ -69,6 +72,7 @@ namespace ToutEmballV1
             if(maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdB.Start();
+                MettreAJourIHM();
             }
             
         }
@@ -89,6 +93,7 @@ namespace ToutEmballV1
             if(maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdC.Start();
+                MettreAJourIHM();
             }
         }
 
@@ -147,6 +152,25 @@ namespace ToutEmballV1
             if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdC.Start();
+            }
+        }
+
+        private void MettreAJourIHM()
+        {
+            if (maProdA.EtatCourant == Production.StatutProd.Demarree)
+            {
+                bToolStripMenuIDem.Enabled = false;
+                cToolStripMenuIDem.Enabled = false;
+
+            }
+            else if(maProdB.EtatCourant == Production.StatutProd.Demarree)
+            {
+                aToolStripMenuIDem.Enabled = false;
+                cToolStripMenuIDem.Enabled = false;
+            }else if (maProdC.EtatCourant == Production.StatutProd.Demarree)
+            {
+                aToolStripMenuIDem.Enabled = false;
+                bToolStripMenuIDem.Enabled = false;
             }
         }
     }
