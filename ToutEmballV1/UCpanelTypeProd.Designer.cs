@@ -66,30 +66,30 @@ namespace ToutEmballV1
             // 
             // labelCaisseProduite
             // 
-            this.labelCaisseProduite.AutoSize = true;
             this.labelCaisseProduite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelCaisseProduite.Location = new System.Drawing.Point(269, 42);
+            this.labelCaisseProduite.Location = new System.Drawing.Point(269, 34);
             this.labelCaisseProduite.Name = "labelCaisseProduite";
-            this.labelCaisseProduite.Size = new System.Drawing.Size(2, 15);
+            this.labelCaisseProduite.Size = new System.Drawing.Size(54, 21);
             this.labelCaisseProduite.TabIndex = 3;
+            this.labelCaisseProduite.Text = "0";
             // 
             // labelDefautParHeure
             // 
-            this.labelDefautParHeure.AutoSize = true;
             this.labelDefautParHeure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelDefautParHeure.Location = new System.Drawing.Point(269, 82);
+            this.labelDefautParHeure.Location = new System.Drawing.Point(269, 74);
             this.labelDefautParHeure.Name = "labelDefautParHeure";
-            this.labelDefautParHeure.Size = new System.Drawing.Size(2, 15);
+            this.labelDefautParHeure.Size = new System.Drawing.Size(54, 21);
             this.labelDefautParHeure.TabIndex = 4;
+            this.labelDefautParHeure.Text = "0";
             // 
             // labelDefautDepuisDem
             // 
-            this.labelDefautDepuisDem.AutoSize = true;
             this.labelDefautDepuisDem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelDefautDepuisDem.Location = new System.Drawing.Point(269, 129);
+            this.labelDefautDepuisDem.Location = new System.Drawing.Point(269, 123);
             this.labelDefautDepuisDem.Name = "labelDefautDepuisDem";
-            this.labelDefautDepuisDem.Size = new System.Drawing.Size(2, 15);
+            this.labelDefautDepuisDem.Size = new System.Drawing.Size(54, 20);
             this.labelDefautDepuisDem.TabIndex = 5;
+            this.labelDefautDepuisDem.Text = "0";
             // 
             // UCpanelTypeProd
             // 

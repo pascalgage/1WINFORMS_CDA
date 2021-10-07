@@ -57,6 +57,7 @@ namespace ToutEmballV1
             uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
             
             uCprogressBarProduction2.ProgressBarProdMaximum = 100;
+            uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
         }
 
 
@@ -76,6 +77,7 @@ namespace ToutEmballV1
             uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
             
             uCprogressBarProduction3.ProgressBarProdMaximum = 100;
+            uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
         }
 
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)
