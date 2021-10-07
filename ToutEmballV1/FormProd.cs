@@ -37,6 +37,7 @@ namespace ToutEmballV1
             uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
             uCprogressBarProduction1.ProgressBarProdMaximum = 100;
             uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
         }
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace ToutEmballV1
             
             uCprogressBarProduction2.ProgressBarProdMaximum = 100;
             uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
         }
 
 
@@ -78,6 +80,7 @@ namespace ToutEmballV1
             
             uCprogressBarProduction3.ProgressBarProdMaximum = 100;
             uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
         }
 
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)

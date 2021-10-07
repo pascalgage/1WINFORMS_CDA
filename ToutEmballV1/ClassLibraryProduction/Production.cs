@@ -88,12 +88,15 @@ namespace ClassLibraryProduction
             }
         }
 
-        public double TauxErreur(int _caisseDefaut)
+        public decimal TauxErreur()
         {
-            double result;
+            decimal result;
+
             int nombreAleatoire = AleadeProduction.Instance().NewAlea(0, 101);
-            result = _caisseDefaut * nombreAleatoire / 100;
-            return result;
+
+            result = (((decimal)quantiteDeCaissedepuisDemarrage * (decimal)nombreAleatoire) / 100000);
+
+            return decimal.Round(result,4);
             
         }
         
