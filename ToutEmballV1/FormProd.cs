@@ -23,11 +23,9 @@ namespace ToutEmballV1
             maProdA = new Production("A",10000,1000);
             maProdB = new Production("B", 25000, 5000);
             maProdC = new Production("C", 120000, 10000);
-
-            progressBarA.Maximum = maProdA.QuantiteAProduire;
-            progressBarB.Maximum = maProdB.QuantiteAProduire;
-            progressBarC.Maximum = maProdC.QuantiteAProduire;
-
+            uCprogressBarProduction1.LabelProductionAText = "Production A";
+            uCprogressBarProduction2.LabelProductionAText = "Production B";
+            uCprogressBarProduction3.LabelProductionAText = "Production C";
         }
 
         //Commencer la production....
@@ -37,8 +35,8 @@ namespace ToutEmballV1
             maProdA.ProduireUneCaisse();
             
             uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction1.LabelProductionAText = "Production A";
             uCprogressBarProduction1.ProgressBarProdMaximum = 100;
+            uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
         }
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
@@ -57,7 +55,7 @@ namespace ToutEmballV1
         {
             maProdB.ProduireUneCaisse();
             uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction2.LabelProductionAText = "Production B";
+            
             uCprogressBarProduction2.ProgressBarProdMaximum = 100;
         }
 
@@ -76,7 +74,7 @@ namespace ToutEmballV1
         {
             maProdC.ProduireUneCaisse();
             uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction3.LabelProductionAText = "Production C";
+            
             uCprogressBarProduction3.ProgressBarProdMaximum = 100;
         }
 

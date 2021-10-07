@@ -32,9 +32,9 @@ namespace ToutEmballV1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelCaisseProduite = new System.Windows.Forms.Label();
+            this.labelDefautParHeure = new System.Windows.Forms.Label();
+            this.labelDefautDepuisDem = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -64,45 +64,45 @@ namespace ToutEmballV1
             this.label3.TabIndex = 2;
             this.label3.Text = "Taux défaut depuis démarrage";
             // 
-            // label4
+            // labelCaisseProduite
             // 
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(269, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(2, 15);
-            this.label4.TabIndex = 3;
+            this.labelCaisseProduite.AutoSize = true;
+            this.labelCaisseProduite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelCaisseProduite.Location = new System.Drawing.Point(269, 42);
+            this.labelCaisseProduite.Name = "labelCaisseProduite";
+            this.labelCaisseProduite.Size = new System.Drawing.Size(2, 15);
+            this.labelCaisseProduite.TabIndex = 3;
             // 
-            // label5
+            // labelDefautParHeure
             // 
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(269, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(2, 15);
-            this.label5.TabIndex = 4;
+            this.labelDefautParHeure.AutoSize = true;
+            this.labelDefautParHeure.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDefautParHeure.Location = new System.Drawing.Point(269, 82);
+            this.labelDefautParHeure.Name = "labelDefautParHeure";
+            this.labelDefautParHeure.Size = new System.Drawing.Size(2, 15);
+            this.labelDefautParHeure.TabIndex = 4;
             // 
-            // label6
+            // labelDefautDepuisDem
             // 
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(269, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(2, 15);
-            this.label6.TabIndex = 5;
+            this.labelDefautDepuisDem.AutoSize = true;
+            this.labelDefautDepuisDem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDefautDepuisDem.Location = new System.Drawing.Point(269, 129);
+            this.labelDefautDepuisDem.Name = "labelDefautDepuisDem";
+            this.labelDefautDepuisDem.Size = new System.Drawing.Size(2, 15);
+            this.labelDefautDepuisDem.TabIndex = 5;
             // 
             // UCpanelTypeProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelDefautDepuisDem);
+            this.Controls.Add(this.labelDefautParHeure);
+            this.Controls.Add(this.labelCaisseProduite);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCpanelTypeProd";
-            this.Size = new System.Drawing.Size(392, 208);
+            this.Size = new System.Drawing.Size(398, 176);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,8 +113,8 @@ namespace ToutEmballV1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelCaisseProduite;
+        private System.Windows.Forms.Label labelDefautParHeure;
+        private System.Windows.Forms.Label labelDefautDepuisDem;
     }
 }

@@ -52,11 +52,7 @@ namespace ToutEmballV1
             this.textTauxDefDemC = new System.Windows.Forms.TextBox();
             this.textTauxDefHeureC = new System.Windows.Forms.TextBox();
             this.textCaissDepDemC = new System.Windows.Forms.TextBox();
-            this.progressBarB = new System.Windows.Forms.ProgressBar();
-            this.progressBarC = new System.Windows.Forms.ProgressBar();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fICHIERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,11 +72,12 @@ namespace ToutEmballV1
             this.timerProdA = new System.Windows.Forms.Timer(this.components);
             this.timerProdB = new System.Windows.Forms.Timer(this.components);
             this.timerProdC = new System.Windows.Forms.Timer(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.progressBarA = new System.Windows.Forms.ProgressBar();
             this.uCprogressBarProduction1 = new ToutEmballV1.UCprogressBarProduction();
             this.uCprogressBarProduction2 = new ToutEmballV1.UCprogressBarProduction();
             this.uCprogressBarProduction3 = new ToutEmballV1.UCprogressBarProduction();
+            this.uCpanelTypeProd1 = new ToutEmballV1.UCpanelTypeProd();
+            this.uCpanelTypeProd2 = new ToutEmballV1.UCpanelTypeProd();
+            this.uCpanelTypeProd3 = new ToutEmballV1.UCpanelTypeProd();
             this.typeA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -93,7 +90,7 @@ namespace ToutEmballV1
             this.typeA.Controls.Add(this.tabPage1);
             this.typeA.Controls.Add(this.tabPage2);
             this.typeA.Controls.Add(this.tabPage3);
-            this.typeA.Location = new System.Drawing.Point(396, 66);
+            this.typeA.Location = new System.Drawing.Point(524, 27);
             this.typeA.Name = "typeA";
             this.typeA.SelectedIndex = 0;
             this.typeA.Size = new System.Drawing.Size(345, 210);
@@ -101,6 +98,7 @@ namespace ToutEmballV1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.uCpanelTypeProd1);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -165,6 +163,7 @@ namespace ToutEmballV1
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.uCpanelTypeProd2);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label6);
@@ -229,6 +228,7 @@ namespace ToutEmballV1
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.uCpanelTypeProd3);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label9);
@@ -291,22 +291,6 @@ namespace ToutEmballV1
             this.textCaissDepDemC.Size = new System.Drawing.Size(100, 20);
             this.textCaissDepDemC.TabIndex = 6;
             // 
-            // progressBarB
-            // 
-            this.progressBarB.Location = new System.Drawing.Point(396, 359);
-            this.progressBarB.Maximum = 5000;
-            this.progressBarB.Name = "progressBarB";
-            this.progressBarB.Size = new System.Drawing.Size(341, 23);
-            this.progressBarB.TabIndex = 2;
-            // 
-            // progressBarC
-            // 
-            this.progressBarC.Location = new System.Drawing.Point(396, 400);
-            this.progressBarC.Maximum = 10000;
-            this.progressBarC.Name = "progressBarC";
-            this.progressBarC.Size = new System.Drawing.Size(341, 23);
-            this.progressBarC.TabIndex = 3;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -315,24 +299,6 @@ namespace ToutEmballV1
             this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 4;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(95, 359);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "PRODUCTION B";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(95, 400);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 13);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "PRODUCTION C";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -340,7 +306,7 @@ namespace ToutEmballV1
             this.pRODUCTIONToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(881, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -375,7 +341,7 @@ namespace ToutEmballV1
             this.bToolStripMenuIDem,
             this.cToolStripMenuIDem});
             this.demarrerToolStripMenuItem.Name = "demarrerToolStripMenuItem";
-            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.demarrerToolStripMenuItem.Text = "Démarrer";
             // 
             // aToolStripMenuIDem
@@ -406,7 +372,7 @@ namespace ToutEmballV1
             this.bToolStripMenuIArr,
             this.cToolStripMenuIArr});
             this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
-            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.arreterToolStripMenuItem.Text = "Arrêter";
             // 
             // aToolStripMenuIArr
@@ -437,7 +403,7 @@ namespace ToutEmballV1
             this.bToolStripMenuICont,
             this.cToolStripMenuICont});
             this.continuerToolStripMenuItem.Name = "continuerToolStripMenuItem";
-            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
             // aToolStripMenuICont
@@ -476,58 +442,57 @@ namespace ToutEmballV1
             this.timerProdC.Interval = 360;
             this.timerProdC.Tick += new System.EventHandler(this.timerProdC_Tick);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(98, 316);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "PRODUCTION A";
-            // 
-            // progressBarA
-            // 
-            this.progressBarA.Location = new System.Drawing.Point(396, 305);
-            this.progressBarA.Name = "progressBarA";
-            this.progressBarA.Size = new System.Drawing.Size(341, 23);
-            this.progressBarA.TabIndex = 9;
-            // 
             // uCprogressBarProduction1
             // 
-            this.uCprogressBarProduction1.Location = new System.Drawing.Point(101, 244);
+            this.uCprogressBarProduction1.Location = new System.Drawing.Point(87, 295);
             this.uCprogressBarProduction1.Name = "uCprogressBarProduction1";
             this.uCprogressBarProduction1.Size = new System.Drawing.Size(650, 57);
             this.uCprogressBarProduction1.TabIndex = 10;
             // 
             // uCprogressBarProduction2
             // 
-            this.uCprogressBarProduction2.Location = new System.Drawing.Point(101, 315);
+            this.uCprogressBarProduction2.Location = new System.Drawing.Point(87, 358);
             this.uCprogressBarProduction2.Name = "uCprogressBarProduction2";
             this.uCprogressBarProduction2.Size = new System.Drawing.Size(650, 57);
             this.uCprogressBarProduction2.TabIndex = 11;
             // 
             // uCprogressBarProduction3
             // 
-            this.uCprogressBarProduction3.Location = new System.Drawing.Point(101, 378);
+            this.uCprogressBarProduction3.Location = new System.Drawing.Point(87, 421);
             this.uCprogressBarProduction3.Name = "uCprogressBarProduction3";
             this.uCprogressBarProduction3.Size = new System.Drawing.Size(650, 57);
             this.uCprogressBarProduction3.TabIndex = 12;
+            // 
+            // uCpanelTypeProd1
+            // 
+            this.uCpanelTypeProd1.Location = new System.Drawing.Point(6, 6);
+            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
+            this.uCpanelTypeProd1.Size = new System.Drawing.Size(328, 163);
+            this.uCpanelTypeProd1.TabIndex = 13;
+            // 
+            // uCpanelTypeProd2
+            // 
+            this.uCpanelTypeProd2.Location = new System.Drawing.Point(20, 9);
+            this.uCpanelTypeProd2.Name = "uCpanelTypeProd2";
+            this.uCpanelTypeProd2.Size = new System.Drawing.Size(296, 169);
+            this.uCpanelTypeProd2.TabIndex = 13;
+            // 
+            // uCpanelTypeProd3
+            // 
+            this.uCpanelTypeProd3.Location = new System.Drawing.Point(6, 6);
+            this.uCpanelTypeProd3.Name = "uCpanelTypeProd3";
+            this.uCpanelTypeProd3.Size = new System.Drawing.Size(310, 161);
+            this.uCpanelTypeProd3.TabIndex = 13;
             // 
             // FormProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(881, 527);
             this.Controls.Add(this.uCprogressBarProduction3);
             this.Controls.Add(this.uCprogressBarProduction2);
             this.Controls.Add(this.uCprogressBarProduction1);
-            this.Controls.Add(this.progressBarA);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.progressBarC);
-            this.Controls.Add(this.progressBarB);
             this.Controls.Add(this.typeA);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormProd";
@@ -570,11 +535,7 @@ namespace ToutEmballV1
         private System.Windows.Forms.TextBox textTauxDefDemC;
         private System.Windows.Forms.TextBox textTauxDefHeureC;
         private System.Windows.Forms.TextBox textCaissDepDemC;
-        private System.Windows.Forms.ProgressBar progressBarB;
-        private System.Windows.Forms.ProgressBar progressBarC;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fICHIERToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
@@ -594,11 +555,12 @@ namespace ToutEmballV1
         private System.Windows.Forms.Timer timerProdA;
         private System.Windows.Forms.Timer timerProdB;
         private System.Windows.Forms.Timer timerProdC;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ProgressBar progressBarA;
         private UCprogressBarProduction uCprogressBarProduction1;
         private UCprogressBarProduction uCprogressBarProduction2;
         private UCprogressBarProduction uCprogressBarProduction3;
+        private UCpanelTypeProd uCpanelTypeProd1;
+        private UCpanelTypeProd uCpanelTypeProd2;
+        private UCpanelTypeProd uCpanelTypeProd3;
     }
 }
 
