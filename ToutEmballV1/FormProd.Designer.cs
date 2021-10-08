@@ -32,26 +32,11 @@ namespace ToutEmballV1
             this.components = new System.ComponentModel.Container();
             this.typeA = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textTauxDefDemA = new System.Windows.Forms.TextBox();
-            this.textTauxDefHeureA = new System.Windows.Forms.TextBox();
-            this.textCaissDepDemA = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textTauxDefDemB = new System.Windows.Forms.TextBox();
-            this.textTauxDefHeureB = new System.Windows.Forms.TextBox();
-            this.textCaissDepDemB = new System.Windows.Forms.TextBox();
+            this.uCpanelTypeProd2 = new ToutEmballV1.UCpanelTypeProd();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textTauxDefDemC = new System.Windows.Forms.TextBox();
-            this.textTauxDefHeureC = new System.Windows.Forms.TextBox();
-            this.textCaissDepDemC = new System.Windows.Forms.TextBox();
+            this.uCpanelTypeProd3 = new ToutEmballV1.UCpanelTypeProd();
+            this.uCpanelTypeProd1 = new ToutEmballV1.UCpanelTypeProd();
             this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fICHIERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,9 +60,6 @@ namespace ToutEmballV1
             this.uCprogressBarProduction1 = new ToutEmballV1.UCprogressBarProduction();
             this.uCprogressBarProduction2 = new ToutEmballV1.UCprogressBarProduction();
             this.uCprogressBarProduction3 = new ToutEmballV1.UCprogressBarProduction();
-            this.uCpanelTypeProd1 = new ToutEmballV1.UCpanelTypeProd();
-            this.uCpanelTypeProd2 = new ToutEmballV1.UCpanelTypeProd();
-            this.uCpanelTypeProd3 = new ToutEmballV1.UCpanelTypeProd();
             this.typeA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,12 +81,6 @@ namespace ToutEmballV1
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.uCpanelTypeProd1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textTauxDefDemA);
-            this.tabPage1.Controls.Add(this.textTauxDefHeureA);
-            this.tabPage1.Controls.Add(this.textCaissDepDemA);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -113,63 +89,9 @@ namespace ToutEmballV1
             this.tabPage1.Text = "Type A";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Taux défaut depuis démarrage";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Taux défaut heure";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nbr de caisses depuis le démarrage";
-            // 
-            // textTauxDefDemA
-            // 
-            this.textTauxDefDemA.Location = new System.Drawing.Point(219, 116);
-            this.textTauxDefDemA.Name = "textTauxDefDemA";
-            this.textTauxDefDemA.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefDemA.TabIndex = 2;
-            // 
-            // textTauxDefHeureA
-            // 
-            this.textTauxDefHeureA.Location = new System.Drawing.Point(219, 72);
-            this.textTauxDefHeureA.Name = "textTauxDefHeureA";
-            this.textTauxDefHeureA.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefHeureA.TabIndex = 1;
-            // 
-            // textCaissDepDemA
-            // 
-            this.textCaissDepDemA.Location = new System.Drawing.Point(219, 28);
-            this.textCaissDepDemA.Name = "textCaissDepDemA";
-            this.textCaissDepDemA.Size = new System.Drawing.Size(100, 20);
-            this.textCaissDepDemA.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.uCpanelTypeProd2);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.textTauxDefDemB);
-            this.tabPage2.Controls.Add(this.textTauxDefHeureB);
-            this.tabPage2.Controls.Add(this.textCaissDepDemB);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -178,63 +100,16 @@ namespace ToutEmballV1
             this.tabPage2.Text = "Type B";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // uCpanelTypeProd2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Taux défaut depuis démarrage";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Taux défaut heure";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Nbr de caisses depuis le démarrage";
-            // 
-            // textTauxDefDemB
-            // 
-            this.textTauxDefDemB.Location = new System.Drawing.Point(216, 126);
-            this.textTauxDefDemB.Name = "textTauxDefDemB";
-            this.textTauxDefDemB.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefDemB.TabIndex = 8;
-            // 
-            // textTauxDefHeureB
-            // 
-            this.textTauxDefHeureB.Location = new System.Drawing.Point(216, 82);
-            this.textTauxDefHeureB.Name = "textTauxDefHeureB";
-            this.textTauxDefHeureB.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefHeureB.TabIndex = 7;
-            // 
-            // textCaissDepDemB
-            // 
-            this.textCaissDepDemB.Location = new System.Drawing.Point(216, 38);
-            this.textCaissDepDemB.Name = "textCaissDepDemB";
-            this.textCaissDepDemB.Size = new System.Drawing.Size(100, 20);
-            this.textCaissDepDemB.TabIndex = 6;
+            this.uCpanelTypeProd2.Location = new System.Drawing.Point(6, 9);
+            this.uCpanelTypeProd2.Name = "uCpanelTypeProd2";
+            this.uCpanelTypeProd2.Size = new System.Drawing.Size(325, 169);
+            this.uCpanelTypeProd2.TabIndex = 13;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.uCpanelTypeProd3);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.textTauxDefDemC);
-            this.tabPage3.Controls.Add(this.textTauxDefHeureC);
-            this.tabPage3.Controls.Add(this.textCaissDepDemC);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -243,53 +118,19 @@ namespace ToutEmballV1
             this.tabPage3.Text = "Type C";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // uCpanelTypeProd3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Taux défaut depuis démarrage";
+            this.uCpanelTypeProd3.Location = new System.Drawing.Point(6, 6);
+            this.uCpanelTypeProd3.Name = "uCpanelTypeProd3";
+            this.uCpanelTypeProd3.Size = new System.Drawing.Size(325, 161);
+            this.uCpanelTypeProd3.TabIndex = 13;
             // 
-            // label8
+            // uCpanelTypeProd1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Taux défaut heure";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 38);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Nbr de caisses depuis le démarrage";
-            // 
-            // textTauxDefDemC
-            // 
-            this.textTauxDefDemC.Location = new System.Drawing.Point(216, 126);
-            this.textTauxDefDemC.Name = "textTauxDefDemC";
-            this.textTauxDefDemC.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefDemC.TabIndex = 8;
-            // 
-            // textTauxDefHeureC
-            // 
-            this.textTauxDefHeureC.Location = new System.Drawing.Point(216, 82);
-            this.textTauxDefHeureC.Name = "textTauxDefHeureC";
-            this.textTauxDefHeureC.Size = new System.Drawing.Size(100, 20);
-            this.textTauxDefHeureC.TabIndex = 7;
-            // 
-            // textCaissDepDemC
-            // 
-            this.textCaissDepDemC.Location = new System.Drawing.Point(216, 38);
-            this.textCaissDepDemC.Name = "textCaissDepDemC";
-            this.textCaissDepDemC.Size = new System.Drawing.Size(100, 20);
-            this.textCaissDepDemC.TabIndex = 6;
+            this.uCpanelTypeProd1.Location = new System.Drawing.Point(3, 6);
+            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
+            this.uCpanelTypeProd1.Size = new System.Drawing.Size(328, 163);
+            this.uCpanelTypeProd1.TabIndex = 13;
             // 
             // label10
             // 
@@ -463,27 +304,6 @@ namespace ToutEmballV1
             this.uCprogressBarProduction3.Size = new System.Drawing.Size(650, 57);
             this.uCprogressBarProduction3.TabIndex = 12;
             // 
-            // uCpanelTypeProd1
-            // 
-            this.uCpanelTypeProd1.Location = new System.Drawing.Point(6, 6);
-            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
-            this.uCpanelTypeProd1.Size = new System.Drawing.Size(328, 163);
-            this.uCpanelTypeProd1.TabIndex = 13;
-            // 
-            // uCpanelTypeProd2
-            // 
-            this.uCpanelTypeProd2.Location = new System.Drawing.Point(20, 9);
-            this.uCpanelTypeProd2.Name = "uCpanelTypeProd2";
-            this.uCpanelTypeProd2.Size = new System.Drawing.Size(296, 169);
-            this.uCpanelTypeProd2.TabIndex = 13;
-            // 
-            // uCpanelTypeProd3
-            // 
-            this.uCpanelTypeProd3.Location = new System.Drawing.Point(6, 6);
-            this.uCpanelTypeProd3.Name = "uCpanelTypeProd3";
-            this.uCpanelTypeProd3.Size = new System.Drawing.Size(310, 161);
-            this.uCpanelTypeProd3.TabIndex = 13;
-            // 
             // FormProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,11 +319,8 @@ namespace ToutEmballV1
             this.Text = "PRODUCTION DES CAISSES";
             this.typeA.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -515,26 +332,8 @@ namespace ToutEmballV1
 
         private System.Windows.Forms.TabControl typeA;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textTauxDefDemA;
-        private System.Windows.Forms.TextBox textTauxDefHeureA;
-        private System.Windows.Forms.TextBox textCaissDepDemA;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textTauxDefDemB;
-        private System.Windows.Forms.TextBox textTauxDefHeureB;
-        private System.Windows.Forms.TextBox textCaissDepDemB;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textTauxDefDemC;
-        private System.Windows.Forms.TextBox textTauxDefHeureC;
-        private System.Windows.Forms.TextBox textCaissDepDemC;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fICHIERToolStripMenuItem;
@@ -559,8 +358,8 @@ namespace ToutEmballV1
         private UCprogressBarProduction uCprogressBarProduction2;
         private UCprogressBarProduction uCprogressBarProduction3;
         private UCpanelTypeProd uCpanelTypeProd1;
-        private UCpanelTypeProd uCpanelTypeProd2;
         private UCpanelTypeProd uCpanelTypeProd3;
+        private UCpanelTypeProd uCpanelTypeProd2;
     }
 }
 

@@ -26,7 +26,7 @@ namespace ToutEmballV1
             uCprogressBarProduction1.LabelProductionAText = "Production A";
             uCprogressBarProduction2.LabelProductionAText = "Production B";
             uCprogressBarProduction3.LabelProductionAText = "Production C";
-            MettreAJourIHM();
+            
         }
 
         //Commencer la production....
@@ -36,7 +36,7 @@ namespace ToutEmballV1
             maProdA.ProduireUneCaisse();
             
             uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction1.ProgressBarProdMaximum = 100;
+            uCprogressBarProduction1.ProgressBarProdMaximum = maProdA.QuantiteAProduire;
             uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
         }
@@ -59,7 +59,7 @@ namespace ToutEmballV1
             maProdB.ProduireUneCaisse();
             uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
             
-            uCprogressBarProduction2.ProgressBarProdMaximum = 100;
+            uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
             uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
             
@@ -82,7 +82,7 @@ namespace ToutEmballV1
             maProdC.ProduireUneCaisse();
             uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
             
-            uCprogressBarProduction3.ProgressBarProdMaximum = 100;
+            uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
             uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
         }
@@ -174,5 +174,7 @@ namespace ToutEmballV1
                 bToolStripMenuIDem.Enabled = false;
             }
         }
+
+        
     }
 }
