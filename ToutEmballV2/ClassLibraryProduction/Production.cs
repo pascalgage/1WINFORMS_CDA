@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace ClassLibraryProduction
 {
@@ -15,6 +17,7 @@ namespace ClassLibraryProduction
         private int productionParHeure;
         private StatutProd etatCourant;
         private int caisseAvecDefaut;
+        private Thread threadCourant;
 
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
@@ -34,20 +37,32 @@ namespace ClassLibraryProduction
             etatCourant = StatutProd.NonDemarree;
             caisseAvecDefaut = 3;
 
+            threadCourant = new Thread(new ThreadStart(ProduireUneCaisse));
+
         }
 
 
-        public void ProduireUneCaisse()
+        private void ProduireUneCaisse()
         {
             //Sert à produire une caisse...
-            
-            quantiteDeCaissedepuisDemarrage ++;
+
+            //quantiteDeCaissedepuisDemarrage++;
 
             //verifier qu'on atteint pas le maximum
-            if (quantiteDeCaissedepuisDemarrage == quantiteAProduire)
+            //if (quantiteDeCaissedepuisDemarrage == quantiteAProduire)
+            //{
+            //    etatCourant = StatutProd.Terminee;
+            //}
+            while (quantiteDeCaissedepuisDemarrage<QuantiteAProduire)
             {
-                etatCourant = StatutProd.Terminee;
+                quantiteDeCaissedepuisDemarrage++;
+
             }
+            etatCourant = StatutProd.Terminee;
+
+
+
+
 
         }
 
@@ -62,12 +77,27 @@ namespace ClassLibraryProduction
 
         public void Demarrer()
         {
-            if ((etatCourant == StatutProd.Suspendue)||(etatCourant == StatutProd.NonDemarree))
-            { 
+            if ((etatCourant == StatutProd.Suspendue) || (etatCourant == StatutProd.NonDemarree))
+            {
                 etatCourant = StatutProd.Demarree;
-
+                DemarrerThread();
             }
+            
+
+
+
+
         }
+
+        private void DemarrerThread()
+        {
+            
+            threadCourant.Start();
+        }
+        
+
+
+
 
 
 
