@@ -163,18 +163,10 @@ namespace ToutEmballV1
             }
         }
 
-        private void quitterToolStripMenuItem_Click(object sender, FormClosingEventArgs e)
+        private void quitterToolStripMenuItem_Click(object sender,EventArgs e)
         {
-            DialogResult dr = MessageBox.Show
-           ("Fin de l’application ?", "FIN",
-           MessageBoxButtons.YesNo,
-           MessageBoxIcon.Question,
-           MessageBoxDefaultButton.Button1);
-            if (dr == DialogResult.No)
-            {
-                e.Cancel = true;
-
-            }
+            
+            this.Close();
 
         }
 

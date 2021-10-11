@@ -67,11 +67,12 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Demarree;
             }
         }
+
         public void Arreter()
         {
             if (etatCourant == StatutProd.Demarree)
             {
-                etatCourant = StatutProd.Suspendue;
+                etatCourant = StatutProd.Terminee;
             }
             
             
