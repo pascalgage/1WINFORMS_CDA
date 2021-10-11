@@ -32,11 +32,11 @@ namespace ToutEmballV1
             this.components = new System.ComponentModel.Container();
             this.typeA = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.uCpanelTypeProd1 = new ToutEmballV1.UCpanelTypeProd();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uCpanelTypeProd2 = new ToutEmballV1.UCpanelTypeProd();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.uCpanelTypeProd3 = new ToutEmballV1.UCpanelTypeProd();
-            this.uCpanelTypeProd1 = new ToutEmballV1.UCpanelTypeProd();
             this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fICHIERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,6 +89,13 @@ namespace ToutEmballV1
             this.tabPage1.Text = "Type A";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // uCpanelTypeProd1
+            // 
+            this.uCpanelTypeProd1.Location = new System.Drawing.Point(3, 6);
+            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
+            this.uCpanelTypeProd1.Size = new System.Drawing.Size(328, 163);
+            this.uCpanelTypeProd1.TabIndex = 13;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.uCpanelTypeProd2);
@@ -125,13 +132,6 @@ namespace ToutEmballV1
             this.uCpanelTypeProd3.Size = new System.Drawing.Size(325, 161);
             this.uCpanelTypeProd3.TabIndex = 13;
             // 
-            // uCpanelTypeProd1
-            // 
-            this.uCpanelTypeProd1.Location = new System.Drawing.Point(3, 6);
-            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
-            this.uCpanelTypeProd1.Size = new System.Drawing.Size(328, 163);
-            this.uCpanelTypeProd1.TabIndex = 13;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -162,8 +162,9 @@ namespace ToutEmballV1
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
+           
             // 
             // pRODUCTIONToolStripMenuItem
             // 
@@ -182,7 +183,7 @@ namespace ToutEmballV1
             this.bToolStripMenuIDem,
             this.cToolStripMenuIDem});
             this.demarrerToolStripMenuItem.Name = "demarrerToolStripMenuItem";
-            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.demarrerToolStripMenuItem.Text = "Démarrer";
             // 
             // aToolStripMenuIDem
@@ -213,7 +214,7 @@ namespace ToutEmballV1
             this.bToolStripMenuIArr,
             this.cToolStripMenuIArr});
             this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
-            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arreterToolStripMenuItem.Text = "Arrêter";
             // 
             // aToolStripMenuIArr
@@ -244,27 +245,27 @@ namespace ToutEmballV1
             this.bToolStripMenuICont,
             this.cToolStripMenuICont});
             this.continuerToolStripMenuItem.Name = "continuerToolStripMenuItem";
-            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.continuerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
             // aToolStripMenuICont
             // 
             this.aToolStripMenuICont.Name = "aToolStripMenuICont";
-            this.aToolStripMenuICont.Size = new System.Drawing.Size(82, 22);
+            this.aToolStripMenuICont.Size = new System.Drawing.Size(180, 22);
             this.aToolStripMenuICont.Text = "A";
             this.aToolStripMenuICont.Click += new System.EventHandler(this.aToolStripMenuICont_Click);
             // 
             // bToolStripMenuICont
             // 
             this.bToolStripMenuICont.Name = "bToolStripMenuICont";
-            this.bToolStripMenuICont.Size = new System.Drawing.Size(82, 22);
+            this.bToolStripMenuICont.Size = new System.Drawing.Size(180, 22);
             this.bToolStripMenuICont.Text = "B";
             this.bToolStripMenuICont.Click += new System.EventHandler(this.bToolStripMenuICont_Click);
             // 
             // cToolStripMenuICont
             // 
             this.cToolStripMenuICont.Name = "cToolStripMenuICont";
-            this.cToolStripMenuICont.Size = new System.Drawing.Size(82, 22);
+            this.cToolStripMenuICont.Size = new System.Drawing.Size(180, 22);
             this.cToolStripMenuICont.Text = "C";
             this.cToolStripMenuICont.Click += new System.EventHandler(this.cToolStripMenuICont_Click);
             // 
