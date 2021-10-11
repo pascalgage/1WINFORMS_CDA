@@ -26,6 +26,7 @@ namespace ToutEmballV1
             uCprogressBarProduction1.LabelProductionAText = "Production A";
             uCprogressBarProduction2.LabelProductionAText = "Production B";
             uCprogressBarProduction3.LabelProductionAText = "Production C";
+            MettreAJourIHM();
             
         }
 
@@ -43,7 +44,7 @@ namespace ToutEmballV1
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
         {
-            //Demarrer le timerProdA....
+            
             maProdA.Demarrer();
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
@@ -58,7 +59,6 @@ namespace ToutEmballV1
         {
             maProdB.ProduireUneCaisse();
             uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
-            
             uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
             uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
@@ -81,7 +81,6 @@ namespace ToutEmballV1
         {
             maProdC.ProduireUneCaisse();
             uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
-            
             uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
             uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
             uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
@@ -97,13 +96,16 @@ namespace ToutEmballV1
             }
         }
 
+
         //Suspendre Production...
+
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdA.MettreEnPause();
             if (maProdA.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdA.Stop();
+                MettreAJourIHM();
                 
             }
         }
@@ -114,6 +116,7 @@ namespace ToutEmballV1
             if (maProdB.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdB.Stop();
+                MettreAJourIHM();
             }
             
         }
@@ -124,16 +127,19 @@ namespace ToutEmballV1
             if (maProdC.EtatCourant == Production.StatutProd.Suspendue)
             {
                 timerProdC.Stop();
+                MettreAJourIHM();
             }
             
         }
         //Reprendre la production....
+
         private void aToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdA.ReprendreLaProduction();
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdA.Start();
+                MettreAJourIHM();
             }
         }
 
@@ -143,6 +149,7 @@ namespace ToutEmballV1
             if (maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdB.Start();
+                MettreAJourIHM();
             }
         }
 
@@ -152,27 +159,81 @@ namespace ToutEmballV1
             if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 timerProdC.Start();
+                MettreAJourIHM();
             }
         }
+
+        //Mise à jour de l'IHM...
 
         private void MettreAJourIHM()
         {
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
-                bToolStripMenuIDem.Enabled = false;
-                cToolStripMenuIDem.Enabled = false;
+                aToolStripMenuIDem.Enabled = false;
+                aToolStripMenuIArr.Enabled = true;
+                aToolStripMenuICont.Enabled = true;
+                
 
             }
-            else if(maProdB.EtatCourant == Production.StatutProd.Demarree)
+            if(maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
-                aToolStripMenuIDem.Enabled = false;
-                cToolStripMenuIDem.Enabled = false;
-            }
-            else if (maProdC.EtatCourant == Production.StatutProd.Demarree)
-            {
-                aToolStripMenuIDem.Enabled = false;
                 bToolStripMenuIDem.Enabled = false;
+                bToolStripMenuIArr.Enabled = true;
+                bToolStripMenuICont.Enabled = true;
+
             }
+            if (maProdC.EtatCourant == Production.StatutProd.Demarree)
+            {
+                cToolStripMenuIDem.Enabled = false;
+                cToolStripMenuIArr.Enabled = true;
+                cToolStripMenuICont.Enabled = true;
+
+            }
+
+
+            if (maProdA.EtatCourant == Production.StatutProd.Suspendue)
+            {
+                aToolStripMenuIDem.Enabled = true;
+                aToolStripMenuIArr.Enabled = false;
+                aToolStripMenuICont.Enabled = true;
+
+
+            }
+            if (maProdB.EtatCourant == Production.StatutProd.Suspendue)
+            {
+                bToolStripMenuIDem.Enabled = true;
+                bToolStripMenuIArr.Enabled = false;
+                bToolStripMenuICont.Enabled = true;
+
+            }
+            if (maProdC.EtatCourant == Production.StatutProd.Suspendue)
+            {
+                cToolStripMenuIDem.Enabled = true;
+                cToolStripMenuIArr.Enabled = false;
+                cToolStripMenuICont.Enabled = true;
+
+            }
+
+
+            if (maProdA.EtatCourant == Production.StatutProd.NonDemarree)
+            {
+
+                aToolStripMenuIArr.Enabled = false;
+                aToolStripMenuICont.Enabled = false;
+            }
+            if (maProdB.EtatCourant == Production.StatutProd.NonDemarree)
+            {
+
+                bToolStripMenuIArr.Enabled = false;
+                bToolStripMenuICont.Enabled = false;
+            }
+            if (maProdC.EtatCourant == Production.StatutProd.NonDemarree)
+            {
+
+                cToolStripMenuIArr.Enabled = false;
+                cToolStripMenuICont.Enabled = false;
+            }
+
         }
 
         

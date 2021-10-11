@@ -69,7 +69,12 @@ namespace ClassLibraryProduction
         }
         public void Arreter()
         {
-            etatCourant = StatutProd.Terminee;
+            if (etatCourant == StatutProd.Demarree)
+            {
+                etatCourant = StatutProd.Suspendue;
+            }
+            
+            
         }
 
         public void MettreEnPause()
@@ -87,6 +92,9 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Demarree;
             }
         }
+
+
+
 
         public decimal TauxErreur()
         {
