@@ -106,6 +106,7 @@ namespace ClassLibraryProduction
             if (etatCourant == StatutProd.Demarree)
             {
                 etatCourant = StatutProd.Terminee;
+                
             }
             
             
