@@ -272,17 +272,17 @@ namespace ToutEmballV1
             // timerProdA
             // 
             this.timerProdA.Interval = 3750;
-            this.timerProdA.Tick += new System.EventHandler(this.timerProdA_Tick);
+            
             // 
             // timerProdB
             // 
             this.timerProdB.Interval = 720;
-            this.timerProdB.Tick += new System.EventHandler(this.timerProdB_Tick);
+            
             // 
             // timerProdC
             // 
             this.timerProdC.Interval = 360;
-            this.timerProdC.Tick += new System.EventHandler(this.timerProdC_Tick);
+            
             // 
             // uCprogressBarProduction1
             // 

@@ -52,15 +52,15 @@ namespace ToutEmballV1
 
         //Commencer la production....
 
-        private void timerProdA_Tick(object sender, EventArgs e)
-        {
-            maProdA.Demarrer();
+        //private void timerProdA_Tick(object sender, EventArgs e)
+        //{
+        //    maProdA.Demarrer();
             
-            uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction1.ProgressBarProdMaximum = maProdA.QuantiteAProduire;
-            uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
-            uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
-        }
+        //    uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
+        //    uCprogressBarProduction1.ProgressBarProdMaximum = maProdA.QuantiteAProduire;
+        //    uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
+        //    uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
+        //}
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
         {
@@ -75,15 +75,15 @@ namespace ToutEmballV1
             
         }
 
-        private void timerProdB_Tick(object sender, EventArgs e)
-        {
-            maProdB.Demarrer();
-            uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
-            uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
-            uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
+        //private void timerProdB_Tick(object sender, EventArgs e)
+        //{
+        //    maProdB.Demarrer();
+        //    uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
+        //    uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
+        //    uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
+        //    uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
             
-        }
+        //}
 
 
         private void bToolStripMenuIDem_Click(object sender, EventArgs e)
@@ -97,14 +97,14 @@ namespace ToutEmballV1
             
         }
 
-        private void timerProdC_Tick(object sender, EventArgs e)
-        {
-            maProdC.Demarrer();
-            uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
-            uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
-            uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
-            uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
-        }
+        //private void timerProdC_Tick(object sender, EventArgs e)
+        //{
+        //    maProdC.Demarrer();
+        //    uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
+        //    uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
+        //    uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
+        //    uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
+        //}
 
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)
         {
