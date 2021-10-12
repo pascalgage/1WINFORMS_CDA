@@ -17,17 +17,37 @@ namespace ToutEmballV1
         private Production maProdB;
         private Production maProdC;
 
+        public delegate void DelegateMettreAJour();
+
         public FormProd()
         {
             InitializeComponent();
             maProdA = new Production("A",10000,1000);
             maProdB = new Production("B", 25000, 5000);
             maProdC = new Production("C", 120000, 10000);
+            maProdA.CaisseProduite += MaProdA_CaisseProduite;
+            maProdB.CaisseProduite += MaProdB_CaisseProduite;
+            maProdC.CaisseProduite += MaProdC_CaisseProduite;
             uCprogressBarProduction1.LabelProductionAText = "Production A";
             uCprogressBarProduction2.LabelProductionAText = "Production B";
             uCprogressBarProduction3.LabelProductionAText = "Production C";
             MettreAJourIHM();
             
+        }
+
+        private void MaProdC_CaisseProduite(Production sender)
+        {
+            this.Invoke(new DelegateMettreAJour(MettreAJourIHM));
+        }
+
+        private void MaProdB_CaisseProduite(Production sender)
+        {
+            this.Invoke(new DelegateMettreAJour(MettreAJourIHM));
+        }
+
+        private void MaProdA_CaisseProduite(Production sender)
+        {
+           this.Invoke(new DelegateMettreAJour(MettreAJourIHM));
         }
 
         //Commencer la production....
@@ -48,7 +68,7 @@ namespace ToutEmballV1
             maProdA.Demarrer();
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdA.Start();
+               // timerProdA.Start();
                 MettreAJourIHM();
                 
             }
@@ -71,7 +91,7 @@ namespace ToutEmballV1
             maProdB.Demarrer();
             if(maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdB.Start();
+                //timerProdB.Start();
                 MettreAJourIHM();
             }
             
@@ -91,7 +111,7 @@ namespace ToutEmballV1
             maProdC.Demarrer();
             if(maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdC.Start();
+                //timerProdC.Start();
                 MettreAJourIHM();
             }
         }
@@ -104,7 +124,7 @@ namespace ToutEmballV1
             maProdA.MettreEnPause();
             if (maProdA.EtatCourant == Production.StatutProd.Suspendue)
             {
-                timerProdA.Stop();
+                //timerProdA.Stop();
                 MettreAJourIHM();
                 
             }
@@ -115,7 +135,7 @@ namespace ToutEmballV1
             maProdB.MettreEnPause();
             if (maProdB.EtatCourant == Production.StatutProd.Suspendue)
             {
-                timerProdB.Stop();
+                //timerProdB.Stop();
                 MettreAJourIHM();
             }
             
@@ -126,7 +146,7 @@ namespace ToutEmballV1
             maProdC.MettreEnPause();
             if (maProdC.EtatCourant == Production.StatutProd.Suspendue)
             {
-                timerProdC.Stop();
+                //timerProdC.Stop();
                 MettreAJourIHM();
             }
             
@@ -138,7 +158,7 @@ namespace ToutEmballV1
             maProdA.ReprendreLaProduction();
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdA.Start();
+                //timerProdA.Start();
                 MettreAJourIHM();
             }
         }
@@ -148,7 +168,7 @@ namespace ToutEmballV1
             maProdB.ReprendreLaProduction();
             if (maProdB.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdB.Start();
+                //timerProdB.Start();
                 MettreAJourIHM();
             }
         }
@@ -158,7 +178,7 @@ namespace ToutEmballV1
             maProdC.ReprendreLaProduction();
             if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
-                timerProdC.Start();
+                //timerProdC.Start();
                 MettreAJourIHM();
             }
         }
@@ -167,6 +187,8 @@ namespace ToutEmballV1
         {
             
             this.Close();
+            
+            
 
         }
 
@@ -175,6 +197,23 @@ namespace ToutEmballV1
 
         private void MettreAJourIHM()
         {
+            
+            uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
+            uCprogressBarProduction1.ProgressBarProdMaximum = maProdA.QuantiteAProduire;
+            uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
+
+            uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
+            uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
+            uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
+
+            uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
+            uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
+            uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
+            uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
+
+
             if (maProdA.EtatCourant == Production.StatutProd.Demarree)
             {
                 aToolStripMenuIDem.Enabled = false;
@@ -241,6 +280,8 @@ namespace ToutEmballV1
                 cToolStripMenuIArr.Enabled = false;
                 cToolStripMenuICont.Enabled = false;
             }
+
+            
 
         }
 

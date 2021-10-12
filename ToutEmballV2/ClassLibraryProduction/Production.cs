@@ -18,6 +18,12 @@ namespace ClassLibraryProduction
         private StatutProd etatCourant;
         private int caisseAvecDefaut;
         private Thread threadCourant;
+        //Déclarer le delegate
+        public delegate void DelegateProduction(Production sender);
+        //Déclarer l'évènement
+        public event DelegateProduction CaisseProduite;
+
+
 
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
@@ -42,30 +48,31 @@ namespace ClassLibraryProduction
         }
 
 
+
+
         private void ProduireUneCaisse()
         {
-            //Sert à produire une caisse...
-
-            //quantiteDeCaissedepuisDemarrage++;
-
-            //verifier qu'on atteint pas le maximum
-            //if (quantiteDeCaissedepuisDemarrage == quantiteAProduire)
-            //{
-            //    etatCourant = StatutProd.Terminee;
-            //}
+            
             while (quantiteDeCaissedepuisDemarrage<QuantiteAProduire)
             {
                 quantiteDeCaissedepuisDemarrage++;
-
+                Thread.Sleep(100);
+                //caisse a été produite...
+                CaisseAEteProduite();
+                
             }
             etatCourant = StatutProd.Terminee;
 
 
-
-
-
         }
 
+        private void CaisseAEteProduite()
+        {
+            if (CaisseProduite != null)
+            {
+                CaisseProduite(this);
+            }
+        }
 
         public enum StatutProd : int
         {
@@ -84,9 +91,6 @@ namespace ClassLibraryProduction
             }
             
 
-
-
-
         }
 
         private void DemarrerThread()
@@ -95,10 +99,6 @@ namespace ClassLibraryProduction
             threadCourant.Start();
         }
         
-
-
-
-
 
 
         public void Arreter()
@@ -126,7 +126,6 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Demarree;
             }
         }
-
 
 
 
