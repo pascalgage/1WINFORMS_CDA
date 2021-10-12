@@ -76,7 +76,7 @@ namespace ToutEmballV1
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdA.MettreEnPause();
-            Environment.Exit(Environment.ExitCode);
+            
             MettreAJourIHM();      
         }
 

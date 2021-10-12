@@ -117,7 +117,7 @@ namespace ClassLibraryProduction
             if (etatCourant == StatutProd.Demarree)
             { 
                 etatCourant = StatutProd.Suspendue;
-                threadCourant.Join();
+                threadCourant.Abort();
             }
         }
 
