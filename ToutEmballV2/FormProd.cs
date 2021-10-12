@@ -76,6 +76,7 @@ namespace ToutEmballV1
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdA.MettreEnPause();
+            Environment.Exit(Environment.ExitCode);
             MettreAJourIHM();      
         }
 
@@ -124,9 +125,10 @@ namespace ToutEmballV1
 
         private void quitterToolStripMenuItem_Click(object sender,EventArgs e)
         {
-            maProdA.CaisseProduite -= MaProdA_CaisseProduite;
-            maProdB.CaisseProduite -= MaProdB_CaisseProduite;
-            maProdC.CaisseProduite -= MaProdC_CaisseProduite;
+            //maProdA.CaisseProduite -= MaProdA_CaisseProduite;
+            //maProdB.CaisseProduite -= MaProdB_CaisseProduite;
+            //maProdC.CaisseProduite -= MaProdC_CaisseProduite;
+            Environment.Exit(Environment.ExitCode);
             this.Close();
             
             
