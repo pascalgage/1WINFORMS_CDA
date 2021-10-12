@@ -52,135 +52,74 @@ namespace ToutEmballV1
 
         //Commencer la production....
 
-        //private void timerProdA_Tick(object sender, EventArgs e)
-        //{
-        //    maProdA.Demarrer();
-            
-        //    uCprogressBarProduction1.ProgressBarProdValue = maProdA.QuantiteDeCaisseDepuisdemarrage;
-        //    uCprogressBarProduction1.ProgressBarProdMaximum = maProdA.QuantiteAProduire;
-        //    uCpanelTypeProd1.NombreDeCaisseProduite = maProdA.QuantiteDeCaisseDepuisdemarrage.ToString();
-        //    uCpanelTypeProd1.NombreDefaut = maProdA.TauxErreur().ToString();
-        //}
 
         private void aToolStripMenuIDem_Click(object sender, EventArgs e)
         {
-            
             maProdA.Demarrer();
-            if (maProdA.EtatCourant == Production.StatutProd.Demarree)
-            {
-               // timerProdA.Start();
-                MettreAJourIHM();
-                
-            }
-            
+            MettreAJourIHM();  
         }
-
-        //private void timerProdB_Tick(object sender, EventArgs e)
-        //{
-        //    maProdB.Demarrer();
-        //    uCprogressBarProduction2.ProgressBarProdValue = maProdB.QuantiteDeCaisseDepuisdemarrage;
-        //    uCprogressBarProduction2.ProgressBarProdMaximum = maProdB.QuantiteAProduire;
-        //    uCpanelTypeProd2.NombreDeCaisseProduite = maProdB.QuantiteDeCaisseDepuisdemarrage.ToString();
-        //    uCpanelTypeProd2.NombreDefaut = maProdB.TauxErreur().ToString();
-            
-        //}
-
 
         private void bToolStripMenuIDem_Click(object sender, EventArgs e)
         {
             maProdB.Demarrer();
-            if(maProdB.EtatCourant == Production.StatutProd.Demarree)
-            {
-                //timerProdB.Start();
-                MettreAJourIHM();
-            }
-            
+            MettreAJourIHM(); 
         }
-
-        //private void timerProdC_Tick(object sender, EventArgs e)
-        //{
-        //    maProdC.Demarrer();
-        //    uCprogressBarProduction3.ProgressBarProdValue = maProdC.QuantiteDeCaisseDepuisdemarrage;
-        //    uCprogressBarProduction3.ProgressBarProdMaximum = maProdC.QuantiteAProduire;
-        //    uCpanelTypeProd3.NombreDeCaisseProduite = maProdC.QuantiteDeCaisseDepuisdemarrage.ToString();
-        //    uCpanelTypeProd3.NombreDefaut = maProdC.TauxErreur().ToString();
-        //}
 
         private void cToolStripMenuIDem_Click(object sender, EventArgs e)
         {
             maProdC.Demarrer();
-            if(maProdC.EtatCourant == Production.StatutProd.Demarree)
-            {
-                //timerProdC.Start();
-                MettreAJourIHM();
-            }
+            MettreAJourIHM();  
         }
-
 
         //Suspendre Production...
 
         private void aToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdA.MettreEnPause();
-            if (maProdA.EtatCourant == Production.StatutProd.Suspendue)
-            {
-                //timerProdA.Stop();
-                MettreAJourIHM();
-                
-            }
+            MettreAJourIHM();      
         }
 
         private void bToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdB.MettreEnPause();
-            if (maProdB.EtatCourant == Production.StatutProd.Suspendue)
-            {
-                //timerProdB.Stop();
-                MettreAJourIHM();
-            }
-            
+            MettreAJourIHM();  
         }
 
         private void cToolStripMenuIArr_Click(object sender, EventArgs e)
         {
             maProdC.MettreEnPause();
-            if (maProdC.EtatCourant == Production.StatutProd.Suspendue)
-            {
-                //timerProdC.Stop();
-                MettreAJourIHM();
-            }
-            
+            MettreAJourIHM();
         }
         //Reprendre la production....
 
         private void aToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdA.ReprendreLaProduction();
-            if (maProdA.EtatCourant == Production.StatutProd.Demarree)
-            {
-                //timerProdA.Start();
+            
+            
+                
                 MettreAJourIHM();
-            }
+            
         }
 
         private void bToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdB.ReprendreLaProduction();
-            if (maProdB.EtatCourant == Production.StatutProd.Demarree)
-            {
-                //timerProdB.Start();
+            
+            
+               
                 MettreAJourIHM();
-            }
+            
         }
 
         private void cToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdC.ReprendreLaProduction();
-            if (maProdC.EtatCourant == Production.StatutProd.Demarree)
-            {
-                //timerProdC.Start();
+            
+            
+                
                 MettreAJourIHM();
-            }
+            
         }
 
         private void quitterToolStripMenuItem_Click(object sender,EventArgs e)
@@ -221,7 +160,7 @@ namespace ToutEmballV1
             {
                 aToolStripMenuIDem.Enabled = false;
                 aToolStripMenuIArr.Enabled = true;
-                aToolStripMenuICont.Enabled = true;
+                aToolStripMenuICont.Enabled = false;
                 
 
             }
@@ -229,14 +168,14 @@ namespace ToutEmballV1
             {
                 bToolStripMenuIDem.Enabled = false;
                 bToolStripMenuIArr.Enabled = true;
-                bToolStripMenuICont.Enabled = true;
+                bToolStripMenuICont.Enabled = false;
 
             }
             if (maProdC.EtatCourant == Production.StatutProd.Demarree)
             {
                 cToolStripMenuIDem.Enabled = false;
                 cToolStripMenuIArr.Enabled = true;
-                cToolStripMenuICont.Enabled = true;
+                cToolStripMenuICont.Enabled = false;
 
             }
 
