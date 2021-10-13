@@ -93,18 +93,13 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Demarree;
                 DemarrerThread();
             }
-            
-
         }
 
         private void DemarrerThread()
-        {
-            
+        { 
             threadCourant.Start();
         }
         
-
-
         public void Arreter()
         {
             if (etatCourant == StatutProd.Demarree)
@@ -112,7 +107,6 @@ namespace ClassLibraryProduction
                 etatCourant = StatutProd.Terminee;
                 
             }
-            
             
         }
 

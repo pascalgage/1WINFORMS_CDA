@@ -97,28 +97,21 @@ namespace ToutEmballV1
         {
             maProdA.ReprendreLaProduction();
             
-            
-                
                 MettreAJourIHM();
-            
         }
 
         private void bToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdB.ReprendreLaProduction();
             
-            
-               
                 MettreAJourIHM();
-            
+           
         }
 
         private void cToolStripMenuICont_Click(object sender, EventArgs e)
         {
             maProdC.ReprendreLaProduction();
             
-            
-                
                 MettreAJourIHM();
             
         }
