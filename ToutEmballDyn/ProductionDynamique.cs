@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryProduction;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace ToutEmballDyn
 {
-    public partial class Form1 : Form
+    public partial class ProductionDynamique : Form
     {
-        public Form1()
+        private Production nouvelleProduction;
+
+
+
+        public ProductionDynamique()
         {
             InitializeComponent();
+            
         }
+        
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace ToutEmballDyn
 {
-    partial class Form1
+    partial class ProductionDynamique
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

@@ -46,16 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ProductionDynamique.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ProductionDynamique.Designer.cs">
+      <DependentUpon>ProductionDynamique.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UCpanelTypeProd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCpanelTypeProd.Designer.cs">
+      <DependentUpon>UCpanelTypeProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCprogressBarProduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCprogressBarProduction.Designer.cs">
+      <DependentUpon>UCprogressBarProduction.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ProductionDynamique.resx">
+      <DependentUpon>ProductionDynamique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +78,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCpanelTypeProd.resx">
+      <DependentUpon>UCpanelTypeProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCprogressBarProduction.resx">
+      <DependentUpon>UCprogressBarProduction.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClassLibraryProduction\ClassLibraryProduction.csproj">
+      <Project>{75c68aa2-0451-49f9-b0e2-b45abdc55f4f}</Project>
+      <Name>ClassLibraryProduction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
