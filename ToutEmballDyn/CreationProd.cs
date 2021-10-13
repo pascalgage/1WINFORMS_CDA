@@ -11,23 +11,22 @@ using System.Windows.Forms;
 
 namespace ToutEmballDyn
 {
-    public partial class ProductionDynamique : Form
+    public partial class CreationProd : Form
     {
+        private Production uneProd;
 
-        
 
-        public ProductionDynamique()
+       
+        public Production UneProd { get => uneProd;  }
+
+        public CreationProd()
         {
             InitializeComponent();
-            
         }
 
-        
-
-        private void commencerUneProductionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void buttonValider_Click(object sender, EventArgs e)
         {
-            CreationProd maProd=new CreationProd();
-            maProd.Show();
+
         }
     }
 }
