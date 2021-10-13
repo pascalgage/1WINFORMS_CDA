@@ -121,7 +121,7 @@ namespace ClassLibraryProduction
             if (etatCourant == StatutProd.Demarree)
             { 
                 etatCourant = StatutProd.Suspendue;
-                threadCourant.Abort();
+                threadCourant.Suspend();
             }
         }
 
@@ -130,7 +130,7 @@ namespace ClassLibraryProduction
             if (etatCourant == StatutProd.Suspendue)
             {
                 etatCourant = StatutProd.Demarree;
-                threadCourant.Start();
+                threadCourant.Resume();
             }
         }
 
