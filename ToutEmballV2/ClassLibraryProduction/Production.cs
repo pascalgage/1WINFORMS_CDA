@@ -58,9 +58,10 @@ namespace ClassLibraryProduction
                 if (etatCourant == StatutProd.Demarree)
                 {
                     quantiteDeCaissedepuisDemarrage++;
-                    Thread.Sleep(100);
                     //caisse a été produite...
                     CaisseAEteProduite();
+                    Thread.Sleep(100);
+
                 }
                 
                 

@@ -38,14 +38,15 @@ namespace ToutEmballDyn
             this.demarrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrêterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.continuerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uCprogressBarProduction1 = new ToutEmballDyn.UCprogressBarProduction();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProgressBarnouvelProd
             // 
-            this.ProgressBarnouvelProd.Location = new System.Drawing.Point(156, 288);
+            this.ProgressBarnouvelProd.Location = new System.Drawing.Point(50, 192);
             this.ProgressBarnouvelProd.Name = "ProgressBarnouvelProd";
-            this.ProgressBarnouvelProd.Size = new System.Drawing.Size(511, 106);
+            this.ProgressBarnouvelProd.Size = new System.Drawing.Size(738, 229);
             this.ProgressBarnouvelProd.TabIndex = 0;
             // 
             // menuStrip1
@@ -70,7 +71,7 @@ namespace ToutEmballDyn
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             // 
             // productionToolStripMenuItem
@@ -108,15 +109,24 @@ namespace ToutEmballDyn
             this.continuerToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
-            // Form1
+            // uCprogressBarProduction1
+            // 
+            this.uCprogressBarProduction1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uCprogressBarProduction1.Location = new System.Drawing.Point(0, 24);
+            this.uCprogressBarProduction1.Name = "uCprogressBarProduction1";
+            this.uCprogressBarProduction1.Size = new System.Drawing.Size(800, 150);
+            this.uCprogressBarProduction1.TabIndex = 2;
+            // 
+            // ProductionDynamique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uCprogressBarProduction1);
             this.Controls.Add(this.ProgressBarnouvelProd);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "ProductionDynamique";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -136,6 +146,7 @@ namespace ToutEmballDyn
         private System.Windows.Forms.ToolStripMenuItem demarrerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem arrêterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem continuerToolStripMenuItem;
+        private UCprogressBarProduction uCprogressBarProduction1;
     }
 }
 

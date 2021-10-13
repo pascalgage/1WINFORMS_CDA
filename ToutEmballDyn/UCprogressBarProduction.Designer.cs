@@ -35,15 +35,15 @@ namespace ToutEmballDyn
             // 
             // progressBarProdA
             // 
-            this.progressBarProdA.Location = new System.Drawing.Point(302, 43);
+            this.progressBarProdA.Location = new System.Drawing.Point(128, 14);
             this.progressBarProdA.Name = "progressBarProdA";
-            this.progressBarProdA.Size = new System.Drawing.Size(409, 57);
+            this.progressBarProdA.Size = new System.Drawing.Size(394, 26);
             this.progressBarProdA.TabIndex = 0;
             // 
             // LabelProductionA
             // 
             this.LabelProductionA.AutoSize = true;
-            this.LabelProductionA.Location = new System.Drawing.Point(85, 64);
+            this.LabelProductionA.Location = new System.Drawing.Point(13, 14);
             this.LabelProductionA.Name = "LabelProductionA";
             this.LabelProductionA.Size = new System.Drawing.Size(109, 13);
             this.LabelProductionA.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace ToutEmballDyn
             this.Controls.Add(this.LabelProductionA);
             this.Controls.Add(this.progressBarProdA);
             this.Name = "UCprogressBarProduction";
-            this.Size = new System.Drawing.Size(745, 150);
+            this.Size = new System.Drawing.Size(538, 49);
             this.ResumeLayout(false);
             this.PerformLayout();
 
