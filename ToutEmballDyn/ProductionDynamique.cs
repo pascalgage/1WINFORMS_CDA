@@ -22,6 +22,10 @@ namespace ToutEmballDyn
             InitializeComponent();
             
         }
-        
+
+        private void commencerUneProductionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
