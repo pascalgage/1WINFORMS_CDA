@@ -14,20 +14,18 @@ namespace ToutEmballDyn
     public partial class ProductionDynamique : Form
     {
 
-        
-
         public ProductionDynamique()
         {
             InitializeComponent();
             
         }
 
-        
-
         private void commencerUneProductionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreationProd maProd=new CreationProd();
             maProd.Show();
+            
+            
         }
     }
 }

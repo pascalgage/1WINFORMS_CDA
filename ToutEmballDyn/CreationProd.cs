@@ -15,9 +15,13 @@ namespace ToutEmballDyn
     {
         private Production uneProd;
 
+        private string produit;
+        private int quantiteAprod;
+        private int quantiteParHeure;
 
-       
         public Production UneProd { get => uneProd;  }
+
+        
 
         public CreationProd()
         {
@@ -26,7 +30,10 @@ namespace ToutEmballDyn
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-
+            uneProd = new Production(textBoxNomProd.Text, Convert.ToInt32(textBoxQuantiteAprod.Text), Convert.ToInt32(textBoxProductionParHeure.Text));
+            
         }
+
+        
     }
 }

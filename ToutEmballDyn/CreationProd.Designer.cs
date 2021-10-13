@@ -72,6 +72,7 @@ namespace ToutEmballDyn
             this.textBoxNomProd.Name = "textBoxNomProd";
             this.textBoxNomProd.Size = new System.Drawing.Size(100, 20);
             this.textBoxNomProd.TabIndex = 3;
+            
             // 
             // textBoxQuantiteAprod
             // 

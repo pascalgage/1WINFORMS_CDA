@@ -46,9 +46,6 @@ namespace ClassLibraryProduction
 
         }
 
-
-
-
         private void ProduireUneCaisse()
         {
 

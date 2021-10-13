@@ -41,12 +41,14 @@ namespace ToutEmballDyn
             this.uCprogressBarProduction1 = new ToutEmballDyn.UCprogressBarProduction();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uCpanelTypeProd1 = new ToutEmballDyn.UCpanelTypeProd();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.uCpanelTypeProd2 = new ToutEmballDyn.UCpanelTypeProd();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -147,22 +149,30 @@ namespace ToutEmballDyn
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // uCpanelTypeProd1
             // 
             this.uCpanelTypeProd1.Location = new System.Drawing.Point(24, 7);
             this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
             this.uCpanelTypeProd1.Size = new System.Drawing.Size(352, 180);
             this.uCpanelTypeProd1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.uCpanelTypeProd2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(446, 188);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // uCpanelTypeProd2
+            // 
+            this.uCpanelTypeProd2.Location = new System.Drawing.Point(49, 5);
+            this.uCpanelTypeProd2.Name = "uCpanelTypeProd2";
+            this.uCpanelTypeProd2.Size = new System.Drawing.Size(352, 180);
+            this.uCpanelTypeProd2.TabIndex = 0;
             // 
             // ProductionDynamique
             // 
@@ -180,6 +190,7 @@ namespace ToutEmballDyn
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +211,7 @@ namespace ToutEmballDyn
         private System.Windows.Forms.TabPage tabPage1;
         private UCpanelTypeProd uCpanelTypeProd1;
         private System.Windows.Forms.TabPage tabPage2;
+        private UCpanelTypeProd uCpanelTypeProd2;
     }
 }
 
