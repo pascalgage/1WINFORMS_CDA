@@ -88,7 +88,7 @@ namespace ToutEmballDyn
                 //Aller récupérer le sous-menu de démarrer correspondant à la prod....
                 demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled =false;
                 arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
-                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true; //a voir true or false
 
 
             }
@@ -110,7 +110,7 @@ namespace ToutEmballDyn
             {
                 demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
                 arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
-                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
 
 
             }
@@ -164,11 +164,18 @@ namespace ToutEmballDyn
             ToolStripMenuItem sousMenuContinuer = new ToolStripMenuItem();
             sousMenuContinuer.Name = _prod.Produit;
             sousMenuContinuer.Text = _prod.Produit;
-            sousMenuContinuer.Enabled = false;
+            //sousMenuContinuer.Enabled = false;
             continuerToolStripMenuItem.DropDownItems.Add(sousMenuContinuer);
+            sousMenuContinuer.Tag = _prod;
+            sousMenuContinuer.Click += SousMenuContinuer_Click;
         }
 
-
+        private void SousMenuContinuer_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem sousMenuContinuer = (ToolStripMenuItem)sender;
+            Production prod = (Production)sousMenuContinuer.Tag;
+            prod.ReprendreLaProduction();
+        }
 
         private void AjouterLesSousMenuAuMenuArreter(Production _prod)
         {
@@ -177,8 +184,18 @@ namespace ToutEmballDyn
             sousMenuArreter.Text = _prod.Produit;
             sousMenuArreter.Enabled = false;
             arreterToolStripMenuItem.DropDownItems.Add(sousMenuArreter);
+            sousMenuArreter.Tag = _prod;
+            sousMenuArreter.Click += SousMenuArreter_Click1;
         }
 
+        private void SousMenuArreter_Click1(object sender, EventArgs e)
+        {
+            ToolStripMenuItem sousMenuArr = (ToolStripMenuItem)sender;
+            Production prod = (Production)sousMenuArr.Tag;
+            prod.MettreEnPause();
+        }
+
+       
 
 
         private void AjouterLesSousMenuAuMenuDemarrer(Production _prod)
@@ -206,6 +223,8 @@ namespace ToutEmballDyn
             //production a demarrer
             prod.Demarrer();
         }
+        
+
 
         private void commencerUneProductionToolStripMenuItem_Click(object sender, EventArgs e)
         {
