@@ -52,11 +52,11 @@
     <Compile Include="CreationProd.Designer.cs">
       <DependentUpon>CreationProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductionDynamique.cs">
+    <Compile Include="FormProductionDynamique.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductionDynamique.Designer.cs">
-      <DependentUpon>ProductionDynamique.cs</DependentUpon>
+    <Compile Include="FormProductionDynamique.Designer.cs">
+      <DependentUpon>FormProductionDynamique.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="CreationProd.resx">
       <DependentUpon>CreationProd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductionDynamique.resx">
-      <DependentUpon>ProductionDynamique.cs</DependentUpon>
+    <EmbeddedResource Include="FormProductionDynamique.resx">
+      <DependentUpon>FormProductionDynamique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

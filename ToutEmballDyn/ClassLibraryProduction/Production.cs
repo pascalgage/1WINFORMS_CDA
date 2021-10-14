@@ -22,8 +22,6 @@ namespace ClassLibraryProduction
         //Déclarer l'évènement
         public event DelegateProduction CaisseProduite;
 
-
-
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
         public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaissedepuisDemarrage; set => quantiteDeCaissedepuisDemarrage = value; }

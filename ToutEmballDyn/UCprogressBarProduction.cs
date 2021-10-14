@@ -29,6 +29,7 @@ namespace ToutEmballDyn
         public UCprogressBarProduction()
         {
             InitializeComponent();
+            
         }
     }
 }

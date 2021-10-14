@@ -16,7 +16,7 @@ namespace ToutEmballDyn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductionDynamique());
+            Application.Run(new FormProductionDynamique());
         }
     }
 }

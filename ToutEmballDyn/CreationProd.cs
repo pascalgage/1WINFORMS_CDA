@@ -31,7 +31,7 @@ namespace ToutEmballDyn
         private void buttonValider_Click(object sender, EventArgs e)
         {
             uneProd = new Production(textBoxNomProd.Text, Convert.ToInt32(textBoxQuantiteAprod.Text), Convert.ToInt32(textBoxProductionParHeure.Text));
-            
+            this.Close();
         }
 
         

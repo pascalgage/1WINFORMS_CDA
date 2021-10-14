@@ -1,7 +1,7 @@
 ﻿
 namespace ToutEmballDyn
 {
-    partial class ProductionDynamique
+    partial class FormProductionDynamique
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -35,20 +35,11 @@ namespace ToutEmballDyn
             this.productionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commencerUneProductionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demarrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.arrêterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arreterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.continuerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.uCprogressBarProduction1 = new ToutEmballDyn.UCprogressBarProduction();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.uCpanelTypeProd1 = new ToutEmballDyn.UCpanelTypeProd();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.uCpanelTypeProd2 = new ToutEmballDyn.UCpanelTypeProd();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -81,7 +72,7 @@ namespace ToutEmballDyn
             this.productionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.commencerUneProductionToolStripMenuItem,
             this.demarrerToolStripMenuItem,
-            this.arrêterToolStripMenuItem,
+            this.arreterToolStripMenuItem,
             this.continuerToolStripMenuItem});
             this.productionToolStripMenuItem.Name = "productionToolStripMenuItem";
             this.productionToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
@@ -100,11 +91,11 @@ namespace ToutEmballDyn
             this.demarrerToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.demarrerToolStripMenuItem.Text = "Demarrer";
             // 
-            // arrêterToolStripMenuItem
+            // arreterToolStripMenuItem
             // 
-            this.arrêterToolStripMenuItem.Name = "arrêterToolStripMenuItem";
-            this.arrêterToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.arrêterToolStripMenuItem.Text = "Arrêter";
+            this.arreterToolStripMenuItem.Name = "arreterToolStripMenuItem";
+            this.arreterToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.arreterToolStripMenuItem.Text = "Arrêter";
             // 
             // continuerToolStripMenuItem
             // 
@@ -112,85 +103,37 @@ namespace ToutEmballDyn
             this.continuerToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.continuerToolStripMenuItem.Text = "Continuer";
             // 
-            // panel1
+            // tabControl
             // 
-            this.panel1.Controls.Add(this.uCprogressBarProduction1);
-            this.panel1.Location = new System.Drawing.Point(23, 247);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 191);
-            this.panel1.TabIndex = 2;
+            this.tabControl.Location = new System.Drawing.Point(232, 27);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(454, 214);
+            this.tabControl.TabIndex = 3;
             // 
-            // uCprogressBarProduction1
+            // flowLayoutPanel
             // 
-            this.uCprogressBarProduction1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uCprogressBarProduction1.Location = new System.Drawing.Point(0, 0);
-            this.uCprogressBarProduction1.Name = "uCprogressBarProduction1";
-            this.uCprogressBarProduction1.Size = new System.Drawing.Size(742, 49);
-            this.uCprogressBarProduction1.TabIndex = 0;
+            this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(23, 258);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(737, 156);
+            this.flowLayoutPanel.TabIndex = 4;
+            this.flowLayoutPanel.WrapContents = false;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(232, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(454, 214);
-            this.tabControl1.TabIndex = 3;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.uCpanelTypeProd1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(446, 188);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // uCpanelTypeProd1
-            // 
-            this.uCpanelTypeProd1.Location = new System.Drawing.Point(24, 7);
-            this.uCpanelTypeProd1.Name = "uCpanelTypeProd1";
-            this.uCpanelTypeProd1.Size = new System.Drawing.Size(352, 180);
-            this.uCpanelTypeProd1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.uCpanelTypeProd2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(446, 188);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // uCpanelTypeProd2
-            // 
-            this.uCpanelTypeProd2.Location = new System.Drawing.Point(49, 5);
-            this.uCpanelTypeProd2.Name = "uCpanelTypeProd2";
-            this.uCpanelTypeProd2.Size = new System.Drawing.Size(352, 180);
-            this.uCpanelTypeProd2.TabIndex = 0;
-            // 
-            // ProductionDynamique
+            // FormProductionDynamique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "ProductionDynamique";
+            this.Name = "FormProductionDynamique";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,15 +146,10 @@ namespace ToutEmballDyn
         private System.Windows.Forms.ToolStripMenuItem productionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem commencerUneProductionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem demarrerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem arrêterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem arreterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem continuerToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private UCprogressBarProduction uCprogressBarProduction1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private UCpanelTypeProd uCpanelTypeProd1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private UCpanelTypeProd uCpanelTypeProd2;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }
 
