@@ -11,26 +11,22 @@ using System.Windows.Forms;
 
 namespace ToutEmballDyn
 {
-    public partial class CreationProd : Form
+    public partial class FormNouvelleProd : Form
     {
-        private Production uneProd;
-
-        private string produit;
-        private int quantiteAprod;
-        private int quantiteParHeure;
-
-        public Production UneProd { get => uneProd;  }
-
         
+        
+        public string Produit { get => textBoxNomProd.Text; }
+        public string QuantiteAprod { get =>textBoxQuantiteAprod.Text ; }
+        public string QuantiteParHeure { get => textBoxProductionParHeure.Text; }
 
-        public CreationProd()
+        public FormNouvelleProd()
         {
             InitializeComponent();
         }
 
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            uneProd = new Production(textBoxNomProd.Text, Convert.ToInt32(textBoxQuantiteAprod.Text), Convert.ToInt32(textBoxProductionParHeure.Text));
+            DialogResult = DialogResult.Yes;
             this.Close();
         }
 

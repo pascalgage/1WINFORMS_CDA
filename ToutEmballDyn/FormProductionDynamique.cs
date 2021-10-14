@@ -16,7 +16,7 @@ namespace ToutEmballDyn
         //Déclarer une liste de production 
         List<Production> mesProductions;
 
-
+        public delegate void DelegateMettreAJour(Production _prod);
         public FormProductionDynamique()
         {
             InitializeComponent();
@@ -35,22 +35,85 @@ namespace ToutEmballDyn
 
             foreach (Production _prod in mesProductions)
             {
-                //Ajouter les boutons concernant les prod dans le menu démarer (peut être séparé dans une fonction)
-                AjouterLesSousMenuAuMenuDemarrer(_prod);
-                //Idem pour le menu arrêter
-                AjouterLesSousMenuAuMenuArreter(_prod);
-                //Idem pour le menu continuer
-                AjouterLesSousMenuAuMenuContinuer(_prod);
-                //Ajouter une tab dans le tabcontrol pour chaque production
-                AjouterTabPageDansTabControl(_prod);
-                //Ajouter les UCpanelTypeProd dans la bonne tabPage
-                AjouterUCpanelTypeProdDansTabPage(_prod);
-                //Ajouter les UCprogressBarProduction dans le flowlayoutPanel
-                AjouterUcprogressBarAuFlowLayout(_prod);
+                InitialiserUneProduction(_prod);
 
             }
 
 
+        }
+        private void InitialiserUneProduction(Production _prod)
+        {
+            //Ajouter les boutons concernant les prod dans le menu démarer (peut être séparé dans une fonction)
+            AjouterLesSousMenuAuMenuDemarrer(_prod);
+            //Idem pour le menu arrêter
+            AjouterLesSousMenuAuMenuArreter(_prod);
+            //Idem pour le menu continuer
+            AjouterLesSousMenuAuMenuContinuer(_prod);
+            //Ajouter une tab dans le tabcontrol pour chaque production
+            AjouterTabPageDansTabControl(_prod);
+            //Ajouter les UCpanelTypeProd dans la bonne tabPage
+            AjouterUCpanelTypeProdDansTabPage(_prod);
+            //Ajouter les UCprogressBarProduction dans le flowlayoutPanel
+            AjouterUcprogressBarAuFlowLayout(_prod);
+
+            //S'abonner à l'évènement...
+            _prod.CaisseProduite += _prod_CaisseProduite;
+        }
+
+        private void _prod_CaisseProduite(Production sender)
+        {
+
+            this.Invoke(new DelegateMettreAJour(MettreAJourIHM),new object[] {sender });
+        }
+
+        private void MettreAJourIHM(Production _prod)
+        {
+            //Aller récupérer le bon UC qui correspond à la production...
+            UCprogressBarProduction uCprogressBarProduction = (UCprogressBarProduction)flowLayoutPanel.Controls[_prod.Produit];
+            //Aller modifier la valeur de la progressBar
+            uCprogressBarProduction.ProgressBarProdValue = _prod.QuantiteDeCaisseDepuisdemarrage;
+
+            //Aller récupérer le bon Uc panel prod...
+            UCpanelTypeProd uCpanelTypeProd= (UCpanelTypeProd)tabControl.Controls[_prod.Produit].Controls[_prod.Produit];
+            //Aller modifier la quantité de caisse produite
+            uCpanelTypeProd.NombreDeCaisseProduite= _prod.QuantiteDeCaisseDepuisdemarrage.ToString();
+            //Aller modifier le taux d'erreur
+            uCpanelTypeProd.NombreDefautDepuisDem = _prod.TauxErreur().ToString();
+
+            
+
+
+            if (_prod.EtatCourant == Production.StatutProd.Demarree)
+            {
+                //Aller récupérer le sous-menu de démarrer correspondant à la prod....
+                demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled =false;
+                arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+
+
+            }
+
+
+
+            if (_prod.EtatCourant == Production.StatutProd.Suspendue)
+            {
+                demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+                arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
+
+
+            }
+            
+
+
+            if (_prod.EtatCourant == Production.StatutProd.NonDemarree)
+            {
+                demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
+                arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
+
+
+            }
 
 
 
@@ -123,15 +186,50 @@ namespace ToutEmballDyn
             ToolStripMenuItem sousMenuDemarrer = new ToolStripMenuItem();
             sousMenuDemarrer.Name = _prod.Produit;
             sousMenuDemarrer.Text = _prod.Produit;
+            //Passer la production dans le tag
+
+            //on met la production dans le tag pour pouvoir y accéder par l'évènement click
+            sousMenuDemarrer.Tag = _prod;
+
+
             demarrerToolStripMenuItem.DropDownItems.Add(sousMenuDemarrer);
+            //Ajouter un évènement au click sur le bouton
+            sousMenuDemarrer.Click += SousMenuDemarrer_Click;
+        }
+
+        private void SousMenuDemarrer_Click(object sender, EventArgs e)
+        {
+            //caster le sender en toolstripmenuItem
+            ToolStripMenuItem sousMenuDem = (ToolStripMenuItem)sender;
+            //récupérer la production dans le tag
+            Production prod=(Production)sousMenuDem.Tag;
+            //production a demarrer
+            prod.Demarrer();
         }
 
         private void commencerUneProductionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreationProd maProd=new CreationProd();
-            maProd.Show();
+            FormNouvelleProd formNouvelleProd=new FormNouvelleProd();
+            formNouvelleProd.ShowDialog();
+            if (formNouvelleProd.DialogResult == DialogResult.Yes)
+            {
+                //Parser quantité à produire et production par heure (à déplacer plus tard dans formNouvelleProd)
+
+                int quantiteAproduire = int.Parse(formNouvelleProd.QuantiteAprod);
+                int productionParHeure = int.Parse(formNouvelleProd.QuantiteParHeure);
+                //creer une nouvelle production
+                Production nouvelleProd = new Production(formNouvelleProd.Produit, quantiteAproduire, productionParHeure);
+
+                //ajouter cette production à la liste de production
+                mesProductions.Add(nouvelleProd);
+
+                //utiliser la méthode Initialiserlapoduction()
+                InitialiserUneProduction(nouvelleProd);
+            }
 
         }
+
+
 
         
     }

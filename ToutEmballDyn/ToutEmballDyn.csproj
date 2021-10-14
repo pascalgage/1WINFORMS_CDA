@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreationProd.cs">
+    <Compile Include="FormNouvelleProd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreationProd.Designer.cs">
-      <DependentUpon>CreationProd.cs</DependentUpon>
+    <Compile Include="FormNouvelleProd.Designer.cs">
+      <DependentUpon>FormNouvelleProd.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProductionDynamique.cs">
       <SubType>Form</SubType>
@@ -72,8 +72,8 @@
     <Compile Include="UCprogressBarProduction.Designer.cs">
       <DependentUpon>UCprogressBarProduction.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreationProd.resx">
-      <DependentUpon>CreationProd.cs</DependentUpon>
+    <EmbeddedResource Include="FormNouvelleProd.resx">
+      <DependentUpon>FormNouvelleProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductionDynamique.resx">
       <DependentUpon>FormProductionDynamique.cs</DependentUpon>

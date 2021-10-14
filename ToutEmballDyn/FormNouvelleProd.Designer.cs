@@ -1,7 +1,7 @@
 ﻿
 namespace ToutEmballDyn
 {
-    partial class CreationProd
+    partial class FormNouvelleProd
     {
         /// <summary>
         /// Required designer variable.
