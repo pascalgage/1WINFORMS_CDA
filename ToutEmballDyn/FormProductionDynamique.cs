@@ -17,6 +17,7 @@ namespace ToutEmballDyn
         List<Production> mesProductions;
 
         public delegate void DelegateMettreAJour(Production _prod);
+
         public FormProductionDynamique()
         {
             InitializeComponent();
@@ -58,6 +59,12 @@ namespace ToutEmballDyn
 
             //S'abonner à l'évènement...
             _prod.CaisseProduite += _prod_CaisseProduite;
+            _prod.ProductionFinie += _prod_ProductionFinie;
+        }
+
+        private void _prod_ProductionFinie(Production sender)
+        {
+            MessageBox.Show("PRODUCTION "+sender.Produit+ " Terminée");
         }
 
         private void _prod_CaisseProduite(Production sender)

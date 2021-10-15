@@ -17,10 +17,16 @@ namespace ClassLibraryProduction
         private StatutProd etatCourant;
         private int caisseAvecDefaut;
         private Thread threadCourant;
-        //Déclarer le delegate
+
+        //Déclarer le delegate de production de caisse
         public delegate void DelegateProduction(Production sender);
-        //Déclarer l'évènement
+        //Déclarer l'évènement de caisse produite
         public event DelegateProduction CaisseProduite;
+
+        //Déclarer le delegate de production terminée
+        public delegate void DelegateFinProduction(Production sender);
+        public event DelegateFinProduction ProductionFinie;
+
 
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
@@ -55,6 +61,11 @@ namespace ClassLibraryProduction
                     Thread.Sleep(100);
                     //caisse a été produite...
                     CaisseAEteProduite();
+                    
+                }
+                if (quantiteDeCaissedepuisDemarrage == QuantiteAProduire)
+                {
+                    ProductionEstFinie();
                 }
 
 
@@ -63,6 +74,14 @@ namespace ClassLibraryProduction
 
 
         }
+        private void ProductionEstFinie()
+        {
+            if (ProductionFinie != null)
+            {
+                ProductionFinie(this);
+            }
+        }
+
 
         private void CaisseAEteProduite()
         {
