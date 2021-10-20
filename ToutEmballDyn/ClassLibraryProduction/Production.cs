@@ -27,6 +27,10 @@ namespace ClassLibraryProduction
         public delegate void DelegateFinProduction(Production sender);
         public event DelegateFinProduction ProductionFinie;
 
+        //Déclarer le delegate de changement d'état de la production
+        public delegate void DelegateChangementEtat(StatutProd sender);
+        //Déclarer l'évènement de changement d'état de la production
+        public event DelegateChangementEtat EtatChangeProd;
 
         //Propriétés...
         public string Produit { get => produit; set => produit = value; }
@@ -65,6 +69,7 @@ namespace ClassLibraryProduction
                 }
                 if (quantiteDeCaissedepuisDemarrage == QuantiteAProduire)
                 {
+                    ProdAChangeDEtat();
                     ProductionEstFinie();
                 }
 
@@ -104,7 +109,19 @@ namespace ClassLibraryProduction
             if ((etatCourant == StatutProd.Suspendue) || (etatCourant == StatutProd.NonDemarree))
             {
                 etatCourant = StatutProd.Demarree;
+                ProdAChangeDEtat();
                 DemarrerThread();
+
+                
+            }
+
+        }
+
+        private void ProdAChangeDEtat() 
+        {
+            if (EtatChangeProd != null)
+            {
+                EtatChangeProd(this.EtatCourant);
             }
         }
 
@@ -113,21 +130,23 @@ namespace ClassLibraryProduction
             threadCourant.Start();
         }
 
-        public void Arreter()
-        {
-            if (etatCourant == StatutProd.Demarree)
-            {
-                etatCourant = StatutProd.Terminee;
+        //public void Arreter()
+        //{
+        //    if (etatCourant == StatutProd.Demarree)
+        //    {
+        //        etatCourant = StatutProd.Terminee;
+        //        ProdAChangeDEtat();
 
-            }
+        //    }
 
-        }
+        //}
 
         public void MettreEnPause()
         {
             if (etatCourant == StatutProd.Demarree)
             {
                 etatCourant = StatutProd.Suspendue;
+                ProdAChangeDEtat();
                 threadCourant.Suspend();
             }
         }
@@ -137,6 +156,7 @@ namespace ClassLibraryProduction
             if (etatCourant == StatutProd.Suspendue)
             {
                 etatCourant = StatutProd.Demarree;
+                ProdAChangeDEtat();
                 threadCourant.Resume();
             }
         }

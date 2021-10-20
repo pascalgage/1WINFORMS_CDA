@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UCfeutricolore.resx">
       <DependentUpon>UCfeutricolore.cs</DependentUpon>
@@ -120,6 +121,15 @@
       <Project>{75c68aa2-0451-49f9-b0e2-b45abdc55f4f}</Project>
       <Name>ClassLibraryProduction</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\THeMe4_soustheme5_131424381416.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORANGE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VERT.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

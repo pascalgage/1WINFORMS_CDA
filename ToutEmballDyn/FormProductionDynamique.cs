@@ -56,7 +56,8 @@ namespace ToutEmballDyn
             AjouterUCpanelTypeProdDansTabPage(_prod);
             //Ajouter les UCprogressBarProduction dans le flowlayoutPanel
             AjouterUcprogressBarAuFlowLayout(_prod);
-
+            //Ajouter des feux tricolores dans le flowlayoutFeutricolore
+            AjouterLeMenuFeuTricolore(_prod);
             //S'abonner à l'évènement...
             _prod.CaisseProduite += _prod_CaisseProduite;
             _prod.ProductionFinie += _prod_ProductionFinie;
@@ -125,6 +126,18 @@ namespace ToutEmballDyn
 
 
         }
+        private void AjouterLeMenuFeuTricolore(Production prod)
+        {
+            //Créer une barre de feu tricolore...
+            UCfeutricolore mesFeux = new UCfeutricolore();
+            //Remplir les propriétés...
+            mesFeux.Name = prod.Produit;
+            //Ajouter la barre de feu au flowlayoutFeutricolore
+            flowLayoutPanelFeuTricolore.Controls.Add(mesFeux);
+        }
+
+
+
 
         private void AjouterUcprogressBarAuFlowLayout(Production prod)
         {

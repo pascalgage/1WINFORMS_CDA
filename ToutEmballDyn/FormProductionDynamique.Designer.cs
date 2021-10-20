@@ -39,6 +39,7 @@ namespace ToutEmballDyn
             this.continuerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelFeuTricolore = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@ namespace ToutEmballDyn
             this.productionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(863, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -105,7 +106,7 @@ namespace ToutEmballDyn
             // 
             // tabControl
             // 
-            this.tabControl.Location = new System.Drawing.Point(232, 27);
+            this.tabControl.Location = new System.Drawing.Point(338, 179);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(454, 214);
@@ -115,17 +116,27 @@ namespace ToutEmballDyn
             // 
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(23, 258);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(55, 399);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(737, 156);
             this.flowLayoutPanel.TabIndex = 4;
             this.flowLayoutPanel.WrapContents = false;
             // 
+            // flowLayoutPanelFeuTricolore
+            // 
+            this.flowLayoutPanelFeuTricolore.AutoScroll = true;
+            this.flowLayoutPanelFeuTricolore.Location = new System.Drawing.Point(55, 63);
+            this.flowLayoutPanelFeuTricolore.Name = "flowLayoutPanelFeuTricolore";
+            this.flowLayoutPanelFeuTricolore.Size = new System.Drawing.Size(737, 100);
+            this.flowLayoutPanelFeuTricolore.TabIndex = 6;
+            this.flowLayoutPanelFeuTricolore.WrapContents = false;
+            // 
             // FormProductionDynamique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(863, 582);
+            this.Controls.Add(this.flowLayoutPanelFeuTricolore);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
@@ -150,6 +161,7 @@ namespace ToutEmballDyn
         private System.Windows.Forms.ToolStripMenuItem continuerToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFeuTricolore;
     }
 }
 
