@@ -28,7 +28,7 @@ namespace ClassLibraryProduction
         public event DelegateFinProduction ProductionFinie;
 
         //Déclarer le delegate de changement d'état de la production
-        public delegate void DelegateChangementEtat(StatutProd sender);
+        public delegate void DelegateChangementEtat(Production sender);
         //Déclarer l'évènement de changement d'état de la production
         public event DelegateChangementEtat EtatChangeProd;
 
@@ -121,7 +121,7 @@ namespace ClassLibraryProduction
         {
             if (EtatChangeProd != null)
             {
-                EtatChangeProd(this.EtatCourant);
+                EtatChangeProd(this);
             }
         }
 

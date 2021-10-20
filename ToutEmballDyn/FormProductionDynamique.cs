@@ -61,6 +61,12 @@ namespace ToutEmballDyn
             //S'abonner à l'évènement...
             _prod.CaisseProduite += _prod_CaisseProduite;
             _prod.ProductionFinie += _prod_ProductionFinie;
+            _prod.EtatChangeProd += _prod_EtatChangeProd;
+        }
+
+        private void _prod_EtatChangeProd(Production sender)
+        {
+            this.Invoke(new DelegateMettreAJour(MettreAJourIHM), new object[] { sender });
         }
 
         private void _prod_ProductionFinie(Production sender)
