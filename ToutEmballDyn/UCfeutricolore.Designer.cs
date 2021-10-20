@@ -29,58 +29,63 @@ namespace ToutEmballDyn
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonGREEN = new System.Windows.Forms.Button();
+            this.buttonORANGE = new System.Windows.Forms.Button();
+            this.buttonRED = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button3
+            // buttonGREEN
             // 
-            this.button3.BackgroundImage = global::ToutEmballDyn.Properties.Resources.VERT;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(202, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 69);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonGREEN.BackgroundImage = global::ToutEmballDyn.Properties.Resources.VERT;
+            this.buttonGREEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonGREEN.Location = new System.Drawing.Point(640, 9);
+            this.buttonGREEN.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.buttonGREEN.Name = "buttonGREEN";
+            this.buttonGREEN.Size = new System.Drawing.Size(310, 196);
+            this.buttonGREEN.TabIndex = 2;
+            this.buttonGREEN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonORANGE
             // 
-            this.button2.BackgroundImage = global::ToutEmballDyn.Properties.Resources.ORANGE;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(99, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 69);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonORANGE.BackgroundImage = global::ToutEmballDyn.Properties.Resources.ORANGE;
+            this.buttonORANGE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonORANGE.Location = new System.Drawing.Point(314, 9);
+            this.buttonORANGE.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.buttonORANGE.Name = "buttonORANGE";
+            this.buttonORANGE.Size = new System.Drawing.Size(323, 196);
+            this.buttonORANGE.TabIndex = 1;
+            this.buttonORANGE.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonRED
             // 
-            this.button1.BackgroundImage = global::ToutEmballDyn.Properties.Resources.THeMe4_soustheme5_131424381416;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 69);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRED.BackgroundImage = global::ToutEmballDyn.Properties.Resources.THeMe4_soustheme5_131424381416;
+            this.buttonRED.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRED.Location = new System.Drawing.Point(10, 9);
+            this.buttonRED.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.buttonRED.Name = "buttonRED";
+            this.buttonRED.Size = new System.Drawing.Size(301, 196);
+            this.buttonRED.TabIndex = 0;
+            this.buttonRED.UseVisualStyleBackColor = true;
+            this.buttonRED.Click += new System.EventHandler(this.buttonRED_Click);
             // 
             // UCfeutricolore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonGREEN);
+            this.Controls.Add(this.buttonORANGE);
+            this.Controls.Add(this.buttonRED);
+            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "UCfeutricolore";
-            this.Size = new System.Drawing.Size(306, 77);
+            this.Size = new System.Drawing.Size(969, 219);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonRED;
+        private System.Windows.Forms.Button buttonORANGE;
+        private System.Windows.Forms.Button buttonGREEN;
     }
 }
