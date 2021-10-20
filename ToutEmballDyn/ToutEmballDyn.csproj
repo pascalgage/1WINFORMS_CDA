@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCfeutricolore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCfeutricolore.Designer.cs">
+      <DependentUpon>UCfeutricolore.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCpanelTypeProd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCfeutricolore.resx">
+      <DependentUpon>UCfeutricolore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCpanelTypeProd.resx">
       <DependentUpon>UCpanelTypeProd.cs</DependentUpon>
     </EmbeddedResource>
