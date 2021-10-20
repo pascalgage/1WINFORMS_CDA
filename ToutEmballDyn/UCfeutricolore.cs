@@ -20,7 +20,11 @@ namespace ToutEmballDyn
 
         private void buttonRED_Click(object sender, EventArgs e)
         {
-            FormNouvelleProd
+            //arreter la production associer à ce usercontrol...
+            
+            
+
+
         }
     }
 }
