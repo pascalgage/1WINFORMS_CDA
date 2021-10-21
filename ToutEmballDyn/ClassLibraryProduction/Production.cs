@@ -125,17 +125,6 @@ namespace ClassLibraryProduction
             threadCourant.Start();
         }
 
-        //public void Arreter()
-        //{
-        //    if (etatCourant == StatutProd.Demarree)
-        //    {
-        //        etatCourant = StatutProd.Terminee;
-        //        ProdAChangeDEtat();
-
-        //    }
-
-        //}
-
         public void MettreEnPause()
         {
             if (etatCourant == StatutProd.Demarree)
