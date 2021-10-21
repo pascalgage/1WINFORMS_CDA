@@ -25,9 +25,9 @@ namespace ToutEmballDyn
             mesProductions = new List<Production>();
 
             //Créer les trois productions 
-            Production maProdA = new Production("A", 10000, 1000);
-            Production maProdB = new Production("B", 25000, 5000);
-            Production maProdC = new Production("C", 120000, 10000);
+            Production maProdA = new Production("A", 100, 10);
+            Production maProdB = new Production("B", 250, 25);
+            Production maProdC = new Production("C", 120, 8);
 
             //Ajouter les productions à la liste 
             mesProductions.Add(maProdA);
