@@ -37,7 +37,7 @@ namespace ClassLibraryProduction
         public int QuantiteDeCaisseDepuisdemarrage { get => quantiteDeCaissedepuisDemarrage; set => quantiteDeCaissedepuisDemarrage = value; }
         public int QuantiteAProduire { get => quantiteAProduire; set => quantiteAProduire = value; }
         public int ProductionParHeure { get => productionParHeure; set => productionParHeure = value; }
-        public StatutProd EtatCourant { get => etatCourant; set => etatCourant = value; }
+        public StatutProd EtatCourant { get => etatCourant; }
         public int CaisseAvecDefaut { get => caisseAvecDefaut; set => caisseAvecDefaut = value; }
 
         //Constructeur classique...
@@ -50,11 +50,13 @@ namespace ClassLibraryProduction
             etatCourant = StatutProd.NonDemarree;
             caisseAvecDefaut = 3;
 
-            threadCourant = new Thread(new ThreadStart(ProduireUneCaisse));
+            threadCourant = new Thread(new ThreadStart(ProduireDesCaisses));
+            DemarrerThread();
 
         }
+       
 
-        private void ProduireUneCaisse()
+        private void ProduireDesCaisses()
         {
 
             while (quantiteDeCaissedepuisDemarrage < QuantiteAProduire)
@@ -105,8 +107,6 @@ namespace ClassLibraryProduction
             {
                 etatCourant = StatutProd.Demarree;
                 ProdAChangeDEtat();
-                DemarrerThread();
-
                 
             }
 
@@ -142,7 +142,7 @@ namespace ClassLibraryProduction
             {
                 etatCourant = StatutProd.Suspendue;
                 ProdAChangeDEtat();
-                threadCourant.Suspend();
+                //threadCourant.Suspend();
             }
         }
 
@@ -152,11 +152,21 @@ namespace ClassLibraryProduction
             {
                 etatCourant = StatutProd.Demarree;
                 ProdAChangeDEtat();
-                threadCourant.Resume();
+                //threadCourant.Resume();
             }
         }
 
-
+        public void Redemarrer()
+        {
+            if (etatCourant == StatutProd.Terminee)
+            {
+                quantiteDeCaissedepuisDemarrage = 0; 
+                etatCourant = StatutProd.NonDemarree;
+                ProdAChangeDEtat();
+                threadCourant = new Thread(new ThreadStart(ProduireDesCaisses));
+                DemarrerThread();
+            }
+        }
 
         public decimal TauxErreur()
         {

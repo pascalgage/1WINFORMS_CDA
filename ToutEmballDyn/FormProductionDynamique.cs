@@ -182,7 +182,9 @@ namespace ToutEmballDyn
 
         private void MesFeux_FeuRougeClick(UCfeutricolore sender)
         {
-            //a voir plus tard !
+
+            Production maProd = (Production)sender.Tag;
+            maProd.Redemarrer();
         }
 
         private void AjouterUcprogressBarAuFlowLayout(Production prod)
