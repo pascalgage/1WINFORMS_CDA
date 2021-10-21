@@ -67,16 +67,11 @@ namespace ClassLibraryProduction
                     CaisseAEteProduite();
                     
                 }
-                if (quantiteDeCaissedepuisDemarrage == QuantiteAProduire)
-                {
-                    ProdAChangeDEtat();
-                    ProductionEstFinie();
-                }
-
-
+               
             }
             etatCourant = StatutProd.Terminee;
-
+            ProdAChangeDEtat();
+            ProductionEstFinie();
 
         }
         private void ProductionEstFinie()

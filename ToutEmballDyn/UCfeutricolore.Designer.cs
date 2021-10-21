@@ -29,63 +29,74 @@ namespace ToutEmballDyn
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonGREEN = new System.Windows.Forms.Button();
-            this.buttonORANGE = new System.Windows.Forms.Button();
-            this.buttonRED = new System.Windows.Forms.Button();
+            this.labelNomProd = new System.Windows.Forms.Label();
+            this.buttonGreen = new System.Windows.Forms.Button();
+            this.buttonOrange = new System.Windows.Forms.Button();
+            this.buttonRed = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonGREEN
+            // labelNomProd
             // 
-            this.buttonGREEN.BackgroundImage = global::ToutEmballDyn.Properties.Resources.VERT;
-            this.buttonGREEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonGREEN.Location = new System.Drawing.Point(640, 9);
-            this.buttonGREEN.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.buttonGREEN.Name = "buttonGREEN";
-            this.buttonGREEN.Size = new System.Drawing.Size(310, 196);
-            this.buttonGREEN.TabIndex = 2;
-            this.buttonGREEN.UseVisualStyleBackColor = true;
+            this.labelNomProd.AutoSize = true;
+            this.labelNomProd.Location = new System.Drawing.Point(84, 60);
+            this.labelNomProd.Name = "labelNomProd";
+            this.labelNomProd.Size = new System.Drawing.Size(58, 13);
+            this.labelNomProd.TabIndex = 3;
+            this.labelNomProd.Text = "Production";
             // 
-            // buttonORANGE
+            // buttonGreen
             // 
-            this.buttonORANGE.BackgroundImage = global::ToutEmballDyn.Properties.Resources.ORANGE;
-            this.buttonORANGE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonORANGE.Location = new System.Drawing.Point(314, 9);
-            this.buttonORANGE.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.buttonORANGE.Name = "buttonORANGE";
-            this.buttonORANGE.Size = new System.Drawing.Size(323, 196);
-            this.buttonORANGE.TabIndex = 1;
-            this.buttonORANGE.UseVisualStyleBackColor = true;
+            this.buttonGreen.BackgroundImage = global::ToutEmballDyn.Properties.Resources.VERT_off;
+            this.buttonGreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonGreen.Location = new System.Drawing.Point(153, 3);
+            this.buttonGreen.Name = "buttonGreen";
+            this.buttonGreen.Size = new System.Drawing.Size(76, 54);
+            this.buttonGreen.TabIndex = 2;
+            this.buttonGreen.UseVisualStyleBackColor = true;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
             // 
-            // buttonRED
+            // buttonOrange
             // 
-            this.buttonRED.BackgroundImage = global::ToutEmballDyn.Properties.Resources.THeMe4_soustheme5_131424381416;
-            this.buttonRED.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRED.Location = new System.Drawing.Point(10, 9);
-            this.buttonRED.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.buttonRED.Name = "buttonRED";
-            this.buttonRED.Size = new System.Drawing.Size(301, 196);
-            this.buttonRED.TabIndex = 0;
-            this.buttonRED.UseVisualStyleBackColor = true;
-            this.buttonRED.Click += new System.EventHandler(this.buttonRED_Click);
+            this.buttonOrange.BackgroundImage = global::ToutEmballDyn.Properties.Resources.ORANGE_off;
+            this.buttonOrange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonOrange.Location = new System.Drawing.Point(74, 3);
+            this.buttonOrange.Name = "buttonOrange";
+            this.buttonOrange.Size = new System.Drawing.Size(78, 54);
+            this.buttonOrange.TabIndex = 1;
+            this.buttonOrange.UseVisualStyleBackColor = true;
+            this.buttonOrange.Click += new System.EventHandler(this.buttonOrange_Click);
+            // 
+            // buttonRed
+            // 
+            this.buttonRed.BackgroundImage = global::ToutEmballDyn.Properties.Resources.ROUGE;
+            this.buttonRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRed.Location = new System.Drawing.Point(3, 3);
+            this.buttonRed.Name = "buttonRed";
+            this.buttonRed.Size = new System.Drawing.Size(71, 54);
+            this.buttonRed.TabIndex = 0;
+            this.buttonRed.UseVisualStyleBackColor = true;
+            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
             // 
             // UCfeutricolore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonGREEN);
-            this.Controls.Add(this.buttonORANGE);
-            this.Controls.Add(this.buttonRED);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.Controls.Add(this.labelNomProd);
+            this.Controls.Add(this.buttonGreen);
+            this.Controls.Add(this.buttonOrange);
+            this.Controls.Add(this.buttonRed);
             this.Name = "UCfeutricolore";
-            this.Size = new System.Drawing.Size(969, 219);
+            this.Size = new System.Drawing.Size(237, 76);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonRED;
-        private System.Windows.Forms.Button buttonORANGE;
-        private System.Windows.Forms.Button buttonGREEN;
+        private System.Windows.Forms.Button buttonRed;
+        private System.Windows.Forms.Button buttonOrange;
+        private System.Windows.Forms.Button buttonGreen;
+        private System.Windows.Forms.Label labelNomProd;
     }
 }

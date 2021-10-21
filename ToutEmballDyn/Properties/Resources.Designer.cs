@@ -73,6 +73,46 @@ namespace ToutEmballDyn.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ORANGE_off {
+            get {
+                object obj = ResourceManager.GetObject("ORANGE_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ROUGE {
+            get {
+                object obj = ResourceManager.GetObject("ROUGE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ROUGE_off {
+            get {
+                object obj = ResourceManager.GetObject("ROUGE_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ROUGE1 {
+            get {
+                object obj = ResourceManager.GetObject("ROUGE1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap THeMe4_soustheme5_131424381416 {
             get {
                 object obj = ResourceManager.GetObject("THeMe4_soustheme5_131424381416", resourceCulture);
@@ -86,6 +126,16 @@ namespace ToutEmballDyn.Properties {
         internal static System.Drawing.Bitmap VERT {
             get {
                 object obj = ResourceManager.GetObject("VERT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VERT_off {
+            get {
+                object obj = ResourceManager.GetObject("VERT_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

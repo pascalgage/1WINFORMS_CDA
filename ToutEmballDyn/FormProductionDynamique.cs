@@ -62,6 +62,7 @@ namespace ToutEmballDyn
             _prod.CaisseProduite += _prod_CaisseProduite;
             _prod.ProductionFinie += _prod_ProductionFinie;
             _prod.EtatChangeProd += _prod_EtatChangeProd;
+            
         }
 
         private void _prod_EtatChangeProd(Production sender)
@@ -72,6 +73,8 @@ namespace ToutEmballDyn
         private void _prod_ProductionFinie(Production sender)
         {
             MessageBox.Show("PRODUCTION "+sender.Produit+ " Terminée");
+            this.Invoke(new DelegateMettreAJour(MettreAJourIHM), new object[] { sender });
+            
         }
 
         private void _prod_CaisseProduite(Production sender)
@@ -94,16 +97,20 @@ namespace ToutEmballDyn
             //Aller modifier le taux d'erreur
             uCpanelTypeProd.NombreDefautDepuisDem = _prod.TauxErreur().ToString();
 
-            
 
+            //Recupere le bon UCfeutricolore en fonction de la prod
+            UCfeutricolore monUCfeuTricolore = (UCfeutricolore)flowLayoutPanelFeuTricolore.Controls[_prod.Produit];
 
             if (_prod.EtatCourant == Production.StatutProd.Demarree)
             {
+
                 //Aller récupérer le sous-menu de démarrer correspondant à la prod....
                 demarrerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled =false;
                 arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
-                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true; //a voir true or false
+                continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
 
+                
+                monUCfeuTricolore.ChangerImageBoutonVert(true);
 
             }
 
@@ -115,7 +122,8 @@ namespace ToutEmballDyn
                 arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
                 continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
 
-
+                
+                monUCfeuTricolore.ChangerImageBoutonOrange(true);
             }
             
 
@@ -126,9 +134,14 @@ namespace ToutEmballDyn
                 arreterToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = false;
                 continuerToolStripMenuItem.DropDownItems[_prod.Produit].Enabled = true;
 
+               
+                monUCfeuTricolore.ChangerImageBoutonRouge(true);
 
             }
-
+            if (_prod.EtatCourant == Production.StatutProd.Terminee)
+            {
+                monUCfeuTricolore.ChangerImageBoutonRouge(true);
+            }
 
 
         }
@@ -138,12 +151,39 @@ namespace ToutEmballDyn
             UCfeutricolore mesFeux = new UCfeutricolore();
             //Remplir les propriétés...
             mesFeux.Name = prod.Produit;
+            mesFeux.Tag = prod;
+            mesFeux.NomProduction = "Production "+prod.Produit;
+            mesFeux.FeuRougeClick += MesFeux_FeuRougeClick;
+            mesFeux.FeuVertClick += MesFeux_FeuVertClick;
+            mesFeux.FeuOrangeClick += MesFeux_FeuOrangeClick;
             //Ajouter la barre de feu au flowlayoutFeutricolore
             flowLayoutPanelFeuTricolore.Controls.Add(mesFeux);
         }
 
+        private void MesFeux_FeuOrangeClick(UCfeutricolore sender)
+        {
+            Production maProd = (Production)sender.Tag;
+            maProd.MettreEnPause();
+        }
 
+        private void MesFeux_FeuVertClick(UCfeutricolore sender)
+        {
+            Production maProd = (Production)sender.Tag;
+            if (maProd.EtatCourant == Production.StatutProd.NonDemarree)
+            {
+                maProd.Demarrer();
+            }
+            else if (maProd.EtatCourant == Production.StatutProd.Suspendue)
+            {
+                maProd.ReprendreLaProduction();
+            }
+            
+        }
 
+        private void MesFeux_FeuRougeClick(UCfeutricolore sender)
+        {
+            //a voir plus tard !
+        }
 
         private void AjouterUcprogressBarAuFlowLayout(Production prod)
         {
@@ -274,8 +314,14 @@ namespace ToutEmballDyn
 
         }
 
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
 
-
-        
+        private void FormProductionDynamique_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
     }
 }
