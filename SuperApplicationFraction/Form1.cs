@@ -52,5 +52,28 @@ namespace SuperApplicationFraction
                 labelResult.Text = mafraction.Divise(mafraction2).ToString();
             }
         }
+
+        private void textBoxNum1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDen1_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDen1.Text == 0.ToString())
+            {
+                errorProviderDen1.SetError(textBoxDen1, "Erreur: Tentative de division par zéro !");
+                textBoxDen1.BackColor = Color.Red;
+            }
+        }
+
+        private void textBoxDen2_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDen2.Text == 0.ToString())
+            {
+                errorProviderDen2.SetError(textBoxDen2, "Erreur: Tentative de division par zéro !");
+                textBoxDen2.BackColor = Color.Red;
+            }
+        }
     }
 }
