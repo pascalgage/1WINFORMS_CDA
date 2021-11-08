@@ -65,6 +65,11 @@ namespace SuperApplicationFraction
                 errorProviderDen1.SetError(textBoxDen1, "Erreur: Tentative de division par zéro !");
                 textBoxDen1.BackColor = Color.Red;
             }
+            else
+            {
+                errorProviderDen1.Clear();
+                textBoxDen1.BackColor = Color.White;
+            }
         }
 
         private void textBoxDen2_Leave(object sender, EventArgs e)
@@ -73,6 +78,11 @@ namespace SuperApplicationFraction
             {
                 errorProviderDen2.SetError(textBoxDen2, "Erreur: Tentative de division par zéro !");
                 textBoxDen2.BackColor = Color.Red;
+            }
+            else
+            {
+                errorProviderDen2.Clear();
+                textBoxDen2.BackColor = Color.White;
             }
         }
     }
