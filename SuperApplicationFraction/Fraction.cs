@@ -8,12 +8,13 @@ namespace SuperApplicationFraction
 {
     public class Fraction
     {
+               
         //Attributs....
         private int numerateur;
         private int denominateur;
 
 
-        public int Numerateur { get => numerateur; set => numerateur= value; }
+        public int Numerateur { get => numerateur; set => numerateur = value; }
         public int Denominateur { get => denominateur; set => denominateur = value; }
         
 
@@ -168,6 +169,14 @@ namespace SuperApplicationFraction
             numerateur = numerateur / pgcd;
             denominateur = denominateur / pgcd;
         }
+        public Fraction Reduction(Fraction _autreFraction)
+        {
+            _autreFraction.GestionSigne();
+            int pgcd = _autreFraction.GetPgcd();
+            _autreFraction.numerateur = _autreFraction.numerateur / pgcd;
+            _autreFraction.denominateur = _autreFraction.denominateur / pgcd;
+            return _autreFraction;
+        }
 
         //Méthode de gestion du signe de la fraction...
         public void GestionSigne()
@@ -191,6 +200,7 @@ namespace SuperApplicationFraction
         //Addition.
         public Fraction Plus(Fraction _autreFrac)
         {
+
             int n;
             int d;
             n = (this.numerateur * _autreFrac.denominateur) + (_autreFrac.numerateur * this.denominateur);
@@ -200,6 +210,7 @@ namespace SuperApplicationFraction
             p = new Fraction(n, d);
             p.Reduire();
             return p;
+            
         }
 
         //Soustraction.
