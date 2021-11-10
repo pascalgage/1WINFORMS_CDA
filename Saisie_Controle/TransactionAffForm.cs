@@ -40,5 +40,10 @@ namespace Saisie_Controle
         {
 
         }
+
+        private void textBoxDATE_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

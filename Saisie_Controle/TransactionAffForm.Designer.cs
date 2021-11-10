@@ -43,93 +43,87 @@ namespace Saisie_Controle
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 256);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label1.Location = new System.Drawing.Point(115, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 37);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "NOM du CLIENT :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 424);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label2.Location = new System.Drawing.Point(118, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 37);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "DATE";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(374, 589);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label3.Location = new System.Drawing.Point(118, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 37);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "MONTANT";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(374, 720);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label4.Location = new System.Drawing.Point(118, 253);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 37);
+            this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "CODE POSTAL";
             // 
             // textBoxCLIENT
             // 
-            this.textBoxCLIENT.Location = new System.Drawing.Point(950, 256);
-            this.textBoxCLIENT.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxCLIENT.Location = new System.Drawing.Point(300, 90);
             this.textBoxCLIENT.Name = "textBoxCLIENT";
             this.textBoxCLIENT.ReadOnly = true;
-            this.textBoxCLIENT.Size = new System.Drawing.Size(308, 44);
+            this.textBoxCLIENT.Size = new System.Drawing.Size(100, 20);
             this.textBoxCLIENT.TabIndex = 4;
             // 
             // textBoxDATE
             // 
-            this.textBoxDATE.Location = new System.Drawing.Point(950, 424);
-            this.textBoxDATE.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxDATE.Location = new System.Drawing.Point(300, 149);
             this.textBoxDATE.Name = "textBoxDATE";
             this.textBoxDATE.ReadOnly = true;
-            this.textBoxDATE.Size = new System.Drawing.Size(308, 44);
+            this.textBoxDATE.Size = new System.Drawing.Size(100, 20);
             this.textBoxDATE.TabIndex = 5;
+            this.textBoxDATE.TextChanged += new System.EventHandler(this.textBoxDATE_TextChanged);
             // 
             // textBoxMONTANT
             // 
-            this.textBoxMONTANT.Location = new System.Drawing.Point(950, 589);
-            this.textBoxMONTANT.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxMONTANT.Location = new System.Drawing.Point(300, 207);
             this.textBoxMONTANT.Name = "textBoxMONTANT";
             this.textBoxMONTANT.ReadOnly = true;
-            this.textBoxMONTANT.Size = new System.Drawing.Size(308, 44);
+            this.textBoxMONTANT.Size = new System.Drawing.Size(100, 20);
             this.textBoxMONTANT.TabIndex = 6;
             // 
             // textBoxCODEPOSTAL
             // 
-            this.textBoxCODEPOSTAL.Location = new System.Drawing.Point(950, 697);
-            this.textBoxCODEPOSTAL.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxCODEPOSTAL.Location = new System.Drawing.Point(300, 245);
             this.textBoxCODEPOSTAL.Name = "textBoxCODEPOSTAL";
             this.textBoxCODEPOSTAL.ReadOnly = true;
-            this.textBoxCODEPOSTAL.Size = new System.Drawing.Size(308, 44);
+            this.textBoxCODEPOSTAL.Size = new System.Drawing.Size(100, 20);
             this.textBoxCODEPOSTAL.TabIndex = 7;
             // 
             // insert
             // 
-            this.insert.Location = new System.Drawing.Point(950, 876);
+            this.insert.Location = new System.Drawing.Point(300, 308);
+            this.insert.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.insert.Name = "insert";
-            this.insert.Size = new System.Drawing.Size(308, 88);
+            this.insert.Size = new System.Drawing.Size(97, 31);
             this.insert.TabIndex = 8;
             this.insert.Text = "INSERTION bDD";
             this.insert.UseVisualStyleBackColor = true;
             // 
             // TransactionAffForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2533, 1281);
+            this.ClientSize = new System.Drawing.Size(800, 373);
             this.Controls.Add(this.insert);
             this.Controls.Add(this.textBoxCODEPOSTAL);
             this.Controls.Add(this.textBoxMONTANT);
@@ -139,7 +133,6 @@ namespace Saisie_Controle
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "TransactionAffForm";
             this.Text = "TransactionAffForm";
             this.Load += new System.EventHandler(this.TransactionAffForm_Load);

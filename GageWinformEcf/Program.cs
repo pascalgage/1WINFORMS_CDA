@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ComboBox
+namespace GageWinformEcf
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ComboBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormComb());
+            Application.Run(new InscriptionStagiaireForm());
         }
     }
 }
