@@ -102,9 +102,24 @@ namespace GageWinformEcf
             }
             else
             {
-                
-                MessageBox.Show("Nom: " +textBoxNom.Text+ " Date:"+textBoxDentree.Text+" Section:"+textBoxSection.Text);
-                
+
+                //Parsage des entrees textBox
+                DateTime date;
+                DateTime.TryParse(textBoxDentree.Text, out date);
+                DateTime date2;
+                DateTime.TryParse(textBoxDsortie.Text, out date2);
+
+
+                //MessageBox.Show("Nom: " + textBoxNom.Text + " Date:" + textBoxDentree.Text + " Section:" + textBoxSection.Text);
+                //instanciation de l'objet matransaction....
+                Inscription monInscription = new Inscription(textBoxNom.Text,textBoxPrenom.Text,date,date2,textBoxSection.Text);
+
+
+                //TransactionAffForm afficherTransaction = new TransactionAffForm(nom, date, montant, codePostal);
+                AffInscription afficherInscription = new AffInscription(monInscription);
+                afficherInscription.ShowDialog();
+                afficherInscription.ForeColor = Color.Green;
+
             }
         }
     }
