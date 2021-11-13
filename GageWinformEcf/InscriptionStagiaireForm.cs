@@ -118,7 +118,7 @@ namespace GageWinformEcf
                 //TransactionAffForm afficherTransaction = new TransactionAffForm(nom, date, montant, codePostal);
                 AffInscription afficherInscription = new AffInscription(monInscription);
                 afficherInscription.ShowDialog();
-                afficherInscription.ForeColor = Color.Green;
+                
 
             }
         }

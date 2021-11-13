@@ -25,6 +25,7 @@ namespace GageWinformEcf
             this.label3.Text = dateentree.ToString();
             this.label4.Text = datesortie.ToString();
             this.label5.Text = section;
+            this.BackColor = Color.Green;
         }
 
         public AffInscription(Inscription _inscription)
@@ -32,5 +33,6 @@ namespace GageWinformEcf
         {
 
         }
+        
     }
 }
