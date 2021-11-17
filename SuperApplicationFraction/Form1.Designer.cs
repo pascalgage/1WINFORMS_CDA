@@ -44,20 +44,26 @@ namespace SuperApplicationFraction
             this.errorProviderDen1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderDen2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radioButtonRed = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDen2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNum1
             // 
-            this.textBoxNum1.Location = new System.Drawing.Point(68, 45);
+            this.textBoxNum1.Location = new System.Drawing.Point(124, 61);
             this.textBoxNum1.Name = "textBoxNum1";
             this.textBoxNum1.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum1.TabIndex = 0;
             // 
             // textBoxDen1
             // 
-            this.textBoxDen1.Location = new System.Drawing.Point(68, 104);
+            this.textBoxDen1.Location = new System.Drawing.Point(124, 120);
             this.textBoxDen1.Name = "textBoxDen1";
             this.textBoxDen1.Size = new System.Drawing.Size(100, 20);
             this.textBoxDen1.TabIndex = 1;
@@ -71,14 +77,14 @@ namespace SuperApplicationFraction
             // 
             // textBoxNum2
             // 
-            this.textBoxNum2.Location = new System.Drawing.Point(491, 44);
+            this.textBoxNum2.Location = new System.Drawing.Point(547, 60);
             this.textBoxNum2.Name = "textBoxNum2";
             this.textBoxNum2.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum2.TabIndex = 7;
             // 
             // textBoxDen2
             // 
-            this.textBoxDen2.Location = new System.Drawing.Point(491, 95);
+            this.textBoxDen2.Location = new System.Drawing.Point(547, 111);
             this.textBoxDen2.Name = "textBoxDen2";
             this.textBoxDen2.Size = new System.Drawing.Size(100, 20);
             this.textBoxDen2.TabIndex = 8;
@@ -87,7 +93,7 @@ namespace SuperApplicationFraction
             // radioButtonAdd
             // 
             this.radioButtonAdd.AutoSize = true;
-            this.radioButtonAdd.Location = new System.Drawing.Point(285, 36);
+            this.radioButtonAdd.Location = new System.Drawing.Point(341, 52);
             this.radioButtonAdd.Name = "radioButtonAdd";
             this.radioButtonAdd.Size = new System.Drawing.Size(63, 17);
             this.radioButtonAdd.TabIndex = 9;
@@ -99,7 +105,7 @@ namespace SuperApplicationFraction
             // radioButtonSoust
             // 
             this.radioButtonSoust.AutoSize = true;
-            this.radioButtonSoust.Location = new System.Drawing.Point(285, 60);
+            this.radioButtonSoust.Location = new System.Drawing.Point(341, 76);
             this.radioButtonSoust.Name = "radioButtonSoust";
             this.radioButtonSoust.Size = new System.Drawing.Size(84, 17);
             this.radioButtonSoust.TabIndex = 10;
@@ -111,7 +117,7 @@ namespace SuperApplicationFraction
             // radioButtonMult
             // 
             this.radioButtonMult.AutoSize = true;
-            this.radioButtonMult.Location = new System.Drawing.Point(285, 84);
+            this.radioButtonMult.Location = new System.Drawing.Point(341, 100);
             this.radioButtonMult.Name = "radioButtonMult";
             this.radioButtonMult.Size = new System.Drawing.Size(86, 17);
             this.radioButtonMult.TabIndex = 11;
@@ -123,7 +129,7 @@ namespace SuperApplicationFraction
             // radioButtonDiv
             // 
             this.radioButtonDiv.AutoSize = true;
-            this.radioButtonDiv.Location = new System.Drawing.Point(285, 108);
+            this.radioButtonDiv.Location = new System.Drawing.Point(341, 124);
             this.radioButtonDiv.Name = "radioButtonDiv";
             this.radioButtonDiv.Size = new System.Drawing.Size(62, 17);
             this.radioButtonDiv.TabIndex = 12;
@@ -135,7 +141,7 @@ namespace SuperApplicationFraction
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(282, 367);
+            this.labelResult.Location = new System.Drawing.Point(343, 373);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(64, 13);
             this.labelResult.TabIndex = 13;
@@ -143,7 +149,7 @@ namespace SuperApplicationFraction
             // 
             // buttonCalculer
             // 
-            this.buttonCalculer.Location = new System.Drawing.Point(285, 227);
+            this.buttonCalculer.Location = new System.Drawing.Point(341, 243);
             this.buttonCalculer.Name = "buttonCalculer";
             this.buttonCalculer.Size = new System.Drawing.Size(75, 23);
             this.buttonCalculer.TabIndex = 14;
@@ -162,7 +168,7 @@ namespace SuperApplicationFraction
             // radioButtonRed
             // 
             this.radioButtonRed.AutoSize = true;
-            this.radioButtonRed.Location = new System.Drawing.Point(285, 142);
+            this.radioButtonRed.Location = new System.Drawing.Point(341, 158);
             this.radioButtonRed.Name = "radioButtonRed";
             this.radioButtonRed.Size = new System.Drawing.Size(66, 17);
             this.radioButtonRed.TabIndex = 15;
@@ -171,11 +177,71 @@ namespace SuperApplicationFraction
             this.radioButtonRed.UseVisualStyleBackColor = true;
             this.radioButtonRed.Click += new System.EventHandler(this.radioButtonRed_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(124, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "FRACTION A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(547, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "FRACTION B";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(83, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "num :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(86, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "den :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(506, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "num :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(506, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "den :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.radioButtonRed);
             this.Controls.Add(this.buttonCalculer);
             this.Controls.Add(this.labelResult);
@@ -212,6 +278,12 @@ namespace SuperApplicationFraction
         private System.Windows.Forms.ErrorProvider errorProviderDen1;
         private System.Windows.Forms.ErrorProvider errorProviderDen2;
         private System.Windows.Forms.RadioButton radioButtonRed;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
