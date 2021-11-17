@@ -56,14 +56,14 @@ namespace SuperApplicationFraction
             // 
             // textBoxNum1
             // 
-            this.textBoxNum1.Location = new System.Drawing.Point(124, 61);
+            this.textBoxNum1.Location = new System.Drawing.Point(134, 96);
             this.textBoxNum1.Name = "textBoxNum1";
             this.textBoxNum1.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum1.TabIndex = 0;
             // 
             // textBoxDen1
             // 
-            this.textBoxDen1.Location = new System.Drawing.Point(124, 120);
+            this.textBoxDen1.Location = new System.Drawing.Point(134, 155);
             this.textBoxDen1.Name = "textBoxDen1";
             this.textBoxDen1.Size = new System.Drawing.Size(100, 20);
             this.textBoxDen1.TabIndex = 1;
@@ -77,14 +77,14 @@ namespace SuperApplicationFraction
             // 
             // textBoxNum2
             // 
-            this.textBoxNum2.Location = new System.Drawing.Point(547, 60);
+            this.textBoxNum2.Location = new System.Drawing.Point(548, 101);
             this.textBoxNum2.Name = "textBoxNum2";
             this.textBoxNum2.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum2.TabIndex = 7;
             // 
             // textBoxDen2
             // 
-            this.textBoxDen2.Location = new System.Drawing.Point(547, 111);
+            this.textBoxDen2.Location = new System.Drawing.Point(548, 152);
             this.textBoxDen2.Name = "textBoxDen2";
             this.textBoxDen2.Size = new System.Drawing.Size(100, 20);
             this.textBoxDen2.TabIndex = 8;
@@ -180,7 +180,7 @@ namespace SuperApplicationFraction
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 42);
+            this.label1.Location = new System.Drawing.Point(134, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 16;
@@ -189,7 +189,7 @@ namespace SuperApplicationFraction
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(547, 41);
+            this.label2.Location = new System.Drawing.Point(548, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 17;
@@ -198,7 +198,7 @@ namespace SuperApplicationFraction
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(83, 67);
+            this.label3.Location = new System.Drawing.Point(93, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 18;
@@ -207,7 +207,7 @@ namespace SuperApplicationFraction
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 124);
+            this.label4.Location = new System.Drawing.Point(96, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 19;
@@ -216,7 +216,7 @@ namespace SuperApplicationFraction
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(506, 67);
+            this.label5.Location = new System.Drawing.Point(507, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 20;
@@ -225,7 +225,7 @@ namespace SuperApplicationFraction
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(506, 118);
+            this.label6.Location = new System.Drawing.Point(507, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 21;
