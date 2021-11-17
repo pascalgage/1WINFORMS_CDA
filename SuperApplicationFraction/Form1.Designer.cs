@@ -77,7 +77,7 @@ namespace SuperApplicationFraction
             // 
             // textBoxNum2
             // 
-            this.textBoxNum2.Location = new System.Drawing.Point(548, 101);
+            this.textBoxNum2.Location = new System.Drawing.Point(548, 95);
             this.textBoxNum2.Name = "textBoxNum2";
             this.textBoxNum2.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum2.TabIndex = 7;
@@ -189,7 +189,7 @@ namespace SuperApplicationFraction
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 82);
+            this.label2.Location = new System.Drawing.Point(548, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 17;
@@ -216,7 +216,7 @@ namespace SuperApplicationFraction
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(507, 108);
+            this.label5.Location = new System.Drawing.Point(507, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 20;
