@@ -94,6 +94,7 @@ namespace SuperApplicationFraction
             this.radioButtonAdd.TabStop = true;
             this.radioButtonAdd.Text = "Addition";
             this.radioButtonAdd.UseVisualStyleBackColor = true;
+            this.radioButtonAdd.CheckedChanged += new System.EventHandler(this.radioButtonAdd_CheckedChanged);
             // 
             // radioButtonSoust
             // 
@@ -105,6 +106,7 @@ namespace SuperApplicationFraction
             this.radioButtonSoust.TabStop = true;
             this.radioButtonSoust.Text = "Soustraction";
             this.radioButtonSoust.UseVisualStyleBackColor = true;
+            this.radioButtonSoust.CheckedChanged += new System.EventHandler(this.radioButtonSoust_CheckedChanged);
             // 
             // radioButtonMult
             // 
@@ -116,6 +118,7 @@ namespace SuperApplicationFraction
             this.radioButtonMult.TabStop = true;
             this.radioButtonMult.Text = "Multiplication";
             this.radioButtonMult.UseVisualStyleBackColor = true;
+            this.radioButtonMult.CheckedChanged += new System.EventHandler(this.radioButtonMult_CheckedChanged);
             // 
             // radioButtonDiv
             // 
@@ -127,6 +130,7 @@ namespace SuperApplicationFraction
             this.radioButtonDiv.TabStop = true;
             this.radioButtonDiv.Text = "Division";
             this.radioButtonDiv.UseVisualStyleBackColor = true;
+            this.radioButtonDiv.CheckedChanged += new System.EventHandler(this.radioButtonDiv_CheckedChanged);
             // 
             // labelResult
             // 
