@@ -247,6 +247,39 @@ namespace SuperApplicationFraction
             return t;
         }
 
+        public static bool EstUnNombrepremier(uint _nbATester)
+
+        {
+            double reste;
+            int diviseur = 2;
+            bool estPremier = true;
+
+            //_nbATester == 0 , il a une infinite de diviseur
+            //_nbATester == 1 , il a qu'un diviseur, lui même
+
+            if ((_nbATester == 0) || (_nbATester == 1))
+            {
+                estPremier = false;
+            }
+            else
+            {
+                while ((diviseur < _nbATester) && estPremier)
+                {
+                    reste = _nbATester % diviseur;
+
+                    diviseur++;
+
+                    if (reste == 0)
+                    {
+                        estPremier = false;
+
+                    }
+
+                }
+            }
+            return estPremier;
+        }
+
 
     }
 }

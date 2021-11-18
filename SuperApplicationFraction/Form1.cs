@@ -127,5 +127,15 @@ namespace SuperApplicationFraction
             textBoxNum2.Enabled = true;
             textBoxDen2.Enabled = true;
         }
+
+        private void textBoxNum1_Leave(object sender, EventArgs e)
+        {
+            uint nombre = uint.Parse(textBoxNum1.Text);
+
+            if (Fraction.EstUnNombrepremier(nombre))
+            {
+                MessageBox.Show("LE NOMBRE "+textBoxNum1.Text+" EST PREMIER !");
+            }
+        }
     }
 }

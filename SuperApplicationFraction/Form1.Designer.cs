@@ -60,6 +60,7 @@ namespace SuperApplicationFraction
             this.textBoxNum1.Name = "textBoxNum1";
             this.textBoxNum1.Size = new System.Drawing.Size(100, 20);
             this.textBoxNum1.TabIndex = 0;
+            this.textBoxNum1.Leave += new System.EventHandler(this.textBoxNum1_Leave);
             // 
             // textBoxDen1
             // 
