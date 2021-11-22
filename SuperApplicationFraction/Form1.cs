@@ -82,6 +82,15 @@ namespace SuperApplicationFraction
                 errorProviderDen1.Clear();
                 textBoxDen1.BackColor = Color.White;
             }
+            uint nombre = uint.Parse(textBoxDen1.Text);
+
+            if (Fraction.EstUnNombrepremier(nombre))
+            {
+                MessageBox.Show("LE NOMBRE " + textBoxDen1.Text + " EST PREMIER !");
+            }
+
+
+
         }
 
         private void textBoxDen2_Leave(object sender, EventArgs e)
@@ -96,6 +105,15 @@ namespace SuperApplicationFraction
                 errorProviderDen2.Clear();
                 textBoxDen2.BackColor = Color.White;
             }
+            uint nombre = uint.Parse(textBoxDen2.Text);
+
+            if (Fraction.EstUnNombrepremier(nombre))
+            {
+                MessageBox.Show("LE NOMBRE " + textBoxDen2.Text + " EST PREMIER !");
+            }
+
+
+
         }
 
         private void radioButtonRed_Click(object sender, EventArgs e)
@@ -135,6 +153,16 @@ namespace SuperApplicationFraction
             if (Fraction.EstUnNombrepremier(nombre))
             {
                 MessageBox.Show("LE NOMBRE "+textBoxNum1.Text+" EST PREMIER !");
+            }
+        }
+
+        private void textBoxNum2_Leave(object sender, EventArgs e)
+        {
+            uint nombre = uint.Parse(textBoxNum2.Text);
+
+            if (Fraction.EstUnNombrepremier(nombre))
+            {
+                MessageBox.Show("LE NOMBRE " + textBoxNum2.Text + " EST PREMIER !");
             }
         }
     }
